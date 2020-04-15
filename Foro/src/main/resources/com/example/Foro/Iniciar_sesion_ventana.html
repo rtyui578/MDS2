@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;mytheme&quot;}">
+  <meta name="vaadin-version" content="8.1.5">
+ </head>
+ <body>
+  <vaadin-vertical-layout size-full>
+   <vaadin-vertical-layout size-full :expand>
+    <vaadin-label plain-text :center>
+      Iniciar Sesión 
+    </vaadin-label>
+    <vaadin-text-field caption="Nombre de usuario" width-full :center></vaadin-text-field>
+    <vaadin-password-field caption="Contraseña" description="Contraseña" width-full :center></vaadin-password-field>
+    <vaadin-horizontal-layout :center>
+     <vaadin-button plain-text>
+       Registrase 
+     </vaadin-button>
+     <vaadin-button plain-text>
+       Entrar 
+     </vaadin-button>
+    </vaadin-horizontal-layout>
+    <vaadin-button style-name="borderless-colored" plain-text :center>
+      ¿Has olvidado la contraseña? 
+    </vaadin-button>
+   </vaadin-vertical-layout>
+  </vaadin-vertical-layout>
+ </body>
+</html>

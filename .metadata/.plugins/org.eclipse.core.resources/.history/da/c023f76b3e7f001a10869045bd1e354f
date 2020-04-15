@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;mytheme&quot;}">
+  <meta name="vaadin-version" content="8.1.5">
+ </head>
+ <body>
+  <vaadin-vertical-layout size-full>
+   <vaadin-horizontal-layout>
+    <vaadin-label plain-text>
+      Visualizando al usuario : Nombre usuario 
+    </vaadin-label>
+   </vaadin-horizontal-layout>
+   <vaadin-horizontal-layout style-name="portada" size-full :expand>
+    <vaadin-vertical-layout spacing="false" width-auto height-full margin="false">
+     <vaadin-button style-name="borderless boton2" width-full plain-text>
+       Perfil 
+     </vaadin-button>
+     <vaadin-button style-name="borderless boton2" width-full plain-text>
+       Lista de usuarios 
+     </vaadin-button>
+     <vaadin-button style-name="borderless boton2" width-full plain-text>
+       Amigos 
+     </vaadin-button>
+    </vaadin-vertical-layout>
+    <vaadin-vertical-layout style-name="contenedor" size-full :expand></vaadin-vertical-layout>
+   </vaadin-horizontal-layout>
+  </vaadin-vertical-layout>
+ </body>
+</html>
