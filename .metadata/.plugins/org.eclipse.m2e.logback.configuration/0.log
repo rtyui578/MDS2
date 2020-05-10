@@ -849,3 +849,190 @@
 2020-04-16 17:57:05,506 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 44 resources
 2020-04-16 17:57:05,513 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2020-04-16 17:57:05,514 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\test\resources
+2020-05-08 17:18:49,414 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-05-08 17:19:05,236 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Updating theme VAADIN\themes\mytheme
+2020-05-08 17:19:05,473 [Thread-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Widgetsets found from classpath:
+2020-05-08 17:19:05,474 [Thread-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Addon styles found from classpath:
+2020-05-08 17:19:05,474 [Thread-38] INFO  o.e.m.c.i.embedder.EclipseLogger - 
+2020-05-08 17:19:05,474 [Thread-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Search took 5ms
+2020-05-08 17:19:05,491 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Theme "VAADIN\themes\mytheme" updated
+2020-05-08 17:19:05,513 [Worker-1: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - GWT plugin is configured to detect modules, but none were found.
+2020-05-08 17:19:05,515 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - No widgetsets found - generating AppWidgetset if necessary.
+2020-05-08 17:19:05,516 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Updating widgetset AppWidgetset
+2020-05-08 17:19:05,517 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding resource directory to command classpath: C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\main\resources
+2020-05-08 17:19:05,517 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding resource directory to command classpath: C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\target\generated-resources\gwt
+2020-05-08 17:19:05,520 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using com.vaadin:vaadin-client version 8.10.3
+2020-05-08 17:19:05,677 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using com.vaadin:vaadin-client-compiler version 8.10.3
+2020-05-08 17:19:07,279 [Thread-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Widgetsets found from classpath:
+2020-05-08 17:19:07,280 [Thread-40] INFO  o.e.m.c.i.embedder.EclipseLogger - 	com.vaadin.DefaultWidgetSet in jar:file:C:/Users/Ramón Ramos/.m2/repository/com/vaadin/vaadin-client/8.10.3/vaadin-client-8.10.3.jar!/
+2020-05-08 17:19:07,280 [Thread-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Addon styles found from classpath:
+2020-05-08 17:19:07,280 [Thread-40] INFO  o.e.m.c.i.embedder.EclipseLogger - 
+2020-05-08 17:19:07,280 [Thread-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Search took 6ms
+2020-05-08 17:19:07,318 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Updating theme VAADIN\themes\mytheme
+2020-05-08 17:19:08,983 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Theme "VAADIN\themes\mytheme" compiled
+2020-05-08 17:19:09,096 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-08 17:19:09,098 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 44 resources
+2020-05-08 17:19:09,105 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-05-08 17:19:09,119 [Worker-1: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - GWT plugin is configured to detect modules, but none were found.
+2020-05-08 17:19:09,121 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using com.vaadin:vaadin-client version 8.10.3
+2020-05-08 17:19:09,126 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using com.vaadin:vaadin-client-compiler version 8.10.3
+2020-05-08 17:19:09,154 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-08 17:19:09,154 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\test\resources
+2020-05-08 17:19:10,868 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-08 17:19:10,870 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-05-08 17:19:10,872 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-08 17:19:10,872 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\test\resources
+2020-05-08 17:19:14,938 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-08 17:19:14,939 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-05-08 17:19:14,940 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-08 17:19:14,940 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\test\resources
+2020-05-08 17:19:19,281 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-08 17:19:19,282 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-05-08 17:19:19,284 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-08 17:19:19,284 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\test\resources
+2020-05-08 18:05:39,896 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-08 18:05:39,896 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-05-08 18:05:39,901 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-08 18:05:39,902 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\test\resources
+2020-05-08 18:06:09,030 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-08 18:06:09,030 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-05-08 18:06:09,032 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-08 18:06:09,033 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\test\resources
+2020-05-08 18:36:18,299 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-08 18:36:18,310 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 45 resources
+2020-05-08 18:36:18,317 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-08 18:36:18,318 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\test\resources
+2020-05-08 18:36:22,774 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-08 18:36:22,778 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 45 resources
+2020-05-08 18:36:22,786 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-08 18:36:22,786 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\test\resources
+2020-05-08 18:37:41,920 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-08 18:37:41,925 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 45 resources
+2020-05-08 18:37:41,934 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-08 18:37:41,934 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\test\resources
+2020-05-08 18:39:28,966 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-08 18:39:28,969 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 46 resources
+2020-05-08 18:39:28,977 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-08 18:39:28,977 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\test\resources
+2020-05-08 18:39:33,421 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-08 18:39:33,426 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 46 resources
+2020-05-08 18:39:33,434 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-08 18:39:33,435 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\test\resources
+2020-05-08 18:41:39,776 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-08 18:41:39,780 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 46 resources
+2020-05-08 18:41:39,787 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-08 18:41:39,788 [Worker-44: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\test\resources
+2020-05-08 18:42:36,020 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-08 18:42:36,025 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 47 resources
+2020-05-08 18:42:36,033 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-08 18:42:36,033 [Worker-45: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\test\resources
+2020-05-08 18:42:40,045 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-08 18:42:40,052 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 47 resources
+2020-05-08 18:42:40,061 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-08 18:42:40,061 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\test\resources
+2020-05-08 18:44:03,257 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-08 18:44:03,263 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 47 resources
+2020-05-08 18:44:03,272 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-08 18:44:03,272 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\test\resources
+2020-05-09 11:47:00,595 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-05-09 11:47:18,288 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Updating theme VAADIN\themes\mytheme
+2020-05-09 11:47:18,537 [Thread-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Widgetsets found from classpath:
+2020-05-09 11:47:18,538 [Thread-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Addon styles found from classpath:
+2020-05-09 11:47:18,538 [Thread-36] INFO  o.e.m.c.i.embedder.EclipseLogger - 
+2020-05-09 11:47:18,538 [Thread-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Search took 6ms
+2020-05-09 11:47:18,556 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Theme "VAADIN\themes\mytheme" updated
+2020-05-09 11:47:18,577 [Worker-28: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - GWT plugin is configured to detect modules, but none were found.
+2020-05-09 11:47:18,578 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - No widgetsets found - generating AppWidgetset if necessary.
+2020-05-09 11:47:18,579 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Updating widgetset AppWidgetset
+2020-05-09 11:47:18,580 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding resource directory to command classpath: C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\main\resources
+2020-05-09 11:47:18,580 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding resource directory to command classpath: C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\target\generated-resources\gwt
+2020-05-09 11:47:18,583 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using com.vaadin:vaadin-client version 8.10.3
+2020-05-09 11:47:18,742 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using com.vaadin:vaadin-client-compiler version 8.10.3
+2020-05-09 11:47:20,389 [Thread-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Widgetsets found from classpath:
+2020-05-09 11:47:20,389 [Thread-38] INFO  o.e.m.c.i.embedder.EclipseLogger - 	com.vaadin.DefaultWidgetSet in jar:file:C:/Users/Ramón Ramos/.m2/repository/com/vaadin/vaadin-client/8.10.3/vaadin-client-8.10.3.jar!/
+2020-05-09 11:47:20,389 [Thread-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Addon styles found from classpath:
+2020-05-09 11:47:20,389 [Thread-38] INFO  o.e.m.c.i.embedder.EclipseLogger - 
+2020-05-09 11:47:20,389 [Thread-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Search took 5ms
+2020-05-09 11:47:20,427 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Updating theme VAADIN\themes\mytheme
+2020-05-09 11:47:22,100 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Theme "VAADIN\themes\mytheme" compiled
+2020-05-09 11:47:22,215 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-09 11:47:22,218 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 47 resources
+2020-05-09 11:47:22,226 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-05-09 11:47:22,242 [Worker-28: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - GWT plugin is configured to detect modules, but none were found.
+2020-05-09 11:47:22,244 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using com.vaadin:vaadin-client version 8.10.3
+2020-05-09 11:47:22,249 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using com.vaadin:vaadin-client-compiler version 8.10.3
+2020-05-09 11:47:22,278 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-09 11:47:22,278 [Worker-28: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\test\resources
+2020-05-09 11:47:23,979 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-09 11:47:23,981 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-05-09 11:47:23,982 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-09 11:47:23,983 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\test\resources
+2020-05-09 11:47:27,444 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-09 11:47:27,444 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-05-09 11:47:27,446 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-09 11:47:27,447 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\test\resources
+2020-05-09 11:57:12,020 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-09 11:57:12,024 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 48 resources
+2020-05-09 11:57:12,033 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-09 11:57:12,033 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\test\resources
+2020-05-09 11:57:17,008 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-09 11:57:17,013 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 48 resources
+2020-05-09 11:57:17,019 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-09 11:57:17,019 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\test\resources
+2020-05-09 11:58:03,676 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-09 11:58:03,681 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 48 resources
+2020-05-09 11:58:03,689 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-09 11:58:03,689 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\test\resources
+2020-05-09 12:07:15,313 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-09 12:07:15,318 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 49 resources
+2020-05-09 12:07:15,325 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-09 12:07:15,325 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\test\resources
+2020-05-09 12:07:19,738 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-09 12:07:19,743 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 49 resources
+2020-05-09 12:07:19,749 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-09 12:07:19,750 [Worker-30: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\test\resources
+2020-05-09 12:23:02,245 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-09 12:23:02,250 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 50 resources
+2020-05-09 12:23:02,257 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-09 12:23:02,257 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\test\resources
+2020-05-09 12:23:08,384 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-09 12:23:08,389 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 50 resources
+2020-05-09 12:23:08,394 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-09 12:23:08,395 [Worker-38: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\test\resources
+2020-05-09 12:24:21,607 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-09 12:24:21,612 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 50 resources
+2020-05-09 12:24:21,619 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-09 12:24:21,619 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\test\resources
+2020-05-09 12:25:11,123 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-09 12:25:11,127 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 50 resources
+2020-05-09 12:25:11,134 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-09 12:25:11,134 [Worker-37: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\test\resources
+2020-05-10 16:50:30,908 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-05-10 16:50:36,122 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Updating theme VAADIN\themes\mytheme
+2020-05-10 16:50:36,384 [Thread-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Widgetsets found from classpath:
+2020-05-10 16:50:36,385 [Thread-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Addon styles found from classpath:
+2020-05-10 16:50:36,385 [Thread-20] INFO  o.e.m.c.i.embedder.EclipseLogger - 
+2020-05-10 16:50:36,385 [Thread-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Search took 6ms
+2020-05-10 16:50:36,413 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Theme "VAADIN\themes\mytheme" updated
+2020-05-10 16:50:36,438 [Worker-7: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - GWT plugin is configured to detect modules, but none were found.
+2020-05-10 16:50:36,440 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - No widgetsets found - generating AppWidgetset if necessary.
+2020-05-10 16:50:36,441 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Updating widgetset AppWidgetset
+2020-05-10 16:50:36,441 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding resource directory to command classpath: C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\main\resources
+2020-05-10 16:50:36,441 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding resource directory to command classpath: C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\target\generated-resources\gwt
+2020-05-10 16:50:36,444 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using com.vaadin:vaadin-client version 8.10.3
+2020-05-10 16:50:36,600 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using com.vaadin:vaadin-client-compiler version 8.10.3
+2020-05-10 16:50:38,273 [Thread-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Widgetsets found from classpath:
+2020-05-10 16:50:38,274 [Thread-23] INFO  o.e.m.c.i.embedder.EclipseLogger - 	com.vaadin.DefaultWidgetSet in jar:file:C:/Users/Ramón Ramos/.m2/repository/com/vaadin/vaadin-client/8.10.3/vaadin-client-8.10.3.jar!/
+2020-05-10 16:50:38,274 [Thread-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Addon styles found from classpath:
+2020-05-10 16:50:38,274 [Thread-23] INFO  o.e.m.c.i.embedder.EclipseLogger - 
+2020-05-10 16:50:38,274 [Thread-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Search took 4ms
+2020-05-10 16:50:38,313 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Updating theme VAADIN\themes\mytheme
+2020-05-10 16:50:40,818 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Theme "VAADIN\themes\mytheme" compiled
+2020-05-10 16:50:40,933 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-10 16:50:40,936 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 50 resources
+2020-05-10 16:50:40,944 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-05-10 16:50:40,959 [Worker-7: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - GWT plugin is configured to detect modules, but none were found.
+2020-05-10 16:50:40,960 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using com.vaadin:vaadin-client version 8.10.3
+2020-05-10 16:50:40,966 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using com.vaadin:vaadin-client-compiler version 8.10.3
+2020-05-10 16:50:40,993 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-10 16:50:40,993 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\test\resources

@@ -25,14 +25,12 @@
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
 			<item value="com.example.myapplication"/>
-			<item value="com.example.Foro"/>
 		</list>
 		<list key="groupId">
 			<item value="com.example"/>
 		</list>
 		<list key="artifactId">
 			<item value="myapplication"/>
-			<item value="Foro"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -44,7 +42,6 @@
 		</list>
 		<list key="version">
 			<item value="1.0-SNAPSHOT"/>
-			<item value="0.0.1-SNAPSHOT"/>
 		</list>
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
