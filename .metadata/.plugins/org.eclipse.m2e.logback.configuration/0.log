@@ -1036,3 +1036,334 @@
 2020-05-10 16:50:40,966 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using com.vaadin:vaadin-client-compiler version 8.10.3
 2020-05-10 16:50:40,993 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2020-05-10 16:50:40,993 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\test\resources
+2020-05-13 09:00:45,057 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-05-13 09:00:50,127 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Updating theme VAADIN\themes\mytheme
+2020-05-13 09:00:50,502 [Thread-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Widgetsets found from classpath:
+2020-05-13 09:00:50,502 [Thread-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Addon styles found from classpath:
+2020-05-13 09:00:50,502 [Thread-18] INFO  o.e.m.c.i.embedder.EclipseLogger - 
+2020-05-13 09:00:50,502 [Thread-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Search took 5ms
+2020-05-13 09:00:50,530 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Theme "VAADIN\themes\mytheme" updated
+2020-05-13 09:00:50,555 [Worker-1: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - GWT plugin is configured to detect modules, but none were found.
+2020-05-13 09:00:50,556 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - No widgetsets found - generating AppWidgetset if necessary.
+2020-05-13 09:00:50,557 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Updating widgetset AppWidgetset
+2020-05-13 09:00:50,558 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding resource directory to command classpath: C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\main\resources
+2020-05-13 09:00:50,558 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding resource directory to command classpath: C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\target\generated-resources\gwt
+2020-05-13 09:00:50,560 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using com.vaadin:vaadin-client version 8.10.3
+2020-05-13 09:00:50,706 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using com.vaadin:vaadin-client-compiler version 8.10.3
+2020-05-13 09:00:52,260 [Thread-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Widgetsets found from classpath:
+2020-05-13 09:00:52,260 [Thread-21] INFO  o.e.m.c.i.embedder.EclipseLogger - 	com.vaadin.DefaultWidgetSet in jar:file:C:/Users/Ramón Ramos/.m2/repository/com/vaadin/vaadin-client/8.10.3/vaadin-client-8.10.3.jar!/
+2020-05-13 09:00:52,260 [Thread-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Addon styles found from classpath:
+2020-05-13 09:00:52,260 [Thread-21] INFO  o.e.m.c.i.embedder.EclipseLogger - 
+2020-05-13 09:00:52,260 [Thread-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Search took 4ms
+2020-05-13 09:00:52,298 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Updating theme VAADIN\themes\mytheme
+2020-05-13 09:00:55,421 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Theme "VAADIN\themes\mytheme" compiled
+2020-05-13 09:00:55,545 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-13 09:00:55,549 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 50 resources
+2020-05-13 09:00:55,558 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-05-13 09:00:55,573 [Worker-1: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - GWT plugin is configured to detect modules, but none were found.
+2020-05-13 09:00:55,575 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using com.vaadin:vaadin-client version 8.10.3
+2020-05-13 09:00:55,581 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using com.vaadin:vaadin-client-compiler version 8.10.3
+2020-05-13 09:00:55,609 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-13 09:00:55,609 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\test\resources
+2020-05-13 09:01:15,669 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-13 09:01:15,670 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-05-13 09:01:15,672 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-13 09:01:15,672 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\test\resources
+2020-05-13 19:48:46,734 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-13 19:48:46,752 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 50 resources
+2020-05-13 19:48:46,769 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-13 19:48:46,769 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\test\resources
+2020-05-13 19:49:01,389 [Worker-60: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-13 19:49:01,394 [Worker-60: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 50 resources
+2020-05-13 19:49:01,400 [Worker-60: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-13 19:49:01,400 [Worker-60: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\test\resources
+2020-05-13 19:50:56,249 [Worker-62: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-13 19:50:56,254 [Worker-62: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 50 resources
+2020-05-13 19:50:56,260 [Worker-62: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-13 19:50:56,261 [Worker-62: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\test\resources
+2020-05-13 19:51:00,663 [Worker-60: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-13 19:51:00,668 [Worker-60: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 50 resources
+2020-05-13 19:51:00,675 [Worker-60: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-13 19:51:00,675 [Worker-60: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\test\resources
+2020-05-13 19:51:26,302 [Worker-60: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-13 19:51:26,308 [Worker-60: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 50 resources
+2020-05-13 19:51:26,315 [Worker-60: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-13 19:51:26,315 [Worker-60: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\test\resources
+2020-05-13 19:52:47,074 [Worker-62: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-13 19:52:47,079 [Worker-62: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 50 resources
+2020-05-13 19:52:47,366 [Worker-62: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - GWT plugin is configured to detect modules, but none were found.
+2020-05-13 19:52:47,372 [Worker-62: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using com.vaadin:vaadin-client version 8.10.3
+2020-05-13 19:52:47,383 [Worker-62: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using com.vaadin:vaadin-client-compiler version 8.10.3
+2020-05-13 19:52:47,441 [Worker-62: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-13 19:52:47,441 [Worker-62: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\test\resources
+2020-05-13 19:54:08,496 [Worker-67: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-13 19:54:08,500 [Worker-67: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 50 resources
+2020-05-13 19:54:08,506 [Worker-67: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-13 19:54:08,506 [Worker-67: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\test\resources
+2020-05-13 19:55:15,730 [Worker-60: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-13 19:55:15,734 [Worker-60: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 50 resources
+2020-05-13 19:55:15,743 [Worker-60: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-13 19:55:15,743 [Worker-60: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\test\resources
+2020-05-13 19:55:56,331 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-13 19:55:56,337 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 50 resources
+2020-05-13 19:55:56,345 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-13 19:55:56,345 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\test\resources
+2020-05-13 20:05:09,362 [Worker-68: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.example:Foro:1.0-SNAPSHOT @ C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\pom.xml.
+2020-05-13 20:05:09,827 [Worker-68: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/javax/xml/bind/jaxb-api/2.4.0-b180830.0359/jaxb-api-2.4.0-b180830.0359.pom
+2020-05-13 20:05:10,087 [Worker-68: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/javax/xml/bind/jaxb-api/2.4.0-b180830.0359/jaxb-api-2.4.0-b180830.0359.pom
+2020-05-13 20:05:10,185 [Worker-68: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/javax/xml/bind/jaxb-api/2.4.0-b180830.0359/jaxb-api-2.4.0-b180830.0359.pom
+2020-05-13 20:05:10,374 [Worker-68: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/javax/xml/bind/jaxb-api-parent/2.4.0-b180830.0359/jaxb-api-parent-2.4.0-b180830.0359.pom
+2020-05-13 20:05:10,417 [Worker-68: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/javax/xml/bind/jaxb-api-parent/2.4.0-b180830.0359/jaxb-api-parent-2.4.0-b180830.0359.pom
+2020-05-13 20:05:10,466 [Worker-68: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/javax/xml/bind/jaxb-api-parent/2.4.0-b180830.0359/jaxb-api-parent-2.4.0-b180830.0359.pom
+2020-05-13 20:05:10,624 [Worker-68: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/org/glassfish/jaxb/jaxb-runtime/2.4.0-b180830.0438/jaxb-runtime-2.4.0-b180830.0438.pom
+2020-05-13 20:05:10,653 [Worker-68: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/glassfish/jaxb/jaxb-runtime/2.4.0-b180830.0438/jaxb-runtime-2.4.0-b180830.0438.pom
+2020-05-13 20:05:10,683 [Worker-68: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/glassfish/jaxb/jaxb-runtime/2.4.0-b180830.0438/jaxb-runtime-2.4.0-b180830.0438.pom
+2020-05-13 20:05:10,824 [Worker-68: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/com/sun/xml/bind/mvn/jaxb-runtime-parent/2.4.0-b180830.0438/jaxb-runtime-parent-2.4.0-b180830.0438.pom
+2020-05-13 20:05:10,852 [Worker-68: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/sun/xml/bind/mvn/jaxb-runtime-parent/2.4.0-b180830.0438/jaxb-runtime-parent-2.4.0-b180830.0438.pom
+2020-05-13 20:05:10,883 [Worker-68: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/sun/xml/bind/mvn/jaxb-runtime-parent/2.4.0-b180830.0438/jaxb-runtime-parent-2.4.0-b180830.0438.pom
+2020-05-13 20:05:11,019 [Worker-68: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/com/sun/xml/bind/mvn/jaxb-parent/2.4.0-b180830.0438/jaxb-parent-2.4.0-b180830.0438.pom
+2020-05-13 20:05:11,050 [Worker-68: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/sun/xml/bind/mvn/jaxb-parent/2.4.0-b180830.0438/jaxb-parent-2.4.0-b180830.0438.pom
+2020-05-13 20:05:11,102 [Worker-68: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/sun/xml/bind/mvn/jaxb-parent/2.4.0-b180830.0438/jaxb-parent-2.4.0-b180830.0438.pom
+2020-05-13 20:05:11,242 [Worker-68: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/com/sun/xml/bind/jaxb-bom-ext/2.4.0-b180830.0438/jaxb-bom-ext-2.4.0-b180830.0438.pom
+2020-05-13 20:05:11,270 [Worker-68: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/sun/xml/bind/jaxb-bom-ext/2.4.0-b180830.0438/jaxb-bom-ext-2.4.0-b180830.0438.pom
+2020-05-13 20:05:11,300 [Worker-68: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/sun/xml/bind/jaxb-bom-ext/2.4.0-b180830.0438/jaxb-bom-ext-2.4.0-b180830.0438.pom
+2020-05-13 20:05:11,439 [Worker-68: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/org/glassfish/jaxb/jaxb-bom/2.4.0-b180830.0438/jaxb-bom-2.4.0-b180830.0438.pom
+2020-05-13 20:05:11,471 [Worker-68: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/glassfish/jaxb/jaxb-bom/2.4.0-b180830.0438/jaxb-bom-2.4.0-b180830.0438.pom
+2020-05-13 20:05:11,504 [Worker-68: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/glassfish/jaxb/jaxb-bom/2.4.0-b180830.0438/jaxb-bom-2.4.0-b180830.0438.pom
+2020-05-13 20:05:11,646 [Worker-68: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/org/glassfish/jaxb/txw2/2.4.0-b180830.0438/txw2-2.4.0-b180830.0438.pom
+2020-05-13 20:05:11,675 [Worker-68: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/glassfish/jaxb/txw2/2.4.0-b180830.0438/txw2-2.4.0-b180830.0438.pom
+2020-05-13 20:05:11,706 [Worker-68: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/glassfish/jaxb/txw2/2.4.0-b180830.0438/txw2-2.4.0-b180830.0438.pom
+2020-05-13 20:05:11,840 [Worker-68: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/com/sun/xml/bind/mvn/jaxb-txw-parent/2.4.0-b180830.0438/jaxb-txw-parent-2.4.0-b180830.0438.pom
+2020-05-13 20:05:11,872 [Worker-68: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/sun/xml/bind/mvn/jaxb-txw-parent/2.4.0-b180830.0438/jaxb-txw-parent-2.4.0-b180830.0438.pom
+2020-05-13 20:05:11,903 [Worker-68: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/sun/xml/bind/mvn/jaxb-txw-parent/2.4.0-b180830.0438/jaxb-txw-parent-2.4.0-b180830.0438.pom
+2020-05-13 20:05:12,038 [Worker-68: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/com/sun/istack/istack-commons-runtime/3.0.7/istack-commons-runtime-3.0.7.pom
+2020-05-13 20:05:12,070 [Worker-68: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/sun/istack/istack-commons-runtime/3.0.7/istack-commons-runtime-3.0.7.pom
+2020-05-13 20:05:12,130 [Worker-68: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/sun/istack/istack-commons-runtime/3.0.7/istack-commons-runtime-3.0.7.pom
+2020-05-13 20:05:12,269 [Worker-68: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/com/sun/istack/istack-commons/3.0.7/istack-commons-3.0.7.pom
+2020-05-13 20:05:12,301 [Worker-68: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/sun/istack/istack-commons/3.0.7/istack-commons-3.0.7.pom
+2020-05-13 20:05:12,332 [Worker-68: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/sun/istack/istack-commons/3.0.7/istack-commons-3.0.7.pom
+2020-05-13 20:05:12,473 [Worker-68: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/org/jvnet/staxex/stax-ex/1.8/stax-ex-1.8.pom
+2020-05-13 20:05:12,503 [Worker-68: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/jvnet/staxex/stax-ex/1.8/stax-ex-1.8.pom
+2020-05-13 20:05:12,568 [Worker-68: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/jvnet/staxex/stax-ex/1.8/stax-ex-1.8.pom
+2020-05-13 20:05:12,709 [Worker-68: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/com/sun/xml/fastinfoset/FastInfoset/1.2.15/FastInfoset-1.2.15.pom
+2020-05-13 20:05:12,739 [Worker-68: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/sun/xml/fastinfoset/FastInfoset/1.2.15/FastInfoset-1.2.15.pom
+2020-05-13 20:05:12,791 [Worker-68: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/sun/xml/fastinfoset/FastInfoset/1.2.15/FastInfoset-1.2.15.pom
+2020-05-13 20:05:12,928 [Worker-68: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/com/sun/xml/fastinfoset/fastinfoset-project/1.2.15/fastinfoset-project-1.2.15.pom
+2020-05-13 20:05:12,958 [Worker-68: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/sun/xml/fastinfoset/fastinfoset-project/1.2.15/fastinfoset-project-1.2.15.pom
+2020-05-13 20:05:12,991 [Worker-68: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/sun/xml/fastinfoset/fastinfoset-project/1.2.15/fastinfoset-project-1.2.15.pom
+2020-05-13 20:05:13,161 [AetherRepositoryConnector-maven.vaadin.com-0-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/org/glassfish/jaxb/jaxb-runtime/2.4.0-b180830.0438/jaxb-runtime-2.4.0-b180830.0438.jar
+2020-05-13 20:05:13,292 [AetherRepositoryConnector-maven.vaadin.com-0-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/javax/xml/bind/jaxb-api/2.4.0-b180830.0359/jaxb-api-2.4.0-b180830.0359.jar
+2020-05-13 20:05:13,292 [AetherRepositoryConnector-maven.vaadin.com-0-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/org/jvnet/staxex/stax-ex/1.8/stax-ex-1.8.jar
+2020-05-13 20:05:13,292 [AetherRepositoryConnector-maven.vaadin.com-0-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/org/glassfish/jaxb/txw2/2.4.0-b180830.0438/txw2-2.4.0-b180830.0438.jar
+2020-05-13 20:05:13,296 [AetherRepositoryConnector-maven.vaadin.com-0-3] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/com/sun/istack/istack-commons-runtime/3.0.7/istack-commons-runtime-3.0.7.jar
+2020-05-13 20:05:13,299 [AetherRepositoryConnector-maven.vaadin.com-0-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/com/sun/xml/fastinfoset/FastInfoset/1.2.15/FastInfoset-1.2.15.jar
+2020-05-13 20:05:13,343 [AetherRepositoryConnector-repo.maven.apache.org-1-3] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/sun/istack/istack-commons-runtime/3.0.7/istack-commons-runtime-3.0.7.jar
+2020-05-13 20:05:13,348 [AetherRepositoryConnector-repo.maven.apache.org-1-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/javax/xml/bind/jaxb-api/2.4.0-b180830.0359/jaxb-api-2.4.0-b180830.0359.jar
+2020-05-13 20:05:13,374 [AetherRepositoryConnector-repo.maven.apache.org-1-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/glassfish/jaxb/jaxb-runtime/2.4.0-b180830.0438/jaxb-runtime-2.4.0-b180830.0438.jar
+2020-05-13 20:05:13,450 [AetherRepositoryConnector-repo.maven.apache.org-1-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/jvnet/staxex/stax-ex/1.8/stax-ex-1.8.jar
+2020-05-13 20:05:13,450 [AetherRepositoryConnector-repo.maven.apache.org-1-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/glassfish/jaxb/txw2/2.4.0-b180830.0438/txw2-2.4.0-b180830.0438.jar
+2020-05-13 20:05:13,479 [AetherRepositoryConnector-repo.maven.apache.org-1-3] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/sun/istack/istack-commons-runtime/3.0.7/istack-commons-runtime-3.0.7.jar
+2020-05-13 20:05:13,483 [AetherRepositoryConnector-repo.maven.apache.org-1-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/javax/xml/bind/jaxb-api/2.4.0-b180830.0359/jaxb-api-2.4.0-b180830.0359.jar
+2020-05-13 20:05:13,508 [AetherRepositoryConnector-repo.maven.apache.org-1-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/glassfish/jaxb/txw2/2.4.0-b180830.0438/txw2-2.4.0-b180830.0438.jar
+2020-05-13 20:05:13,508 [AetherRepositoryConnector-repo.maven.apache.org-1-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/jvnet/staxex/stax-ex/1.8/stax-ex-1.8.jar
+2020-05-13 20:05:13,519 [AetherRepositoryConnector-repo.maven.apache.org-1-3] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/sun/xml/fastinfoset/FastInfoset/1.2.15/FastInfoset-1.2.15.jar
+2020-05-13 20:05:13,546 [AetherRepositoryConnector-repo.maven.apache.org-1-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/glassfish/jaxb/jaxb-runtime/2.4.0-b180830.0438/jaxb-runtime-2.4.0-b180830.0438.jar
+2020-05-13 20:05:13,570 [AetherRepositoryConnector-repo.maven.apache.org-1-3] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/sun/xml/fastinfoset/FastInfoset/1.2.15/FastInfoset-1.2.15.jar
+2020-05-13 20:05:14,561 [Worker-68: Building] ERROR o.e.m.c.i.p.ProjectConfigurationManager - Could not read maven project
+org.eclipse.core.runtime.CoreException: Could not read maven project
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readProjectWithDependencies(ProjectRegistryManager.java:847) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.lambda$22(ProjectRegistryManager.java:1064) ~[na:na]
+	at com.google.common.cache.LocalCache$LocalManualCache$1.load(LocalCache.java:4878) ~[na:na]
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3529) ~[na:na]
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2278) ~[na:na]
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2155) ~[na:na]
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2045) ~[na:na]
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3953) ~[na:na]
+	at com.google.common.cache.LocalCache$LocalManualCache.get(LocalCache.java:4873) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.getMavenProject(ProjectRegistryManager.java:1063) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.MavenProjectFacade.getMavenProject(MavenProjectFacade.java:244) ~[na:na]
+	at org.eclipse.m2e.wtp.jaxrs.internal.configurators.JaxRsProjectConfigurator.mavenProjectChanged(JaxRsProjectConfigurator.java:175) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.mavenProjectChanged(ProjectConfigurationManager.java:1033) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:821) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:985) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:314) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.getProjectFacade(MavenBuilder.java:151) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.lambda$0(MavenBuilder.java:89) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153) ~[na:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.execute(MavenBuilder.java:88) ~[na:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder.build(MavenBuilder.java:197) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:832) ~[na:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) ~[org.eclipse.equinox.common_3.11.0.v20200206-0817.jar:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:220) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:263) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:316) ~[na:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) ~[org.eclipse.equinox.common_3.11.0.v20200206-0817.jar:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:319) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:371) ~[na:na]
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:392) ~[na:na]
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:154) ~[na:na]
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:244) ~[na:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) ~[org.eclipse.core.jobs_3.10.700.v20200106-1020.jar:na]
+2020-05-13 20:05:16,491 [Worker-68: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of Foro
+2020-05-13 20:05:16,492 [Worker-68: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for Foro
+2020-05-13 20:05:16,495 [Worker-68: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.apache.maven.plugins:maven-clean-plugin:jar:3.0.0 is missing, no dependency information available
+2020-05-13 20:05:16,499 [Worker-68: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.eclipse.jetty:jetty-maven-plugin:jar:9.3.9.v20160517 is missing, no dependency information available
+2020-05-13 20:05:16,501 [Worker-68: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for org.eclipse.jetty:jetty-maven-plugin:9.3.9.v20160517: Plugin org.eclipse.jetty:jetty-maven-plugin:9.3.9.v20160517 or one of its dependencies could not be resolved: Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact org.eclipse.jetty:jetty-maven-plugin:jar:9.3.9.v20160517 has not been downloaded from it before.
+2020-05-13 20:05:16,502 [Worker-68: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.eclipse.jetty:jetty-maven-plugin:jar:9.3.9.v20160517 is missing, no dependency information available
+2020-05-13 20:05:16,503 [Worker-68: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for org.eclipse.jetty:jetty-maven-plugin:9.3.9.v20160517: Plugin org.eclipse.jetty:jetty-maven-plugin:9.3.9.v20160517 or one of its dependencies could not be resolved: Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact org.eclipse.jetty:jetty-maven-plugin:jar:9.3.9.v20160517 has not been downloaded from it before.
+2020-05-13 20:08:28,880 [Worker-74: reload maven project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/com/sun/xml/bind/jaxb-core/2.3.0-b170127.1453/jaxb-core-2.3.0-b170127.1453.pom
+2020-05-13 20:08:29,000 [Worker-70: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.example:Foro:1.0-SNAPSHOT @ C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\pom.xml.
+2020-05-13 20:08:29,267 [Worker-70: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/sun/xml/bind/jaxb-core/2.3.0-b170127.1453/jaxb-core-2.3.0-b170127.1453.pom
+2020-05-13 20:08:29,276 [Worker-74: reload maven project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/sun/xml/bind/jaxb-core/2.3.0-b170127.1453/jaxb-core-2.3.0-b170127.1453.pom
+2020-05-13 20:08:29,432 [Worker-70: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/sun/xml/bind/jaxb-core/2.3.0-b170127.1453/jaxb-core-2.3.0-b170127.1453.pom
+2020-05-13 20:08:29,437 [Worker-74: reload maven project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/sun/xml/bind/jaxb-core/2.3.0-b170127.1453/jaxb-core-2.3.0-b170127.1453.pom
+2020-05-13 20:08:29,601 [Worker-74: reload maven project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/com/sun/xml/bind/mvn/jaxb-bundles/2.3.0-b170127.1453/jaxb-bundles-2.3.0-b170127.1453.pom
+2020-05-13 20:08:29,711 [Worker-74: reload maven project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/sun/xml/bind/mvn/jaxb-bundles/2.3.0-b170127.1453/jaxb-bundles-2.3.0-b170127.1453.pom
+2020-05-13 20:08:29,712 [Worker-70: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/com/sun/xml/bind/mvn/jaxb-bundles/2.3.0-b170127.1453/jaxb-bundles-2.3.0-b170127.1453.pom
+2020-05-13 20:08:29,744 [Worker-70: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/sun/xml/bind/mvn/jaxb-bundles/2.3.0-b170127.1453/jaxb-bundles-2.3.0-b170127.1453.pom
+2020-05-13 20:08:29,822 [Worker-70: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/sun/xml/bind/mvn/jaxb-bundles/2.3.0-b170127.1453/jaxb-bundles-2.3.0-b170127.1453.pom
+2020-05-13 20:08:29,824 [Worker-74: reload maven project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/sun/xml/bind/mvn/jaxb-bundles/2.3.0-b170127.1453/jaxb-bundles-2.3.0-b170127.1453.pom
+2020-05-13 20:08:29,961 [Worker-70: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/com/sun/xml/bind/mvn/jaxb-parent/2.3.0-b170127.1453/jaxb-parent-2.3.0-b170127.1453.pom
+2020-05-13 20:08:29,961 [Worker-74: reload maven project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/com/sun/xml/bind/mvn/jaxb-parent/2.3.0-b170127.1453/jaxb-parent-2.3.0-b170127.1453.pom
+2020-05-13 20:08:29,988 [Worker-74: reload maven project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/sun/xml/bind/mvn/jaxb-parent/2.3.0-b170127.1453/jaxb-parent-2.3.0-b170127.1453.pom
+2020-05-13 20:08:29,989 [Worker-70: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/sun/xml/bind/mvn/jaxb-parent/2.3.0-b170127.1453/jaxb-parent-2.3.0-b170127.1453.pom
+2020-05-13 20:08:30,046 [Worker-74: reload maven project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/sun/xml/bind/mvn/jaxb-parent/2.3.0-b170127.1453/jaxb-parent-2.3.0-b170127.1453.pom
+2020-05-13 20:08:30,053 [Worker-70: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/sun/xml/bind/mvn/jaxb-parent/2.3.0-b170127.1453/jaxb-parent-2.3.0-b170127.1453.pom
+2020-05-13 20:08:30,190 [Worker-74: reload maven project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/com/sun/xml/bind/jaxb-bom-ext/2.3.0-b170127.1453/jaxb-bom-ext-2.3.0-b170127.1453.pom
+2020-05-13 20:08:30,200 [Worker-70: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/com/sun/xml/bind/jaxb-bom-ext/2.3.0-b170127.1453/jaxb-bom-ext-2.3.0-b170127.1453.pom
+2020-05-13 20:08:30,219 [Worker-74: reload maven project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/sun/xml/bind/jaxb-bom-ext/2.3.0-b170127.1453/jaxb-bom-ext-2.3.0-b170127.1453.pom
+2020-05-13 20:08:30,229 [Worker-70: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/sun/xml/bind/jaxb-bom-ext/2.3.0-b170127.1453/jaxb-bom-ext-2.3.0-b170127.1453.pom
+2020-05-13 20:08:30,248 [Worker-74: reload maven project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/sun/xml/bind/jaxb-bom-ext/2.3.0-b170127.1453/jaxb-bom-ext-2.3.0-b170127.1453.pom
+2020-05-13 20:08:30,261 [Worker-70: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/sun/xml/bind/jaxb-bom-ext/2.3.0-b170127.1453/jaxb-bom-ext-2.3.0-b170127.1453.pom
+2020-05-13 20:08:30,390 [Worker-74: reload maven project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/org/glassfish/jaxb/jaxb-bom/2.3.0-b170127.1453/jaxb-bom-2.3.0-b170127.1453.pom
+2020-05-13 20:08:30,399 [Worker-70: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/org/glassfish/jaxb/jaxb-bom/2.3.0-b170127.1453/jaxb-bom-2.3.0-b170127.1453.pom
+2020-05-13 20:08:30,419 [Worker-74: reload maven project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/glassfish/jaxb/jaxb-bom/2.3.0-b170127.1453/jaxb-bom-2.3.0-b170127.1453.pom
+2020-05-13 20:08:30,429 [Worker-70: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/glassfish/jaxb/jaxb-bom/2.3.0-b170127.1453/jaxb-bom-2.3.0-b170127.1453.pom
+2020-05-13 20:08:30,451 [Worker-74: reload maven project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/glassfish/jaxb/jaxb-bom/2.3.0-b170127.1453/jaxb-bom-2.3.0-b170127.1453.pom
+2020-05-13 20:08:30,466 [Worker-70: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/glassfish/jaxb/jaxb-bom/2.3.0-b170127.1453/jaxb-bom-2.3.0-b170127.1453.pom
+2020-05-13 20:08:30,602 [Worker-74: reload maven project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/com/sun/xml/bind/jaxb-impl/2.4.0-b180725.0644/jaxb-impl-2.4.0-b180725.0644.pom
+2020-05-13 20:08:30,661 [Worker-70: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/com/sun/xml/bind/jaxb-impl/2.4.0-b180725.0644/jaxb-impl-2.4.0-b180725.0644.pom
+2020-05-13 20:08:30,768 [Worker-74: reload maven project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/sun/xml/bind/jaxb-impl/2.4.0-b180725.0644/jaxb-impl-2.4.0-b180725.0644.pom
+2020-05-13 20:08:30,770 [Worker-70: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/sun/xml/bind/jaxb-impl/2.4.0-b180725.0644/jaxb-impl-2.4.0-b180725.0644.pom
+2020-05-13 20:08:30,799 [Worker-70: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/sun/xml/bind/jaxb-impl/2.4.0-b180725.0644/jaxb-impl-2.4.0-b180725.0644.pom
+2020-05-13 20:08:30,808 [Worker-74: reload maven project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/sun/xml/bind/jaxb-impl/2.4.0-b180725.0644/jaxb-impl-2.4.0-b180725.0644.pom
+2020-05-13 20:08:30,999 [Worker-70: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/com/sun/xml/bind/mvn/jaxb-bundles/2.4.0-b180725.0644/jaxb-bundles-2.4.0-b180725.0644.pom
+2020-05-13 20:08:31,005 [Worker-74: reload maven project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/com/sun/xml/bind/mvn/jaxb-bundles/2.4.0-b180725.0644/jaxb-bundles-2.4.0-b180725.0644.pom
+2020-05-13 20:08:31,107 [Worker-70: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/sun/xml/bind/mvn/jaxb-bundles/2.4.0-b180725.0644/jaxb-bundles-2.4.0-b180725.0644.pom
+2020-05-13 20:08:31,107 [Worker-74: reload maven project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/sun/xml/bind/mvn/jaxb-bundles/2.4.0-b180725.0644/jaxb-bundles-2.4.0-b180725.0644.pom
+2020-05-13 20:08:31,142 [Worker-74: reload maven project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/sun/xml/bind/mvn/jaxb-bundles/2.4.0-b180725.0644/jaxb-bundles-2.4.0-b180725.0644.pom
+2020-05-13 20:08:31,145 [Worker-70: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/sun/xml/bind/mvn/jaxb-bundles/2.4.0-b180725.0644/jaxb-bundles-2.4.0-b180725.0644.pom
+2020-05-13 20:08:31,282 [Worker-74: reload maven project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/com/sun/xml/bind/mvn/jaxb-parent/2.4.0-b180725.0644/jaxb-parent-2.4.0-b180725.0644.pom
+2020-05-13 20:08:31,284 [Worker-70: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/com/sun/xml/bind/mvn/jaxb-parent/2.4.0-b180725.0644/jaxb-parent-2.4.0-b180725.0644.pom
+2020-05-13 20:08:31,391 [Worker-74: reload maven project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/sun/xml/bind/mvn/jaxb-parent/2.4.0-b180725.0644/jaxb-parent-2.4.0-b180725.0644.pom
+2020-05-13 20:08:31,392 [Worker-70: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/sun/xml/bind/mvn/jaxb-parent/2.4.0-b180725.0644/jaxb-parent-2.4.0-b180725.0644.pom
+2020-05-13 20:08:31,506 [Worker-70: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/sun/xml/bind/mvn/jaxb-parent/2.4.0-b180725.0644/jaxb-parent-2.4.0-b180725.0644.pom
+2020-05-13 20:08:31,512 [Worker-74: reload maven project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/sun/xml/bind/mvn/jaxb-parent/2.4.0-b180725.0644/jaxb-parent-2.4.0-b180725.0644.pom
+2020-05-13 20:08:31,652 [Worker-74: reload maven project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/com/sun/xml/bind/jaxb-bom-ext/2.4.0-b180725.0644/jaxb-bom-ext-2.4.0-b180725.0644.pom
+2020-05-13 20:08:31,654 [Worker-70: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/com/sun/xml/bind/jaxb-bom-ext/2.4.0-b180725.0644/jaxb-bom-ext-2.4.0-b180725.0644.pom
+2020-05-13 20:08:31,683 [Worker-74: reload maven project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/sun/xml/bind/jaxb-bom-ext/2.4.0-b180725.0644/jaxb-bom-ext-2.4.0-b180725.0644.pom
+2020-05-13 20:08:31,687 [Worker-70: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/sun/xml/bind/jaxb-bom-ext/2.4.0-b180725.0644/jaxb-bom-ext-2.4.0-b180725.0644.pom
+2020-05-13 20:08:31,717 [Worker-74: reload maven project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/sun/xml/bind/jaxb-bom-ext/2.4.0-b180725.0644/jaxb-bom-ext-2.4.0-b180725.0644.pom
+2020-05-13 20:08:31,721 [Worker-70: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/sun/xml/bind/jaxb-bom-ext/2.4.0-b180725.0644/jaxb-bom-ext-2.4.0-b180725.0644.pom
+2020-05-13 20:08:31,863 [Worker-74: reload maven project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/org/glassfish/jaxb/jaxb-bom/2.4.0-b180725.0644/jaxb-bom-2.4.0-b180725.0644.pom
+2020-05-13 20:08:31,868 [Worker-70: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/org/glassfish/jaxb/jaxb-bom/2.4.0-b180725.0644/jaxb-bom-2.4.0-b180725.0644.pom
+2020-05-13 20:08:31,891 [Worker-74: reload maven project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/glassfish/jaxb/jaxb-bom/2.4.0-b180725.0644/jaxb-bom-2.4.0-b180725.0644.pom
+2020-05-13 20:08:31,900 [Worker-70: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/glassfish/jaxb/jaxb-bom/2.4.0-b180725.0644/jaxb-bom-2.4.0-b180725.0644.pom
+2020-05-13 20:08:31,927 [Worker-74: reload maven project] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/glassfish/jaxb/jaxb-bom/2.4.0-b180725.0644/jaxb-bom-2.4.0-b180725.0644.pom
+2020-05-13 20:08:31,940 [Worker-70: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/glassfish/jaxb/jaxb-bom/2.4.0-b180725.0644/jaxb-bom-2.4.0-b180725.0644.pom
+2020-05-13 20:08:32,083 [AetherRepositoryConnector-maven.vaadin.com-2-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/com/sun/xml/bind/jaxb-impl/2.4.0-b180725.0644/jaxb-impl-2.4.0-b180725.0644.jar
+2020-05-13 20:08:32,097 [AetherRepositoryConnector-maven.vaadin.com-3-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/com/sun/xml/bind/jaxb-core/2.3.0-b170127.1453/jaxb-core-2.3.0-b170127.1453.jar
+2020-05-13 20:08:32,208 [AetherRepositoryConnector-maven.vaadin.com-2-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/com/sun/xml/bind/jaxb-core/2.3.0-b170127.1453/jaxb-core-2.3.0-b170127.1453.jar
+2020-05-13 20:08:32,225 [AetherRepositoryConnector-maven.vaadin.com-3-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/com/sun/xml/bind/jaxb-impl/2.4.0-b180725.0644/jaxb-impl-2.4.0-b180725.0644.jar
+2020-05-13 20:08:32,350 [AetherRepositoryConnector-repo.maven.apache.org-4-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/sun/xml/bind/jaxb-core/2.3.0-b170127.1453/jaxb-core-2.3.0-b170127.1453.jar
+2020-05-13 20:08:32,353 [AetherRepositoryConnector-repo.maven.apache.org-5-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/sun/xml/bind/jaxb-core/2.3.0-b170127.1453/jaxb-core-2.3.0-b170127.1453.jar
+2020-05-13 20:08:32,408 [AetherRepositoryConnector-repo.maven.apache.org-5-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/sun/xml/bind/jaxb-impl/2.4.0-b180725.0644/jaxb-impl-2.4.0-b180725.0644.jar
+2020-05-13 20:08:32,410 [AetherRepositoryConnector-repo.maven.apache.org-4-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/sun/xml/bind/jaxb-impl/2.4.0-b180725.0644/jaxb-impl-2.4.0-b180725.0644.jar
+2020-05-13 20:08:32,513 [AetherRepositoryConnector-repo.maven.apache.org-4-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/sun/xml/bind/jaxb-core/2.3.0-b170127.1453/jaxb-core-2.3.0-b170127.1453.jar
+2020-05-13 20:08:32,518 [AetherRepositoryConnector-repo.maven.apache.org-5-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/sun/xml/bind/jaxb-core/2.3.0-b170127.1453/jaxb-core-2.3.0-b170127.1453.jar
+2020-05-13 20:08:32,594 [AetherRepositoryConnector-repo.maven.apache.org-5-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/sun/xml/bind/jaxb-impl/2.4.0-b180725.0644/jaxb-impl-2.4.0-b180725.0644.jar
+2020-05-13 20:08:32,606 [AetherRepositoryConnector-repo.maven.apache.org-4-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/sun/xml/bind/jaxb-impl/2.4.0-b180725.0644/jaxb-impl-2.4.0-b180725.0644.jar
+2020-05-13 20:08:33,761 [Worker-70: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - GWT plugin is configured to detect modules, but none were found.
+2020-05-13 20:08:33,762 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - No widgetsets found - generating AppWidgetset if necessary.
+2020-05-13 20:08:33,764 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Updating widgetset AppWidgetset
+2020-05-13 20:08:33,765 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding resource directory to command classpath: C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\main\resources
+2020-05-13 20:08:33,766 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Adding resource directory to command classpath: C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\target\generated-resources\gwt
+2020-05-13 20:08:33,767 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using com.vaadin:vaadin-client version 8.10.3
+2020-05-13 20:08:33,773 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using com.vaadin:vaadin-client-compiler version 8.10.3
+2020-05-13 20:08:34,476 [Worker-68: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/javax/xml/bind/jaxb-api/2.4.0-b180830.0359/jaxb-api-2.4.0-b180830.0359-sources.jar
+2020-05-13 20:08:34,620 [Worker-68: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/javax/xml/bind/jaxb-api/2.4.0-b180830.0359/jaxb-api-2.4.0-b180830.0359-sources.jar
+2020-05-13 20:08:34,683 [Thread-637] INFO  o.e.m.c.i.embedder.EclipseLogger - Widgetsets found from classpath:
+2020-05-13 20:08:34,683 [Thread-637] INFO  o.e.m.c.i.embedder.EclipseLogger - 	com.vaadin.DefaultWidgetSet in jar:file:C:/Users/Ramón Ramos/.m2/repository/com/vaadin/vaadin-client/8.10.3/vaadin-client-8.10.3.jar!/
+2020-05-13 20:08:34,683 [Thread-637] INFO  o.e.m.c.i.embedder.EclipseLogger - Addon styles found from classpath:
+2020-05-13 20:08:34,683 [Thread-637] INFO  o.e.m.c.i.embedder.EclipseLogger - 
+2020-05-13 20:08:34,684 [Thread-637] INFO  o.e.m.c.i.embedder.EclipseLogger - Search took 5ms
+2020-05-13 20:08:34,749 [Worker-68: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/javax/xml/bind/jaxb-api/2.4.0-b180830.0359/jaxb-api-2.4.0-b180830.0359-sources.jar
+2020-05-13 20:08:34,788 [Worker-68: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for javax.xml.bind:jaxb-api:2.4.0-b180830.0359
+2020-05-13 20:08:34,849 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-13 20:08:34,850 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-05-13 20:08:34,872 [Worker-70: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - GWT plugin is configured to detect modules, but none were found.
+2020-05-13 20:08:34,874 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using com.vaadin:vaadin-client version 8.10.3
+2020-05-13 20:08:34,880 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using com.vaadin:vaadin-client-compiler version 8.10.3
+2020-05-13 20:08:34,908 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-13 20:08:34,909 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\test\resources
+2020-05-13 20:08:34,909 [Worker-70: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of Foro
+2020-05-13 20:08:34,909 [Worker-70: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for Foro
+2020-05-13 20:08:34,911 [Worker-70: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.eclipse.jetty:jetty-maven-plugin:jar:9.3.9.v20160517 is missing, no dependency information available
+2020-05-13 20:08:34,913 [Worker-70: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for org.eclipse.jetty:jetty-maven-plugin:9.3.9.v20160517: Plugin org.eclipse.jetty:jetty-maven-plugin:9.3.9.v20160517 or one of its dependencies could not be resolved: Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact org.eclipse.jetty:jetty-maven-plugin:jar:9.3.9.v20160517 has not been downloaded from it before.
+2020-05-13 20:08:34,914 [Worker-70: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.eclipse.jetty:jetty-maven-plugin:jar:9.3.9.v20160517 is missing, no dependency information available
+2020-05-13 20:08:34,915 [Worker-70: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Failed to retrieve plugin descriptor for org.eclipse.jetty:jetty-maven-plugin:9.3.9.v20160517: Plugin org.eclipse.jetty:jetty-maven-plugin:9.3.9.v20160517 or one of its dependencies could not be resolved: Cannot access central (https://repo.maven.apache.org/maven2) in offline mode and the artifact org.eclipse.jetty:jetty-maven-plugin:jar:9.3.9.v20160517 has not been downloaded from it before.
+2020-05-13 20:08:34,917 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-13 20:08:35,250 [Worker-68: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0-sources.jar
+2020-05-13 20:08:35,407 [Worker-68: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0-sources.jar
+2020-05-13 20:08:35,488 [Worker-68: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0-sources.jar
+2020-05-13 20:08:35,499 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-13 20:08:35,508 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 50 resources
+2020-05-13 20:08:35,541 [Worker-68: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for javax.activation:javax.activation-api:1.2.0
+2020-05-13 20:08:35,631 [Worker-70: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - GWT plugin is configured to detect modules, but none were found.
+2020-05-13 20:08:35,634 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using com.vaadin:vaadin-client version 8.10.3
+2020-05-13 20:08:35,642 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using com.vaadin:vaadin-client-compiler version 8.10.3
+2020-05-13 20:08:35,669 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-13 20:08:35,669 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Ramón Ramos\ProyectoForoV2.0\Foro\src\test\resources
+2020-05-13 20:08:35,872 [Worker-68: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/org/glassfish/jaxb/jaxb-runtime/2.4.0-b180830.0438/jaxb-runtime-2.4.0-b180830.0438-sources.jar
+2020-05-13 20:08:36,031 [Worker-68: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/glassfish/jaxb/jaxb-runtime/2.4.0-b180830.0438/jaxb-runtime-2.4.0-b180830.0438-sources.jar
+2020-05-13 20:08:36,231 [Worker-68: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/glassfish/jaxb/jaxb-runtime/2.4.0-b180830.0438/jaxb-runtime-2.4.0-b180830.0438-sources.jar
+2020-05-13 20:08:36,272 [Worker-68: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.glassfish.jaxb:jaxb-runtime:2.4.0-b180830.0438
+2020-05-13 20:08:36,538 [Worker-68: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/org/glassfish/jaxb/txw2/2.4.0-b180830.0438/txw2-2.4.0-b180830.0438-sources.jar
+2020-05-13 20:08:36,695 [Worker-68: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/glassfish/jaxb/txw2/2.4.0-b180830.0438/txw2-2.4.0-b180830.0438-sources.jar
+2020-05-13 20:08:36,802 [Worker-68: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/glassfish/jaxb/txw2/2.4.0-b180830.0438/txw2-2.4.0-b180830.0438-sources.jar
+2020-05-13 20:08:36,837 [Worker-68: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.glassfish.jaxb:txw2:2.4.0-b180830.0438
+2020-05-13 20:08:37,105 [Worker-68: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/com/sun/istack/istack-commons-runtime/3.0.7/istack-commons-runtime-3.0.7-sources.jar
+2020-05-13 20:08:37,263 [Worker-68: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/sun/istack/istack-commons-runtime/3.0.7/istack-commons-runtime-3.0.7-sources.jar
+2020-05-13 20:08:37,325 [Worker-68: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/sun/istack/istack-commons-runtime/3.0.7/istack-commons-runtime-3.0.7-sources.jar
+2020-05-13 20:08:37,369 [Worker-68: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.sun.istack:istack-commons-runtime:3.0.7
+2020-05-13 20:08:37,654 [Worker-68: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/org/jvnet/staxex/stax-ex/1.8/stax-ex-1.8-sources.jar
+2020-05-13 20:08:37,815 [Worker-68: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/jvnet/staxex/stax-ex/1.8/stax-ex-1.8-sources.jar
+2020-05-13 20:08:37,938 [Worker-68: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/jvnet/staxex/stax-ex/1.8/stax-ex-1.8-sources.jar
+2020-05-13 20:08:38,017 [Worker-68: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.jvnet.staxex:stax-ex:1.8
+2020-05-13 20:08:38,288 [Worker-68: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/com/sun/xml/fastinfoset/FastInfoset/1.2.15/FastInfoset-1.2.15-sources.jar
+2020-05-13 20:08:38,441 [Worker-68: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/sun/xml/fastinfoset/FastInfoset/1.2.15/FastInfoset-1.2.15-sources.jar
+2020-05-13 20:08:38,571 [Worker-68: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/sun/xml/fastinfoset/FastInfoset/1.2.15/FastInfoset-1.2.15-sources.jar
+2020-05-13 20:08:38,605 [Worker-68: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.sun.xml.fastinfoset:FastInfoset:1.2.15
+2020-05-13 20:08:38,875 [Worker-68: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/com/sun/xml/bind/jaxb-core/2.3.0-b170127.1453/jaxb-core-2.3.0-b170127.1453-sources.jar
+2020-05-13 20:08:39,280 [Worker-68: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/sun/xml/bind/jaxb-core/2.3.0-b170127.1453/jaxb-core-2.3.0-b170127.1453-sources.jar
+2020-05-13 20:08:39,497 [Worker-68: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/sun/xml/bind/jaxb-core/2.3.0-b170127.1453/jaxb-core-2.3.0-b170127.1453-sources.jar
+2020-05-13 20:08:39,528 [Worker-68: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.sun.xml.bind:jaxb-core:2.3.0-b170127.1453
+2020-05-13 20:08:39,788 [Worker-68: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://maven.vaadin.com/vaadin-addons/com/sun/xml/bind/jaxb-impl/2.4.0-b180725.0644/jaxb-impl-2.4.0-b180725.0644-sources.jar
+2020-05-13 20:08:40,063 [Worker-68: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/sun/xml/bind/jaxb-impl/2.4.0-b180725.0644/jaxb-impl-2.4.0-b180725.0644-sources.jar
+2020-05-13 20:08:40,244 [Worker-68: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/sun/xml/bind/jaxb-impl/2.4.0-b180725.0644/jaxb-impl-2.4.0-b180725.0644-sources.jar
+2020-05-13 20:08:40,277 [Worker-68: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.sun.xml.bind:jaxb-impl:2.4.0-b180725.0644
+2020-05-13 20:08:40,281 [Worker-68: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.jvnet.staxex:stax-ex:1.8
+2020-05-13 20:08:40,284 [Worker-68: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.sun.xml.fastinfoset:FastInfoset:1.2.15
+2020-05-13 20:08:40,289 [Worker-68: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.sun.xml.bind:jaxb-core:2.3.0-b170127.1453
+2020-05-13 20:08:40,292 [Worker-68: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.sun.xml.bind:jaxb-impl:2.4.0-b180725.0644
+2020-05-13 20:08:40,295 [Worker-68: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.jvnet.staxex:stax-ex:1.8
+2020-05-13 20:08:40,298 [Worker-68: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.sun.xml.fastinfoset:FastInfoset:1.2.15
+2020-05-13 20:08:40,301 [Worker-68: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.sun.xml.bind:jaxb-core:2.3.0-b170127.1453
+2020-05-13 20:08:40,304 [Worker-68: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.sun.xml.bind:jaxb-impl:2.4.0-b180725.0644
+2020-05-13 20:08:40,307 [Worker-68: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.jvnet.staxex:stax-ex:1.8
+2020-05-13 20:08:40,310 [Worker-68: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.sun.xml.fastinfoset:FastInfoset:1.2.15
+2020-05-13 20:08:40,314 [Worker-68: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.sun.xml.bind:jaxb-core:2.3.0-b170127.1453
+2020-05-13 20:08:40,317 [Worker-68: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for com.sun.xml.bind:jaxb-impl:2.4.0-b180725.0644
+2020-05-13 20:08:40,558 [Worker-70: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.

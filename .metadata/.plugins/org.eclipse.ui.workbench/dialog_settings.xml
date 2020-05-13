@@ -6,4 +6,6 @@
 			<item value="com.vaadin"/>
 		</list>
 	</section>
+	<section name="ImportExportAction">
+	</section>
 </section>
