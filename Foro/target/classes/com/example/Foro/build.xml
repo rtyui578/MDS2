@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="build">
+	<path id="build.classpath">
+		<pathelement location="classes"/>
+	</path>
+	<target name="init">
+		<mkdir dir="classes"/>
+	</target>
+	<target name="clean">
+		<delete dir="classes"/>
+	</target>
+	<target depends="init" name="build">
+		<javac srcdir="." destdir="classes" source="1.5" target="1.5" fork="yes">
+			<classpath refid="build.classpath"/>
+			<include name="BD_Videos.java"/>
+			<include name="Video.java"/>
+			<include name="Foto.java"/>
+			<include name="BD_Imagenes.java"/>
+			<include name="BD_Secciones.java"/>
+			<include name="BD_Administradores.java"/>
+			<include name="BD_Moderadores.java"/>
+			<include name="BD_Usuarios.java"/>
+			<include name="BD_Notificaciones.java"/>
+			<include name="Notificaciones.java"/>
+			<include name="Usuario.java"/>
+			<include name="Moderador.java"/>
+			<include name="Administrador.java"/>
+			<include name="Secciones.java"/>
+			<include name="Temas.java"/>
+			<include name="BD_Temas.java"/>
+			<include name="BD_Pincipal.java"/>
+			<include name="BD_Mensajes.java"/>
+			<include name="Mensaje.java"/>
+			<include name="Media.java"/>
+		</javac>
+	</target>
+</project>

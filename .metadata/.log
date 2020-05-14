@@ -8205,3 +8205,132 @@ org.apache.maven.project.ProjectBuildingException: Some problems were encountere
 
 !ENTRY com.vaadin.designer2 2 0 2020-05-13 20:09:46.108
 !MESSAGE AtmosphereResource a1d8b92c-1dd2-4aa0-8e29-98ee47ec5d1c is not suspended. If cached messages exists, this may cause unexpected situation. Suspend first
+
+!ENTRY com.vaadin.designer2 1 0 2020-05-13 21:00:45.995
+!MESSAGE Schedule fetching new notifications
+
+!ENTRY com.vaadin.designer2 1 0 2020-05-13 21:00:46.004
+!MESSAGE Fetching all notifications
+
+!ENTRY com.vaadin.designer2 1 0 2020-05-13 21:00:46.693
+!MESSAGE HTTP Response code :200
+
+!ENTRY com.vaadin.designer2 1 0 2020-05-13 21:00:46.695
+!MESSAGE Parse notifications
+
+!ENTRY com.vaadin.designer2 1 0 2020-05-13 21:00:46.697
+!MESSAGE Save JSON notifications content to cache file C:\Users\Ramón Ramos\ProyectoForoV2.0\.metadata\.plugins\com.vaadin.integration.eclipse\notifications-cache.json
+
+!ENTRY com.vaadin.designer2 1 0 2020-05-14 00:54:13.142
+!MESSAGE Jetty stopped at http://192.168.233.1:-1
+
+!ENTRY com.vaadin.designer2 1 0 2020-05-14 00:54:13.143
+!MESSAGE Removed all models from server.
+
+!ENTRY com.vaadin.designer2 1 0 2020-05-14 00:54:13.144
+!MESSAGE Jetty stopped at http://null:0
+
+!ENTRY com.vaadin.designer2 1 0 2020-05-14 00:54:13.145
+!MESSAGE Removed all models from server.
+!SESSION 2020-05-14 18:40:52.746 -----------------------------------------------
+eclipse.buildId=4.15.0.I20200305-0155
+java.version=12.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2020-05-14 18:41:04.622
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-05-14 18:41:04.622
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@399acce3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@18c432ed,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY com.vaadin.designer2 1 0 2020-05-14 18:41:16.495
+!MESSAGE Schedule fetching all notifications
+
+!ENTRY com.vaadin.designer2 1 0 2020-05-14 18:41:16.500
+!MESSAGE Schedule version update jobs
+
+!ENTRY com.vaadin.designer2 1 0 2020-05-14 18:41:16.991
+!MESSAGE Fetching all notifications
+
+!ENTRY com.vaadin.designer2 1 0 2020-05-14 18:41:16.994
+!MESSAGE Requesting user info (notification settings URL)
+
+!ENTRY org.eclipse.egit.ui 2 0 2020-05-14 18:41:17.426
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Ramón Ramos'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.vaadin.designer2 1 0 2020-05-14 18:41:17.906
+!MESSAGE HTTP Response code :200
+
+!ENTRY com.vaadin.designer2 1 0 2020-05-14 18:41:17.907
+!MESSAGE HTTP Response code :200
+
+!ENTRY com.vaadin.designer2 1 0 2020-05-14 18:41:17.914
+!MESSAGE Parse notifications
+
+!ENTRY com.vaadin.designer2 1 0 2020-05-14 18:41:17.925
+!MESSAGE Save JSON notifications content to cache file C:\Users\Ramón Ramos\ProyectoForoV2.0\.metadata\.plugins\com.vaadin.integration.eclipse\notifications-cache.json
+
+!ENTRY com.vaadin.designer2 1 0 2020-05-14 18:41:18.102
+!MESSAGE Schedule fetching new notifications
+
+!ENTRY com.vaadin.designer2 1 0 2020-05-14 18:41:18.336
+!MESSAGE BrowserCore initialized.
+
+!ENTRY org.apache.ivyde.eclipse 1 0 2020-05-14 18:41:19.491
+!MESSAGE starting IvyDE plugin
+
+!ENTRY org.apache.ivyde.eclipse 1 0 2020-05-14 18:41:19.513
+!MESSAGE IvyDE plugin started
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-05-14 18:41:22.073
+!MESSAGE GWT plugin is configured to detect modules, but none were found.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-05-14 18:41:26.787
+!MESSAGE GWT plugin is configured to detect modules, but none were found.
+
+!ENTRY com.vaadin.designer2 1 0 2020-05-14 18:41:46.509
+!MESSAGE All vaadin 7+ projects : [P/Foro]
+
+!ENTRY com.vaadin.designer2 1 0 2020-05-14 18:41:47.062
+!MESSAGE Vaadin 7+ projects to upgrade : [P/Foro]
+
+!ENTRY org.eclipse.jface 2 0 2020-05-14 18:43:32.078
+!MESSAGE Ignored reentrant call while viewer is busy. This is only logged once per viewer instance, but similar calls will still be ignored.
+!STACK 0
+java.lang.RuntimeException
+	at org.eclipse.jface.viewers.ColumnViewer.checkBusy(ColumnViewer.java:764)
+	at org.eclipse.jface.viewers.ColumnViewer.update(ColumnViewer.java:543)
+	at org.eclipse.ui.navigator.CommonViewer.update(CommonViewer.java:512)
+	at org.eclipse.jface.viewers.StructuredViewer.update(StructuredViewer.java:1976)
+	at org.eclipse.ui.internal.navigator.resources.nested.NestedProjectsLabelProvider.lambda$2(NestedProjectsLabelProvider.java:87)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:714)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1776)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1763)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
