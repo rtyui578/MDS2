@@ -1,2 +1,2 @@
 # MDS2
-Mimebros del grupo : Ramón Francisco Ramos Tristán
+Miembros del grupo : Ramón Francisco Ramos Tristán
