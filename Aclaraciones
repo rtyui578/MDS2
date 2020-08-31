@@ -1,8 +1,0 @@
-En los html se incluye los diesños de la ventana de ajustes desde las perspectivas de los diferentes suaurio que puyeden acceder a ellas,
-Ajustes_administrador,Ajustes_moderador y Ajustes_registrado.
-Se incluye la vista que tiene un usuario al entrar por primera vez, Vista_foro_no_registrado y cual es una vez se registra, Vista_foro_registrado.
-Ademas se modelan las vistas de una seccion y tema además de la vista que tine un usuario del perfil de otro dependiendo de su tipo.
-Tambien estan modeladas las vsitas de Iniciar_sesion y registrarse.
-Con todo ello se representan las clases Secciones_publicas,Temas_publicos,Mensajes_no_interaccion,Registrarse,Iniciar_sesión,Secciones,Tema,Mensajes,
-Mensajes_propios,Ajustes,Modificar_perfil,Modificar_contraseña,Notificaciones,Ajustes_administrador,Usuarios_reportados,Ajustes_moderador,
-Ver_perfil,Ver_ultimos_mensajes.
