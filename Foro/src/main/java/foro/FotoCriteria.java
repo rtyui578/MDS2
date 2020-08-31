@@ -19,14 +19,16 @@ import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
 public class FotoCriteria extends AbstractORMCriteria {
-	public final IntegerExpression attribute;
-	public final IntegerExpression ID;
+	public final IntegerExpression id_media;
+	public final IntegerExpression es_deId;
+	public final AssociationExpression es_de;
 	public final StringExpression enlace;
 	
 	public FotoCriteria(Criteria criteria) {
 		super(criteria);
-		attribute = new IntegerExpression("attribute", this);
-		ID = new IntegerExpression("ID", this);
+		id_media = new IntegerExpression("id_media", this);
+		es_deId = new IntegerExpression("es_de.id_mensaje", this);
+		es_de = new AssociationExpression("es_de", this);
 		enlace = new StringExpression("enlace", this);
 	}
 	
@@ -36,6 +38,10 @@ public class FotoCriteria extends AbstractORMCriteria {
 	
 	public FotoCriteria() throws PersistentException {
 		this(foro.CUPersistentManager.instance().getSession());
+	}
+	
+	public MensajeCriteria createEs_deCriteria() {
+		return new MensajeCriteria(createCriteria("es_de"));
 	}
 	
 	public Foto uniqueFoto() {

@@ -19,7 +19,7 @@ import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
 public class MensajeCriteria extends AbstractORMCriteria {
-	public final IntegerExpression attribute;
+	public final IntegerExpression id_mensaje;
 	public final IntegerExpression eliminado_porId;
 	public final AssociationExpression eliminado_por;
 	public final IntegerExpression respuesta_deId;
@@ -27,8 +27,6 @@ public class MensajeCriteria extends AbstractORMCriteria {
 	public final IntegerExpression son_deId;
 	public final AssociationExpression son_de;
 	public final CollectionExpression es_gustado;
-	public final IntegerExpression ID;
-	public final IntegerExpression id_mensaje;
 	public final IntegerExpression num_likes;
 	public final StringExpression contenido;
 	public final CollectionExpression tiene;
@@ -38,20 +36,18 @@ public class MensajeCriteria extends AbstractORMCriteria {
 	
 	public MensajeCriteria(Criteria criteria) {
 		super(criteria);
-		attribute = new IntegerExpression("attribute", this);
-		eliminado_porId = new IntegerExpression("eliminado_por.attribute", this);
+		id_mensaje = new IntegerExpression("id_mensaje", this);
+		eliminado_porId = new IntegerExpression("eliminado_por.", this);
 		eliminado_por = new AssociationExpression("eliminado_por", this);
-		respuesta_deId = new IntegerExpression("respuesta_de.attribute", this);
+		respuesta_deId = new IntegerExpression("respuesta_de.id_mensaje", this);
 		respuesta_de = new AssociationExpression("respuesta_de", this);
-		son_deId = new IntegerExpression("son_de.attribute", this);
+		son_deId = new IntegerExpression("son_de.id_tema", this);
 		son_de = new AssociationExpression("son_de", this);
 		es_gustado = new CollectionExpression("ORM_es_gustado", this);
-		ID = new IntegerExpression("ID", this);
-		id_mensaje = new IntegerExpression("id_mensaje", this);
 		num_likes = new IntegerExpression("num_likes", this);
 		contenido = new StringExpression("contenido", this);
 		tiene = new CollectionExpression("ORM_tiene", this);
-		pertenece_aId = new IntegerExpression("pertenece_a.attribute", this);
+		pertenece_aId = new IntegerExpression("pertenece_a.id_usuario", this);
 		pertenece_a = new AssociationExpression("pertenece_a", this);
 		contiene = new CollectionExpression("ORM_contiene", this);
 	}
@@ -72,8 +68,8 @@ public class MensajeCriteria extends AbstractORMCriteria {
 		return new MensajeCriteria(createCriteria("respuesta_de"));
 	}
 	
-	public TemasCriteria createSon_deCriteria() {
-		return new TemasCriteria(createCriteria("son_de"));
+	public TemaCriteria createSon_deCriteria() {
+		return new TemaCriteria(createCriteria("son_de"));
 	}
 	
 	public foro.UsuarioCriteria createEs_gustadoCriteria() {

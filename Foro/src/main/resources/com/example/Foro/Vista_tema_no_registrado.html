@@ -8,26 +8,22 @@
  <body>
   <vaadin-vertical-layout size-full>
    <vaadin-horizontal-layout width-full>
-    <vaadin-button style-name="borderless boton1" size-full plain-text :expand>
+    <vaadin-button style-name="borderless boton1" size-full plain-text _id="foro_html" :expand>
       Foro 
     </vaadin-button>
     <vaadin-horizontal-layout :right>
-     <vaadin-button style-name="borderless boton1" plain-text>
+     <vaadin-button style-name="borderless boton1" plain-text _id="registrarse_html">
        Registrarse 
      </vaadin-button>
-     <vaadin-button style-name="borderless boton1" plain-text>
+     <vaadin-button style-name="borderless boton1" plain-text _id="iniciarsesion_html">
        Iniciar Sesión 
      </vaadin-button>
     </vaadin-horizontal-layout>
    </vaadin-horizontal-layout>
    <vaadin-horizontal-layout width-full height="97px">
-    <vaadin-image size-full :expand></vaadin-image>
-    <vaadin-vertical-layout size-auto>
-     <vaadin-label style-name="titulo" plain-text>
+    <vaadin-vertical-layout :expand>
+     <vaadin-label style-name="titulo" plain-text _id="titulotema_html">
        Titulo 
-     </vaadin-label>
-     <vaadin-label style-name="titulo" plain-text>
-       Subtitulo 
      </vaadin-label>
     </vaadin-vertical-layout>
    </vaadin-horizontal-layout>
@@ -35,39 +31,7 @@
     <vaadin-label style-name="titulo" plain-text :center>
       Comentarios 
     </vaadin-label>
-    <vaadin-horizontal-layout style-name="wrapping label1">
-     <vaadin-image></vaadin-image>
-     <vaadin-label plain-text>
-       a sg sdfh serstdh rueujsu5jhdfs dsfh hgfk asdg kñjasd igudgs ahhsryhsfasda 
-     </vaadin-label>
-    </vaadin-horizontal-layout>
-    <vaadin-horizontal-layout style-name="label1">
-     <vaadin-image></vaadin-image>
-     <vaadin-label plain-text>
-       Contenido de la respuesta 
-     </vaadin-label>
-    </vaadin-horizontal-layout>
-    <vaadin-horizontal-layout>
-     <vaadin-image></vaadin-image>
-     <vaadin-label plain-text>
-       Contenido de la respuesta 
-     </vaadin-label>
-    </vaadin-horizontal-layout>
-    <vaadin-horizontal-layout style-name="label1">
-     <vaadin-image></vaadin-image>
-     <vaadin-label plain-text>
-       Contenido de la respuesta 
-     </vaadin-label>
-    </vaadin-horizontal-layout>
-    <vaadin-horizontal-layout style-name="label1">
-     <vaadin-image></vaadin-image>
-     <vaadin-label plain-text>
-       Contenido de la respuesta 
-     </vaadin-label>
-    </vaadin-horizontal-layout>
-    <vaadin-button style-name="boton1" plain-text :center>
-      Ver más 
-    </vaadin-button>
+    <vaadin-vertical-layout spacing="false" size-full margin="false" _id="comentarios_html" :expand></vaadin-vertical-layout>
    </vaadin-vertical-layout>
   </vaadin-vertical-layout>
  </body>

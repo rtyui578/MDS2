@@ -16,7 +16,26 @@
 		<item key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID" value="false"/>
 		<item key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID" value="false"/>
 		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
-			<item value="C:\Users\Ramón Ramos\Documents\Documentos\BD\src"/>
+			<item value="C:\Users\Ramón Ramos\Downloads\cosasORM\src"/>
+			<item value="C:\Users\Ramón Ramos\Documents\MDS2\Codigo Generado\Nuevo IG"/>
+			<item value="C:\Users\Ramón Ramos\Documents\MDS2\Codigo Generado\Wizard\Anterio\src"/>
+			<item value="C:\Users\Ramón Ramos\Documents\Nueva Carpeta de Codigo\5\src\foro"/>
+			<item value="C:\Users\Ramón Ramos\Documents\Nueva Carpeta de Codigo\5\src\ormmapping"/>
+			<item value="C:\Users\Ramón Ramos\Documents\Nueva Carpeta de Codigo\5\src\ormsamples"/>
+			<item value="C:\Users\Ramón Ramos\Documents\Nueva Carpeta de Codigo\Cuarto\src\foro"/>
+			<item value="C:\Users\Ramón Ramos\Documents\Nueva Carpeta de Codigo\Cuarto\src\ormmapping"/>
+			<item value="C:\Users\Ramón Ramos\Documents\Nueva Carpeta de Codigo\Cuarto\src\ormsamples"/>
+			<item value="C:\Users\Ramón Ramos\Documents\Nueva Carpeta de Codigo\Tercero\src\foro"/>
+			<item value="C:\Users\Ramón Ramos\Documents\Nueva Carpeta de Codigo\Tercero\src\ormmapping"/>
+			<item value="C:\Users\Ramón Ramos\Documents\Nueva Carpeta de Codigo\Tercero\src\ormsamples"/>
+			<item value="C:\Users\Ramón Ramos\Documents\Nueva Carpeta de Codigo\Ig"/>
+			<item value="C:\Users\Ramón Ramos\Documents\Nueva Carpeta de Codigo\Segundo\src\foro"/>
+			<item value="C:\Users\Ramón Ramos\Documents\Nueva Carpeta de Codigo\Segundo\src\ormsamples"/>
+			<item value="C:\Users\Ramón Ramos\Documents\Nuevo Codigo MDS2 cv2\New Folder\src\foro"/>
+			<item value="C:\Users\Ramón Ramos\Documents\Nuevo Codigo MDS2 cv2\New Folder\src\ormmapping"/>
+			<item value="C:\Users\Ramón Ramos\Documents\Nuevo Codigo MDS2 cv2\New Folder\src\ormsamples"/>
+			<item value="C:\Users\Ramón Ramos\Documents\Nuevo Codigo MDS2 cv2\src\foro"/>
+			<item value="C:\Users\Ramón Ramos\Documents\Nuevo Codigo MDS2 cv2\src\ormmapping"/>
 		</list>
 	</section>
 </section>

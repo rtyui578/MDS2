@@ -8,17 +8,17 @@
  <body>
   <vaadin-vertical-layout size-full>
    <vaadin-horizontal-layout width-full>
-    <vaadin-button style-name="borderless boton1" size-full plain-text :expand>
+    <vaadin-button style-name="borderless boton1" size-full plain-text _id="foro_html" :expand>
       Foro 
     </vaadin-button>
     <vaadin-horizontal-layout :right>
-     <vaadin-button style-name="borderless boton1" plain-text>
+     <vaadin-button style-name="borderless boton1" plain-text _id="notificaciones_html">
        Notificaciones 
      </vaadin-button>
-     <vaadin-button style-name="borderless boton1" responsive>
+     <vaadin-button style-name="borderless boton1" responsive _id="ajustes_html">
        Ajustes 
      </vaadin-button>
-     <vaadin-button style-name="borderless boton1" plain-text>
+     <vaadin-button style-name="borderless boton1" plain-text _id="cerrarsesion_html">
        Cerrar Sesión 
      </vaadin-button>
     </vaadin-horizontal-layout>
@@ -29,217 +29,25 @@
       <vaadin-label style-name="titular" plain-text :center>
         Secciones 
       </vaadin-label>
-      <vaadin-horizontal-layout style-name="secciontema" width-full>
-       <vaadin-horizontal-layout width-full :expand>
-        <vaadin-label plain-text>
-          Nombre sección 
-        </vaadin-label>
-        <vaadin-label plain-text>
-          Numero de temas 
-        </vaadin-label>
-        <vaadin-label plain-text>
-          Numero de mensajes 
-        </vaadin-label>
-       </vaadin-horizontal-layout>
-       <vaadin-button style-name="borderless boton2" plain-text>
-         Borrar 
-       </vaadin-button>
-      </vaadin-horizontal-layout>
-      <vaadin-horizontal-layout style-name="secciontema" width-full>
-       <vaadin-horizontal-layout width-full :expand>
-        <vaadin-label plain-text>
-          Nombre sección 
-        </vaadin-label>
-        <vaadin-label plain-text>
-          Numero de temas 
-        </vaadin-label>
-        <vaadin-label plain-text>
-          Numero de mensajes 
-        </vaadin-label>
-       </vaadin-horizontal-layout>
-       <vaadin-button style-name="borderless boton2" plain-text>
-         Borrar 
-       </vaadin-button>
-      </vaadin-horizontal-layout>
-      <vaadin-horizontal-layout style-name="secciontema" width-full>
-       <vaadin-horizontal-layout width-full :expand>
-        <vaadin-label plain-text>
-          Nombre sección 
-        </vaadin-label>
-        <vaadin-label plain-text>
-          Numero de temas 
-        </vaadin-label>
-        <vaadin-label plain-text>
-          Numero de mensajes 
-        </vaadin-label>
-       </vaadin-horizontal-layout>
-       <vaadin-button style-name="borderless boton2" plain-text>
-         Borrar 
-       </vaadin-button>
-      </vaadin-horizontal-layout>
+      <vaadin-vertical-layout size-full margin="false" _id="listasecciones_html"></vaadin-vertical-layout>
      </vaadin-vertical-layout>
      <vaadin-vertical-layout style-name="contenido" spacing="false" width-auto height-full :expand>
       <vaadin-label style-name="titular" plain-text :center>
         Temas 
       </vaadin-label>
-      <vaadin-horizontal-layout style-name="secciontema" width-full :center>
-       <vaadin-horizontal-layout width-full :expand>
-        <vaadin-label style-name="label1" plain-text>
-          Nombre tema 
-        </vaadin-label>
-        <vaadin-label style-name="label1" width-full plain-text>
-          Numero de mensajes 
-        </vaadin-label>
-        <vaadin-label width-full plain-text>
-          Numero de likes 
-        </vaadin-label>
-       </vaadin-horizontal-layout>
-       <vaadin-horizontal-layout>
-        <vaadin-button style-name="borderless boton2" plain-text>
-          Like 
-        </vaadin-button>
-        <vaadin-button style-name="borderless boton2" plain-text>
-          Borrar 
-        </vaadin-button>
-       </vaadin-horizontal-layout>
-      </vaadin-horizontal-layout>
-      <vaadin-horizontal-layout style-name="secciontema" width-full>
-       <vaadin-horizontal-layout width-full :expand>
-        <vaadin-label style-name="label1" plain-text>
-          Nombre tema 
-        </vaadin-label>
-        <vaadin-label style-name="label1" width-full plain-text>
-          Numero de mensajes 
-        </vaadin-label>
-        <vaadin-label width-full plain-text>
-          Numero de likes 
-        </vaadin-label>
-       </vaadin-horizontal-layout>
-       <vaadin-horizontal-layout>
-        <vaadin-button style-name="borderless boton2" plain-text>
-          Like 
-        </vaadin-button>
-        <vaadin-button style-name="borderless boton2" plain-text>
-          Borrar 
-        </vaadin-button>
-       </vaadin-horizontal-layout>
-      </vaadin-horizontal-layout>
-      <vaadin-horizontal-layout style-name="secciontema" width-full>
-       <vaadin-horizontal-layout width-full :expand>
-        <vaadin-label style-name="label1" plain-text>
-          Nombre tema 
-        </vaadin-label>
-        <vaadin-label style-name="label1" width-full plain-text>
-          Numero de mensajes 
-        </vaadin-label>
-        <vaadin-label width-full plain-text>
-          Numero de likes 
-        </vaadin-label>
-       </vaadin-horizontal-layout>
-       <vaadin-horizontal-layout>
-        <vaadin-button style-name="borderless boton2" plain-text>
-          Like 
-        </vaadin-button>
-        <vaadin-button style-name="borderless boton2" plain-text>
-          Borrar 
-        </vaadin-button>
-       </vaadin-horizontal-layout>
-      </vaadin-horizontal-layout>
+      <vaadin-vertical-layout spacing="false" size-full margin="false" _id="listatemas_html"></vaadin-vertical-layout>
      </vaadin-vertical-layout>
      <vaadin-vertical-layout style-name="contenido" width-auto height-full :expand>
       <vaadin-label style-name="titular" plain-text :center>
         Mensajes 
       </vaadin-label>
-      <vaadin-horizontal-layout style-name="secciontema" width-full>
-       <vaadin-horizontal-layout width-full :expand>
-        <vaadin-label width-full plain-text :expand>
-          Contenido mensaje 
-        </vaadin-label>
-        <vaadin-label plain-text>
-          Autor 
-        </vaadin-label>
-        <vaadin-label width-full plain-text :right :expand>
-          Numero de likes 
-        </vaadin-label>
-       </vaadin-horizontal-layout>
-       <vaadin-horizontal-layout>
-        <vaadin-button style-name="borderless boton2" responsive plain-text>
-          Like 
-        </vaadin-button>
-        <vaadin-button style-name="borderless boton2" plain-text>
-          Borrar 
-        </vaadin-button>
-       </vaadin-horizontal-layout>
-      </vaadin-horizontal-layout>
-      <vaadin-horizontal-layout style-name="secciontema" width-full>
-       <vaadin-horizontal-layout width-full :expand>
-        <vaadin-label width-full plain-text :expand>
-          Contenido mensaje 
-        </vaadin-label>
-        <vaadin-label plain-text :center>
-          Autor 
-        </vaadin-label>
-        <vaadin-label width-full plain-text :right :expand>
-          Numero de likes 
-        </vaadin-label>
-       </vaadin-horizontal-layout>
-       <vaadin-horizontal-layout>
-        <vaadin-button style-name="borderless boton2" plain-text>
-          Like 
-        </vaadin-button>
-        <vaadin-button style-name="borderless boton2" plain-text>
-          Borrar 
-        </vaadin-button>
-       </vaadin-horizontal-layout>
-      </vaadin-horizontal-layout>
-      <vaadin-horizontal-layout style-name="secciontema" width-full>
-       <vaadin-horizontal-layout width-full :expand>
-        <vaadin-label width-full plain-text :expand>
-          Contenido mensaje 
-        </vaadin-label>
-        <vaadin-label plain-text :center>
-          Autor 
-        </vaadin-label>
-        <vaadin-label width-full plain-text :right :expand>
-          Numero de likes 
-        </vaadin-label>
-       </vaadin-horizontal-layout>
-       <vaadin-horizontal-layout>
-        <vaadin-button style-name="borderless boton2" plain-text>
-          Like 
-        </vaadin-button>
-        <vaadin-button style-name="borderless boton2" plain-text>
-          Borrar 
-        </vaadin-button>
-       </vaadin-horizontal-layout>
-      </vaadin-horizontal-layout>
+      <vaadin-vertical-layout spacing="false" size-full margin="false" _id="listamensajes_html"></vaadin-vertical-layout>
      </vaadin-vertical-layout>
     </vaadin-vertical-layout>
-    <vaadin-vertical-layout style-name="usuariosconectados" spacing="false" responsive width="40%" height-full margin="false" :middle :right>
+    <vaadin-vertical-layout style-name="usuariosconectados" spacing="false" responsive width="40%" height-full margin="false" _id="usuarios_html" :middle :right>
      <vaadin-label height-full plain-text :center>
        Usuarios conectados 
      </vaadin-label>
-     <vaadin-button style-name="boton2 borderless" width-full plain-text>
-       Usuario 
-     </vaadin-button>
-     <vaadin-button style-name="boton2 borderless" width-full plain-text>
-       Usuario 
-     </vaadin-button>
-     <vaadin-button style-name="boton2 borderless" width-full plain-text>
-       Usuario 
-     </vaadin-button>
-     <vaadin-button style-name="boton2 borderless" width-full plain-text>
-       Usuario 
-     </vaadin-button>
-     <vaadin-button style-name="boton2 borderless" width-full plain-text>
-       Usuario 
-     </vaadin-button>
-     <vaadin-button style-name="boton2 borderless" width-full plain-text>
-       Usuario 
-     </vaadin-button>
-     <vaadin-button style-name="boton2 borderless" width-full plain-text>
-       Usuario 
-     </vaadin-button>
     </vaadin-vertical-layout>
    </vaadin-horizontal-layout>
   </vaadin-vertical-layout>

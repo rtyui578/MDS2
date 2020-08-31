@@ -18,8 +18,7 @@ import javax.persistence.*;
 @Entity
 @org.hibernate.annotations.Proxy(lazy=false)
 @Table(name="Usuario")
-@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name="Discriminator", discriminatorType=DiscriminatorType.STRING)
+@Inheritance(strategy=InheritanceType.JOINED)
 @DiscriminatorValue("Usuario")
 public class Usuario implements Serializable {
 	public Usuario() {
@@ -75,23 +74,16 @@ public class Usuario implements Serializable {
 		
 	};
 	
-	@Column(name="Attribute", nullable=false, length=10)	
-	@Id	
-	@GeneratedValue(generator="FORO_USUARIO_ATTRIBUTE_GENERATOR")	
-	@org.hibernate.annotations.GenericGenerator(name="FORO_USUARIO_ATTRIBUTE_GENERATOR", strategy="native")	
-	private int attribute;
-	
-	@ManyToMany(targetEntity=foro.Usuario.class)	
-	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.LOCK})	
-	@JoinTable(name="Usuario_Usuario", joinColumns={ @JoinColumn(name="UsuarioAttribute2") }, inverseJoinColumns={ @JoinColumn(name="UsuarioAttribute") })	
-	@org.hibernate.annotations.LazyCollection(org.hibernate.annotations.LazyCollectionOption.TRUE)	
-	private java.util.Set ORM_es_amigo_de = new java.util.HashSet();
-	
-	@Column(name="ID", nullable=false, length=10)	
-	private int ID;
-	
 	@Column(name="Id_usuario", nullable=false, length=10)	
+	@Id	
+	@GeneratedValue(generator="FORO_USUARIO_ID_USUARIO_GENERATOR")	
+	@org.hibernate.annotations.GenericGenerator(name="FORO_USUARIO_ID_USUARIO_GENERATOR", strategy="native")	
 	private int id_usuario;
+	
+	@ManyToOne(targetEntity=foro.Administrador.class, fetch=FetchType.LAZY)	
+	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.LOCK})	
+	@JoinColumns(value={ @JoinColumn(name="AdministradorUsuarioId_usuario", referencedColumnName="UsuarioId_usuario", nullable=true) }, foreignKey=@ForeignKey(name="FKUsuario346868"))	
+	private foro.Administrador eliminado_por;
 	
 	@Column(name="Email", nullable=true, length=255)	
 	private String email;
@@ -102,7 +94,7 @@ public class Usuario implements Serializable {
 	@Column(name="Nombre_usuario", nullable=true, length=255)	
 	private String nombre_usuario;
 	
-	@OneToMany(mappedBy="creado_por", targetEntity=foro.Temas.class)	
+	@OneToMany(mappedBy="creado_por", targetEntity=foro.Tema.class)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.LOCK})	
 	@org.hibernate.annotations.LazyCollection(org.hibernate.annotations.LazyCollectionOption.TRUE)	
 	private java.util.Set ORM_crea_un = new java.util.HashSet();
@@ -114,11 +106,17 @@ public class Usuario implements Serializable {
 	
 	@ManyToMany(targetEntity=foro.Usuario.class)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.LOCK})	
-	@JoinTable(name="Usuario_Usuario2", joinColumns={ @JoinColumn(name="UsuarioAttribute2") }, inverseJoinColumns={ @JoinColumn(name="UsuarioAttribute") })	
+	@JoinTable(name="Usuario_Usuario", joinColumns={ @JoinColumn(name="UsuarioId_usuario2") }, inverseJoinColumns={ @JoinColumn(name="UsuarioId_usuario") })	
+	@org.hibernate.annotations.LazyCollection(org.hibernate.annotations.LazyCollectionOption.TRUE)	
+	private java.util.Set ORM_es_amigo_de = new java.util.HashSet();
+	
+	@ManyToMany(targetEntity=foro.Usuario.class)	
+	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.LOCK})	
+	@JoinTable(name="Usuario_Usuario2", joinColumns={ @JoinColumn(name="UsuarioId_usuario2") }, inverseJoinColumns={ @JoinColumn(name="UsuarioId_usuario") })	
 	@org.hibernate.annotations.LazyCollection(org.hibernate.annotations.LazyCollectionOption.TRUE)	
 	private java.util.Set ORM_reporta_a = new java.util.HashSet();
 	
-	@OneToMany(mappedBy="de", targetEntity=foro.Notificaciones.class)	
+	@OneToMany(mappedBy="de", targetEntity=foro.Notificacion.class)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.LOCK})	
 	@org.hibernate.annotations.LazyCollection(org.hibernate.annotations.LazyCollectionOption.TRUE)	
 	private java.util.Set ORM_tiene = new java.util.HashSet();
@@ -127,11 +125,6 @@ public class Usuario implements Serializable {
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.LOCK})	
 	@org.hibernate.annotations.LazyCollection(org.hibernate.annotations.LazyCollectionOption.TRUE)	
 	private java.util.Set ORM_es_su_amigo = new java.util.HashSet();
-	
-	@ManyToOne(targetEntity=foro.Administrador.class, fetch=FetchType.LAZY)	
-	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.LOCK})	
-	@JoinColumns(value={ @JoinColumn(name="UsuarioAttribute", referencedColumnName="Attribute", nullable=false) }, foreignKey=@ForeignKey(name="FKUsuario248154"))	
-	private foro.Administrador eliminado_por;
 	
 	@ManyToMany(mappedBy="ORM_es_gustado", targetEntity=foro.Mensaje.class)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.LOCK})	
@@ -143,37 +136,21 @@ public class Usuario implements Serializable {
 	@org.hibernate.annotations.LazyCollection(org.hibernate.annotations.LazyCollectionOption.TRUE)	
 	private java.util.Set ORM_es_reportado_por = new java.util.HashSet();
 	
-	@ManyToMany(mappedBy="ORM_es_gustado", targetEntity=foro.Temas.class)	
+	@ManyToMany(mappedBy="ORM_es_gustado", targetEntity=foro.Tema.class)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.LOCK})	
 	@org.hibernate.annotations.LazyCollection(org.hibernate.annotations.LazyCollectionOption.TRUE)	
 	private java.util.Set ORM_le_da_me_gusta = new java.util.HashSet();
 	
-	private void setAttribute(int value) {
-		this.attribute = value;
-	}
-	
-	public int getAttribute() {
-		return attribute;
-	}
-	
-	public int getORMID() {
-		return getAttribute();
-	}
-	
-	public void setID(int value) {
-		this.ID = value;
-	}
-	
-	public int getID() {
-		return ID;
-	}
-	
-	public void setId_usuario(int value) {
+	private void setId_usuario(int value) {
 		this.id_usuario = value;
 	}
 	
 	public int getId_usuario() {
 		return id_usuario;
+	}
+	
+	public int getORMID() {
+		return getId_usuario();
 	}
 	
 	public void setEmail(String value) {
@@ -209,7 +186,7 @@ public class Usuario implements Serializable {
 	}
 	
 	@Transient	
-	public final foro.TemasSetCollection crea_un = new foro.TemasSetCollection(this, _ormAdapter, foro.ORMConstants.KEY_USUARIO_CREA_UN, foro.ORMConstants.KEY_TEMAS_CREADO_POR, foro.ORMConstants.KEY_MUL_ONE_TO_MANY);
+	public final foro.TemaSetCollection crea_un = new foro.TemaSetCollection(this, _ormAdapter, foro.ORMConstants.KEY_USUARIO_CREA_UN, foro.ORMConstants.KEY_TEMA_CREADO_POR, foro.ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	private void setORM_Escribe(java.util.Set value) {
 		this.ORM_escribe = value;
@@ -253,7 +230,7 @@ public class Usuario implements Serializable {
 	}
 	
 	@Transient	
-	public final foro.NotificacionesSetCollection tiene = new foro.NotificacionesSetCollection(this, _ormAdapter, foro.ORMConstants.KEY_USUARIO_TIENE, foro.ORMConstants.KEY_NOTIFICACIONES_DE, foro.ORMConstants.KEY_MUL_ONE_TO_MANY);
+	public final foro.NotificacionSetCollection tiene = new foro.NotificacionSetCollection(this, _ormAdapter, foro.ORMConstants.KEY_USUARIO_TIENE, foro.ORMConstants.KEY_NOTIFICACION_DE, foro.ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	private void setORM_Es_su_amigo(java.util.Set value) {
 		this.ORM_es_su_amigo = value;
@@ -321,40 +298,10 @@ public class Usuario implements Serializable {
 	}
 	
 	@Transient	
-	public final foro.TemasSetCollection le_da_me_gusta = new foro.TemasSetCollection(this, _ormAdapter, foro.ORMConstants.KEY_USUARIO_LE_DA_ME_GUSTA, foro.ORMConstants.KEY_TEMAS_ES_GUSTADO, foro.ORMConstants.KEY_MUL_MANY_TO_MANY);
-	
-	public boolean iniciarSesion(String usuario, String contraseña) {
-		//TODO: Implement Method
-		throw new UnsupportedOperationException();
-	}
-	
-	public void registrarse(String usuario, String contraseña) {
-		//TODO: Implement Method
-		throw new UnsupportedOperationException();
-	}
-	
-	public void banearUsuario() {
-		//TODO: Implement Method
-		throw new UnsupportedOperationException();
-	}
-	
-	public void desbanearUsuario() {
-		//TODO: Implement Method
-		throw new UnsupportedOperationException();
-	}
-	
-	public void modificarInformacion() {
-		//TODO: Implement Method
-		throw new UnsupportedOperationException();
-	}
-	
-	public void operation() {
-		//TODO: Implement Method
-		throw new UnsupportedOperationException();
-	}
+	public final foro.TemaSetCollection le_da_me_gusta = new foro.TemaSetCollection(this, _ormAdapter, foro.ORMConstants.KEY_USUARIO_LE_DA_ME_GUSTA, foro.ORMConstants.KEY_TEMA_ES_GUSTADO, foro.ORMConstants.KEY_MUL_MANY_TO_MANY);
 	
 	public String toString() {
-		return String.valueOf(getAttribute());
+		return String.valueOf(getId_usuario());
 	}
 	
 }

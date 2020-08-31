@@ -17,8 +17,10 @@ import java.io.Serializable;
 import javax.persistence.*;
 @Entity
 @org.hibernate.annotations.Proxy(lazy=false)
-@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
+@Table(name="Moderador")
+@Inheritance(strategy=InheritanceType.JOINED)
 @DiscriminatorValue("Moderador")
+@PrimaryKeyJoinColumn(name="UsuarioId_usuario", referencedColumnName="Id_usuario")
 public class Moderador extends foro.Usuario implements Serializable {
 	public Moderador() {
 	}

@@ -24,12 +24,16 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.example.Nueva"/>
+			<item value="com.example.intento"/>
 			<item value="com.example.myapplication"/>
 		</list>
 		<list key="groupId">
 			<item value="com.example"/>
 		</list>
 		<list key="artifactId">
+			<item value="Nueva"/>
+			<item value="intento"/>
 			<item value="myapplication"/>
 		</list>
 		<list key="projectNameTemplate">

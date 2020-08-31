@@ -272,19 +272,19 @@
     <SelectedForm>true</SelectedForm>
   </Setting>
   <Setting type="2">
-    <Driver>MySQL (Connector/J Driver)</Driver>
+    <Driver>MySQL5 (Connector/J Driver)</Driver>
     <DriverFiles>C:\Users\Ramón Ramos\Downloads\mysql-connector-java-5.1.49\mysql-connector-java-5.1.49\mysql-connector-java-5.1.49.jar</DriverFiles>
-    <Dialect>org.hibernate.dialect.MySQLInnoDBDialect</Dialect>
+    <Dialect>org.hibernate.dialect.MySQL5InnoDBDialect</Dialect>
     <DriverClass>com.mysql.jdbc.Driver</DriverClass>
-    <URL>jdbc:mysql://localhost:3306/MDS2</URL>
+    <URL>jdbc:mysql://localhost:3306/RAMOS-rtyui578</URL>
     <UserName>root</UserName>
     <EncryptedPassword>32F3ACE632ECEBAFB24DCAF99A8C6CDC</EncryptedPassword>
     <HostName>localhost</HostName>
     <PortNO>3306</PortNO>
-    <DBName>MDS2</DBName>
+    <DBName>RAMOS-rtyui578</DBName>
     <ServiceName></ServiceName>
     <ServerName></ServerName>
-    <SelectedForm>true</SelectedForm>
+    <SelectedForm>false</SelectedForm>
   </Setting>
   <Setting type="16777216">
     <Driver></Driver>

@@ -4,7 +4,7 @@ import com.vaadin.navigator.Navigator;
 
 //import basededatos.iUsuario_No_Registrado;
 
-public class Usuario_No_Registrado extends Común_usuarios {
+public class Usuario_No_Registrado extends Comun_usuarios {
 	public Usuario_No_Registrado(Navigator nav) {
 		super(nav);
 		// TODO Auto-generated constructor stub

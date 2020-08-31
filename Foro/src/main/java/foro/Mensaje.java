@@ -38,7 +38,7 @@ public class Mensaje implements Serializable {
 	
 	private void this_setOwner(Object owner, int key) {
 		if (key == foro.ORMConstants.KEY_MENSAJE_SON_DE) {
-			this.son_de = (foro.Temas) owner;
+			this.son_de = (foro.Tema) owner;
 		}
 		
 		else if (key == foro.ORMConstants.KEY_MENSAJE_ELIMINADO_POR) {
@@ -66,38 +66,32 @@ public class Mensaje implements Serializable {
 		
 	};
 	
-	@Column(name="Attribute", nullable=false, length=10)	
+	@Column(name="Id_mensaje", nullable=false, length=10)	
 	@Id	
-	@GeneratedValue(generator="FORO_MENSAJE_ATTRIBUTE_GENERATOR")	
-	@org.hibernate.annotations.GenericGenerator(name="FORO_MENSAJE_ATTRIBUTE_GENERATOR", strategy="native")	
-	private int attribute;
+	@GeneratedValue(generator="FORO_MENSAJE_ID_MENSAJE_GENERATOR")	
+	@org.hibernate.annotations.GenericGenerator(name="FORO_MENSAJE_ID_MENSAJE_GENERATOR", strategy="native")	
+	private int id_mensaje;
 	
 	@ManyToOne(targetEntity=foro.Moderador.class, fetch=FetchType.LAZY)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.LOCK})	
-	@JoinColumns(value={ @JoinColumn(name="UsuarioAttribute2", referencedColumnName="Attribute", nullable=false) }, foreignKey=@ForeignKey(name="FKMensaje853697"))	
+	@JoinColumns(value={ @JoinColumn(name="ModeradorUsuarioId_usuario", referencedColumnName="UsuarioId_usuario", nullable=true) }, foreignKey=@ForeignKey(name="FKMensaje460318"))	
 	private foro.Moderador eliminado_por;
 	
 	@ManyToOne(targetEntity=foro.Mensaje.class, fetch=FetchType.LAZY)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.LOCK})	
-	@JoinColumns(value={ @JoinColumn(name="MensajeAttribute", referencedColumnName="Attribute", nullable=false) }, foreignKey=@ForeignKey(name="FKMensaje93997"))	
+	@JoinColumns(value={ @JoinColumn(name="MensajeId_mensaje", referencedColumnName="Id_mensaje", nullable=true) }, foreignKey=@ForeignKey(name="FKMensaje78768"))	
 	private foro.Mensaje respuesta_de;
 	
-	@ManyToOne(targetEntity=foro.Temas.class, fetch=FetchType.LAZY)	
+	@ManyToOne(targetEntity=foro.Tema.class, fetch=FetchType.LAZY)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.LOCK})	
-	@JoinColumns(value={ @JoinColumn(name="TemasAttribute", referencedColumnName="Attribute", nullable=false) }, foreignKey=@ForeignKey(name="FKMensaje917310"))	
-	private foro.Temas son_de;
+	@JoinColumns(value={ @JoinColumn(name="TemaId_tema", referencedColumnName="Id_tema", nullable=false) }, foreignKey=@ForeignKey(name="FKMensaje657495"))	
+	private foro.Tema son_de;
 	
 	@ManyToMany(targetEntity=foro.Usuario.class)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.LOCK})	
-	@JoinTable(name="Usuario_Mensaje", joinColumns={ @JoinColumn(name="MensajeAttribute") }, inverseJoinColumns={ @JoinColumn(name="UsuarioAttribute") })	
+	@JoinTable(name="Usuario_Mensaje", joinColumns={ @JoinColumn(name="MensajeId_mensaje") }, inverseJoinColumns={ @JoinColumn(name="UsuarioId_usuario") })	
 	@org.hibernate.annotations.LazyCollection(org.hibernate.annotations.LazyCollectionOption.TRUE)	
 	private java.util.Set ORM_es_gustado = new java.util.HashSet();
-	
-	@Column(name="ID", nullable=false, length=10)	
-	private int ID;
-	
-	@Column(name="Id_mensaje", nullable=false, length=10)	
-	private int id_mensaje;
 	
 	@Column(name="Num_likes", nullable=false, length=10)	
 	private int num_likes;
@@ -112,7 +106,7 @@ public class Mensaje implements Serializable {
 	
 	@ManyToOne(targetEntity=foro.Usuario.class, fetch=FetchType.LAZY)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.LOCK})	
-	@JoinColumns(value={ @JoinColumn(name="UsuarioAttribute", referencedColumnName="Attribute", nullable=false) }, foreignKey=@ForeignKey(name="FKMensaje905233"))	
+	@JoinColumns(value={ @JoinColumn(name="UsuarioId_usuario", referencedColumnName="Id_usuario", nullable=false) }, foreignKey=@ForeignKey(name="FKMensaje97513"))	
 	private foro.Usuario pertenece_a;
 	
 	@OneToMany(mappedBy="es_de", targetEntity=foro.Media.class)	
@@ -120,32 +114,16 @@ public class Mensaje implements Serializable {
 	@org.hibernate.annotations.LazyCollection(org.hibernate.annotations.LazyCollectionOption.TRUE)	
 	private java.util.Set ORM_contiene = new java.util.HashSet();
 	
-	private void setAttribute(int value) {
-		this.attribute = value;
-	}
-	
-	public int getAttribute() {
-		return attribute;
-	}
-	
-	public int getORMID() {
-		return getAttribute();
-	}
-	
-	public void setID(int value) {
-		this.ID = value;
-	}
-	
-	public int getID() {
-		return ID;
-	}
-	
-	public void setId_mensaje(int value) {
+	private void setId_mensaje(int value) {
 		this.id_mensaje = value;
 	}
 	
 	public int getId_mensaje() {
 		return id_mensaje;
+	}
+	
+	public int getORMID() {
+		return getId_mensaje();
 	}
 	
 	public void setNum_likes(int value) {
@@ -164,7 +142,7 @@ public class Mensaje implements Serializable {
 		return contenido;
 	}
 	
-	public void setSon_de(foro.Temas value) {
+	public void setSon_de(foro.Tema value) {
 		if (son_de != null) {
 			son_de.tiene.remove(this);
 		}
@@ -173,18 +151,18 @@ public class Mensaje implements Serializable {
 		}
 	}
 	
-	public foro.Temas getSon_de() {
+	public foro.Tema getSon_de() {
 		return son_de;
 	}
 	
 	/**
 	 * This method is for internal use only.
 	 */
-	public void setORM_Son_de(foro.Temas value) {
+	public void setORM_Son_de(foro.Tema value) {
 		this.son_de = value;
 	}
 	
-	private foro.Temas getORM_Son_de() {
+	private foro.Tema getORM_Son_de() {
 		return son_de;
 	}
 	
@@ -293,28 +271,8 @@ public class Mensaje implements Serializable {
 		return respuesta_de;
 	}
 	
-	public void contenidoMensaje(String contenido) {
-		//TODO: Implement Method
-		throw new UnsupportedOperationException();
-	}
-	
-	public void me_Gusta_Mensaje() {
-		//TODO: Implement Method
-		throw new UnsupportedOperationException();
-	}
-	
-	public void borrarMensaje() {
-		//TODO: Implement Method
-		throw new UnsupportedOperationException();
-	}
-	
-	public void operation() {
-		//TODO: Implement Method
-		throw new UnsupportedOperationException();
-	}
-	
 	public String toString() {
-		return String.valueOf(getAttribute());
+		return String.valueOf(getId_mensaje());
 	}
 	
 }

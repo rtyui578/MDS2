@@ -19,10 +19,10 @@ import org.hibernate.LockMode;
 import java.util.List;
 
 public class VideoDAO {
-	public static Video loadVideoByORMID(int attribute) throws PersistentException {
+	public static Video loadVideoByORMID(int id_media) throws PersistentException {
 		try {
 			PersistentSession session = foro.CUPersistentManager.instance().getSession();
-			return loadVideoByORMID(session, attribute);
+			return loadVideoByORMID(session, id_media);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -30,10 +30,10 @@ public class VideoDAO {
 		}
 	}
 	
-	public static Video getVideoByORMID(int attribute) throws PersistentException {
+	public static Video getVideoByORMID(int id_media) throws PersistentException {
 		try {
 			PersistentSession session = foro.CUPersistentManager.instance().getSession();
-			return getVideoByORMID(session, attribute);
+			return getVideoByORMID(session, id_media);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -41,10 +41,10 @@ public class VideoDAO {
 		}
 	}
 	
-	public static Video loadVideoByORMID(int attribute, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Video loadVideoByORMID(int id_media, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = foro.CUPersistentManager.instance().getSession();
-			return loadVideoByORMID(session, attribute, lockMode);
+			return loadVideoByORMID(session, id_media, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -52,10 +52,10 @@ public class VideoDAO {
 		}
 	}
 	
-	public static Video getVideoByORMID(int attribute, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Video getVideoByORMID(int id_media, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = foro.CUPersistentManager.instance().getSession();
-			return getVideoByORMID(session, attribute, lockMode);
+			return getVideoByORMID(session, id_media, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -63,9 +63,9 @@ public class VideoDAO {
 		}
 	}
 	
-	public static Video loadVideoByORMID(PersistentSession session, int attribute) throws PersistentException {
+	public static Video loadVideoByORMID(PersistentSession session, int id_media) throws PersistentException {
 		try {
-			return (Video) session.load(foro.Video.class, new Integer(attribute));
+			return (Video) session.load(foro.Video.class, new Integer(id_media));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -73,9 +73,9 @@ public class VideoDAO {
 		}
 	}
 	
-	public static Video getVideoByORMID(PersistentSession session, int attribute) throws PersistentException {
+	public static Video getVideoByORMID(PersistentSession session, int id_media) throws PersistentException {
 		try {
-			return (Video) session.get(foro.Video.class, new Integer(attribute));
+			return (Video) session.get(foro.Video.class, new Integer(id_media));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -83,9 +83,9 @@ public class VideoDAO {
 		}
 	}
 	
-	public static Video loadVideoByORMID(PersistentSession session, int attribute, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Video loadVideoByORMID(PersistentSession session, int id_media, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Video) session.load(foro.Video.class, new Integer(attribute), lockMode);
+			return (Video) session.load(foro.Video.class, new Integer(id_media), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -93,9 +93,9 @@ public class VideoDAO {
 		}
 	}
 	
-	public static Video getVideoByORMID(PersistentSession session, int attribute, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Video getVideoByORMID(PersistentSession session, int id_media, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Video) session.get(foro.Video.class, new Integer(attribute), lockMode);
+			return (Video) session.get(foro.Video.class, new Integer(id_media), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -316,6 +316,39 @@ public class VideoDAO {
 			return true;
 		}
 		catch (Exception e) {
+			e.printStackTrace();
+			throw new PersistentException(e);
+		}
+	}
+	
+	public static boolean deleteAndDissociate(foro.Video video)throws PersistentException {
+		try {
+			if (video.getEs_de() != null) {
+				video.getEs_de().contiene.remove(video);
+			}
+			
+			return delete(video);
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			throw new PersistentException(e);
+		}
+	}
+	
+	public static boolean deleteAndDissociate(foro.Video video, org.orm.PersistentSession session)throws PersistentException {
+		try {
+			if (video.getEs_de() != null) {
+				video.getEs_de().contiene.remove(video);
+			}
+			
+			try {
+				session.delete(video);
+				return true;
+			} catch (Exception e) {
+				return false;
+			}
+		}
+		catch(Exception e) {
 			e.printStackTrace();
 			throw new PersistentException(e);
 		}

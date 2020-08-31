@@ -19,7 +19,7 @@ import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
 public class MensajeDetachedCriteria extends AbstractORMDetachedCriteria {
-	public final IntegerExpression attribute;
+	public final IntegerExpression id_mensaje;
 	public final IntegerExpression eliminado_porId;
 	public final AssociationExpression eliminado_por;
 	public final IntegerExpression respuesta_deId;
@@ -27,8 +27,6 @@ public class MensajeDetachedCriteria extends AbstractORMDetachedCriteria {
 	public final IntegerExpression son_deId;
 	public final AssociationExpression son_de;
 	public final CollectionExpression es_gustado;
-	public final IntegerExpression ID;
-	public final IntegerExpression id_mensaje;
 	public final IntegerExpression num_likes;
 	public final StringExpression contenido;
 	public final CollectionExpression tiene;
@@ -38,40 +36,36 @@ public class MensajeDetachedCriteria extends AbstractORMDetachedCriteria {
 	
 	public MensajeDetachedCriteria() {
 		super(foro.Mensaje.class, foro.MensajeCriteria.class);
-		attribute = new IntegerExpression("attribute", this.getDetachedCriteria());
-		eliminado_porId = new IntegerExpression("eliminado_por.attribute", this.getDetachedCriteria());
+		id_mensaje = new IntegerExpression("id_mensaje", this.getDetachedCriteria());
+		eliminado_porId = new IntegerExpression("eliminado_por.", this.getDetachedCriteria());
 		eliminado_por = new AssociationExpression("eliminado_por", this.getDetachedCriteria());
-		respuesta_deId = new IntegerExpression("respuesta_de.attribute", this.getDetachedCriteria());
+		respuesta_deId = new IntegerExpression("respuesta_de.id_mensaje", this.getDetachedCriteria());
 		respuesta_de = new AssociationExpression("respuesta_de", this.getDetachedCriteria());
-		son_deId = new IntegerExpression("son_de.attribute", this.getDetachedCriteria());
+		son_deId = new IntegerExpression("son_de.id_tema", this.getDetachedCriteria());
 		son_de = new AssociationExpression("son_de", this.getDetachedCriteria());
 		es_gustado = new CollectionExpression("ORM_es_gustado", this.getDetachedCriteria());
-		ID = new IntegerExpression("ID", this.getDetachedCriteria());
-		id_mensaje = new IntegerExpression("id_mensaje", this.getDetachedCriteria());
 		num_likes = new IntegerExpression("num_likes", this.getDetachedCriteria());
 		contenido = new StringExpression("contenido", this.getDetachedCriteria());
 		tiene = new CollectionExpression("ORM_tiene", this.getDetachedCriteria());
-		pertenece_aId = new IntegerExpression("pertenece_a.attribute", this.getDetachedCriteria());
+		pertenece_aId = new IntegerExpression("pertenece_a.id_usuario", this.getDetachedCriteria());
 		pertenece_a = new AssociationExpression("pertenece_a", this.getDetachedCriteria());
 		contiene = new CollectionExpression("ORM_contiene", this.getDetachedCriteria());
 	}
 	
 	public MensajeDetachedCriteria(DetachedCriteria aDetachedCriteria) {
 		super(aDetachedCriteria, foro.MensajeCriteria.class);
-		attribute = new IntegerExpression("attribute", this.getDetachedCriteria());
-		eliminado_porId = new IntegerExpression("eliminado_por.attribute", this.getDetachedCriteria());
+		id_mensaje = new IntegerExpression("id_mensaje", this.getDetachedCriteria());
+		eliminado_porId = new IntegerExpression("eliminado_por.", this.getDetachedCriteria());
 		eliminado_por = new AssociationExpression("eliminado_por", this.getDetachedCriteria());
-		respuesta_deId = new IntegerExpression("respuesta_de.attribute", this.getDetachedCriteria());
+		respuesta_deId = new IntegerExpression("respuesta_de.id_mensaje", this.getDetachedCriteria());
 		respuesta_de = new AssociationExpression("respuesta_de", this.getDetachedCriteria());
-		son_deId = new IntegerExpression("son_de.attribute", this.getDetachedCriteria());
+		son_deId = new IntegerExpression("son_de.id_tema", this.getDetachedCriteria());
 		son_de = new AssociationExpression("son_de", this.getDetachedCriteria());
 		es_gustado = new CollectionExpression("ORM_es_gustado", this.getDetachedCriteria());
-		ID = new IntegerExpression("ID", this.getDetachedCriteria());
-		id_mensaje = new IntegerExpression("id_mensaje", this.getDetachedCriteria());
 		num_likes = new IntegerExpression("num_likes", this.getDetachedCriteria());
 		contenido = new StringExpression("contenido", this.getDetachedCriteria());
 		tiene = new CollectionExpression("ORM_tiene", this.getDetachedCriteria());
-		pertenece_aId = new IntegerExpression("pertenece_a.attribute", this.getDetachedCriteria());
+		pertenece_aId = new IntegerExpression("pertenece_a.id_usuario", this.getDetachedCriteria());
 		pertenece_a = new AssociationExpression("pertenece_a", this.getDetachedCriteria());
 		contiene = new CollectionExpression("ORM_contiene", this.getDetachedCriteria());
 	}
@@ -84,8 +78,8 @@ public class MensajeDetachedCriteria extends AbstractORMDetachedCriteria {
 		return new MensajeDetachedCriteria(createCriteria("respuesta_de"));
 	}
 	
-	public TemasDetachedCriteria createSon_deCriteria() {
-		return new TemasDetachedCriteria(createCriteria("son_de"));
+	public TemaDetachedCriteria createSon_deCriteria() {
+		return new TemaDetachedCriteria(createCriteria("son_de"));
 	}
 	
 	public foro.UsuarioDetachedCriteria createEs_gustadoCriteria() {

@@ -1,8 +1,8 @@
 package com.example.Foro;
+import java.util.Vector;
 
-//import basededatos.iAdministrador;
-
-public class Administrador /*extends Usuario_Registrado*/ {
-	//public iAdministrador _iAdministrador;
-	public Ajustes_administrador _unnamed_Ajustes_administrador_;
+public class Administrador extends Moderador {
+	public BD_Administrador _unnamed_BD_Administrador_;
+	public Vector<Seccion> _crea = new Vector<Seccion>();
+	public Vector<Usuario> _elimina = new Vector<Usuario>();
 }

@@ -19,10 +19,10 @@ import org.hibernate.LockMode;
 import java.util.List;
 
 public class AdministradorDAO {
-	public static Administrador loadAdministradorByORMID(int attribute) throws PersistentException {
+	public static Administrador loadAdministradorByORMID(int id_usuario) throws PersistentException {
 		try {
 			PersistentSession session = foro.CUPersistentManager.instance().getSession();
-			return loadAdministradorByORMID(session, attribute);
+			return loadAdministradorByORMID(session, id_usuario);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -30,10 +30,10 @@ public class AdministradorDAO {
 		}
 	}
 	
-	public static Administrador getAdministradorByORMID(int attribute) throws PersistentException {
+	public static Administrador getAdministradorByORMID(int id_usuario) throws PersistentException {
 		try {
 			PersistentSession session = foro.CUPersistentManager.instance().getSession();
-			return getAdministradorByORMID(session, attribute);
+			return getAdministradorByORMID(session, id_usuario);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -41,10 +41,10 @@ public class AdministradorDAO {
 		}
 	}
 	
-	public static Administrador loadAdministradorByORMID(int attribute, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Administrador loadAdministradorByORMID(int id_usuario, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = foro.CUPersistentManager.instance().getSession();
-			return loadAdministradorByORMID(session, attribute, lockMode);
+			return loadAdministradorByORMID(session, id_usuario, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -52,10 +52,10 @@ public class AdministradorDAO {
 		}
 	}
 	
-	public static Administrador getAdministradorByORMID(int attribute, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Administrador getAdministradorByORMID(int id_usuario, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = foro.CUPersistentManager.instance().getSession();
-			return getAdministradorByORMID(session, attribute, lockMode);
+			return getAdministradorByORMID(session, id_usuario, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -63,9 +63,9 @@ public class AdministradorDAO {
 		}
 	}
 	
-	public static Administrador loadAdministradorByORMID(PersistentSession session, int attribute) throws PersistentException {
+	public static Administrador loadAdministradorByORMID(PersistentSession session, int id_usuario) throws PersistentException {
 		try {
-			return (Administrador) session.load(foro.Administrador.class, new Integer(attribute));
+			return (Administrador) session.load(foro.Administrador.class, new Integer(id_usuario));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -73,9 +73,9 @@ public class AdministradorDAO {
 		}
 	}
 	
-	public static Administrador getAdministradorByORMID(PersistentSession session, int attribute) throws PersistentException {
+	public static Administrador getAdministradorByORMID(PersistentSession session, int id_usuario) throws PersistentException {
 		try {
-			return (Administrador) session.get(foro.Administrador.class, new Integer(attribute));
+			return (Administrador) session.get(foro.Administrador.class, new Integer(id_usuario));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -83,9 +83,9 @@ public class AdministradorDAO {
 		}
 	}
 	
-	public static Administrador loadAdministradorByORMID(PersistentSession session, int attribute, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Administrador loadAdministradorByORMID(PersistentSession session, int id_usuario, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Administrador) session.load(foro.Administrador.class, new Integer(attribute), lockMode);
+			return (Administrador) session.load(foro.Administrador.class, new Integer(id_usuario), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -93,9 +93,9 @@ public class AdministradorDAO {
 		}
 	}
 	
-	public static Administrador getAdministradorByORMID(PersistentSession session, int attribute, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Administrador getAdministradorByORMID(PersistentSession session, int id_usuario, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Administrador) session.get(foro.Administrador.class, new Integer(attribute), lockMode);
+			return (Administrador) session.get(foro.Administrador.class, new Integer(id_usuario), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -323,7 +323,7 @@ public class AdministradorDAO {
 	
 	public static boolean deleteAndDissociate(foro.Administrador administrador)throws PersistentException {
 		try {
-			foro.Secciones[] lCreas = administrador.crea.toArray();
+			foro.Seccion[] lCreas = administrador.crea.toArray();
 			for(int i = 0; i < lCreas.length; i++) {
 				lCreas[i].setEs_creada_por(null);
 			}
@@ -331,15 +331,11 @@ public class AdministradorDAO {
 			for(int i = 0; i < lEliminas.length; i++) {
 				lEliminas[i].setEliminado_por(null);
 			}
-			foro.Mensaje[] lBorras = administrador.borra.toArray();
-			for(int i = 0; i < lBorras.length; i++) {
-				lBorras[i].setEliminado_por(null);
+			if (administrador.getEliminado_por() != null) {
+				administrador.getEliminado_por().elimina.remove(administrador);
 			}
-			foro.Usuario[] lEs_amigo_des = administrador.es_amigo_de.toArray();
-			for(int i = 0; i < lEs_amigo_des.length; i++) {
-				lEs_amigo_des[i].es_su_amigo.remove(administrador);
-			}
-			foro.Temas[] lCrea_uns = administrador.crea_un.toArray();
+			
+			foro.Tema[] lCrea_uns = administrador.crea_un.toArray();
 			for(int i = 0; i < lCrea_uns.length; i++) {
 				lCrea_uns[i].setCreado_por(null);
 			}
@@ -347,11 +343,15 @@ public class AdministradorDAO {
 			for(int i = 0; i < lEscribes.length; i++) {
 				lEscribes[i].setPertenece_a(null);
 			}
+			foro.Usuario[] lEs_amigo_des = administrador.es_amigo_de.toArray();
+			for(int i = 0; i < lEs_amigo_des.length; i++) {
+				lEs_amigo_des[i].es_su_amigo.remove(administrador);
+			}
 			foro.Usuario[] lReporta_as = administrador.reporta_a.toArray();
 			for(int i = 0; i < lReporta_as.length; i++) {
 				lReporta_as[i].es_reportado_por.remove(administrador);
 			}
-			foro.Notificaciones[] lTienes = administrador.tiene.toArray();
+			foro.Notificacion[] lTienes = administrador.tiene.toArray();
 			for(int i = 0; i < lTienes.length; i++) {
 				lTienes[i].setDe(null);
 			}
@@ -359,10 +359,6 @@ public class AdministradorDAO {
 			for(int i = 0; i < lEs_su_amigos.length; i++) {
 				lEs_su_amigos[i].es_amigo_de.remove(administrador);
 			}
-			if (administrador.getEliminado_por() != null) {
-				administrador.getEliminado_por().elimina.remove(administrador);
-			}
-			
 			foro.Mensaje[] lGustas = administrador.gusta.toArray();
 			for(int i = 0; i < lGustas.length; i++) {
 				lGustas[i].es_gustado.remove(administrador);
@@ -371,7 +367,7 @@ public class AdministradorDAO {
 			for(int i = 0; i < lEs_reportado_pors.length; i++) {
 				lEs_reportado_pors[i].reporta_a.remove(administrador);
 			}
-			foro.Temas[] lLe_da_me_gustas = administrador.le_da_me_gusta.toArray();
+			foro.Tema[] lLe_da_me_gustas = administrador.le_da_me_gusta.toArray();
 			for(int i = 0; i < lLe_da_me_gustas.length; i++) {
 				lLe_da_me_gustas[i].es_gustado.remove(administrador);
 			}
@@ -385,7 +381,7 @@ public class AdministradorDAO {
 	
 	public static boolean deleteAndDissociate(foro.Administrador administrador, org.orm.PersistentSession session)throws PersistentException {
 		try {
-			foro.Secciones[] lCreas = administrador.crea.toArray();
+			foro.Seccion[] lCreas = administrador.crea.toArray();
 			for(int i = 0; i < lCreas.length; i++) {
 				lCreas[i].setEs_creada_por(null);
 			}
@@ -393,15 +389,11 @@ public class AdministradorDAO {
 			for(int i = 0; i < lEliminas.length; i++) {
 				lEliminas[i].setEliminado_por(null);
 			}
-			foro.Mensaje[] lBorras = administrador.borra.toArray();
-			for(int i = 0; i < lBorras.length; i++) {
-				lBorras[i].setEliminado_por(null);
+			if (administrador.getEliminado_por() != null) {
+				administrador.getEliminado_por().elimina.remove(administrador);
 			}
-			foro.Usuario[] lEs_amigo_des = administrador.es_amigo_de.toArray();
-			for(int i = 0; i < lEs_amigo_des.length; i++) {
-				lEs_amigo_des[i].es_su_amigo.remove(administrador);
-			}
-			foro.Temas[] lCrea_uns = administrador.crea_un.toArray();
+			
+			foro.Tema[] lCrea_uns = administrador.crea_un.toArray();
 			for(int i = 0; i < lCrea_uns.length; i++) {
 				lCrea_uns[i].setCreado_por(null);
 			}
@@ -409,11 +401,15 @@ public class AdministradorDAO {
 			for(int i = 0; i < lEscribes.length; i++) {
 				lEscribes[i].setPertenece_a(null);
 			}
+			foro.Usuario[] lEs_amigo_des = administrador.es_amigo_de.toArray();
+			for(int i = 0; i < lEs_amigo_des.length; i++) {
+				lEs_amigo_des[i].es_su_amigo.remove(administrador);
+			}
 			foro.Usuario[] lReporta_as = administrador.reporta_a.toArray();
 			for(int i = 0; i < lReporta_as.length; i++) {
 				lReporta_as[i].es_reportado_por.remove(administrador);
 			}
-			foro.Notificaciones[] lTienes = administrador.tiene.toArray();
+			foro.Notificacion[] lTienes = administrador.tiene.toArray();
 			for(int i = 0; i < lTienes.length; i++) {
 				lTienes[i].setDe(null);
 			}
@@ -421,10 +417,6 @@ public class AdministradorDAO {
 			for(int i = 0; i < lEs_su_amigos.length; i++) {
 				lEs_su_amigos[i].es_amigo_de.remove(administrador);
 			}
-			if (administrador.getEliminado_por() != null) {
-				administrador.getEliminado_por().elimina.remove(administrador);
-			}
-			
 			foro.Mensaje[] lGustas = administrador.gusta.toArray();
 			for(int i = 0; i < lGustas.length; i++) {
 				lGustas[i].es_gustado.remove(administrador);
@@ -433,7 +425,7 @@ public class AdministradorDAO {
 			for(int i = 0; i < lEs_reportado_pors.length; i++) {
 				lEs_reportado_pors[i].reporta_a.remove(administrador);
 			}
-			foro.Temas[] lLe_da_me_gustas = administrador.le_da_me_gusta.toArray();
+			foro.Tema[] lLe_da_me_gustas = administrador.le_da_me_gusta.toArray();
 			for(int i = 0; i < lLe_da_me_gustas.length; i++) {
 				lLe_da_me_gustas[i].es_gustado.remove(administrador);
 			}

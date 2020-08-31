@@ -126,7 +126,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log." suffix=".txt"/>
 
-      <Context docBase="C:\Users\Ramón Ramos\ProyectoForoV2.0\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\Ramón Ramos\ProyectoForoV2.0\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Foro" path="/Foro" reloadable="true" source="org.eclipse.jst.jee.server:Foro"/></Host>
+      <Context docBase="C:\Users\Ramón Ramos\ProyectoForoV2.0\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\Ramón Ramos\ProyectoForoV2.0\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Foro" path="/Foro" reloadable="true" source="org.eclipse.jst.jee.server:Foro"/><Context docBase="C:\Users\Ramón Ramos\ProyectoForoV2.0\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Nueva" path="/Nueva" reloadable="true" source="org.eclipse.jst.jee.server:Nueva"/></Host>
     </Engine>
   </Service>
 </Server>

@@ -19,10 +19,10 @@ import org.hibernate.LockMode;
 import java.util.List;
 
 public class UsuarioDAO {
-	public static Usuario loadUsuarioByORMID(int attribute) throws PersistentException {
+	public static Usuario loadUsuarioByORMID(int id_usuario) throws PersistentException {
 		try {
 			PersistentSession session = foro.CUPersistentManager.instance().getSession();
-			return loadUsuarioByORMID(session, attribute);
+			return loadUsuarioByORMID(session, id_usuario);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -30,10 +30,10 @@ public class UsuarioDAO {
 		}
 	}
 	
-	public static Usuario getUsuarioByORMID(int attribute) throws PersistentException {
+	public static Usuario getUsuarioByORMID(int id_usuario) throws PersistentException {
 		try {
 			PersistentSession session = foro.CUPersistentManager.instance().getSession();
-			return getUsuarioByORMID(session, attribute);
+			return getUsuarioByORMID(session, id_usuario);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -41,10 +41,10 @@ public class UsuarioDAO {
 		}
 	}
 	
-	public static Usuario loadUsuarioByORMID(int attribute, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Usuario loadUsuarioByORMID(int id_usuario, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = foro.CUPersistentManager.instance().getSession();
-			return loadUsuarioByORMID(session, attribute, lockMode);
+			return loadUsuarioByORMID(session, id_usuario, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -52,10 +52,10 @@ public class UsuarioDAO {
 		}
 	}
 	
-	public static Usuario getUsuarioByORMID(int attribute, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Usuario getUsuarioByORMID(int id_usuario, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = foro.CUPersistentManager.instance().getSession();
-			return getUsuarioByORMID(session, attribute, lockMode);
+			return getUsuarioByORMID(session, id_usuario, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -63,9 +63,9 @@ public class UsuarioDAO {
 		}
 	}
 	
-	public static Usuario loadUsuarioByORMID(PersistentSession session, int attribute) throws PersistentException {
+	public static Usuario loadUsuarioByORMID(PersistentSession session, int id_usuario) throws PersistentException {
 		try {
-			return (Usuario) session.load(foro.Usuario.class, new Integer(attribute));
+			return (Usuario) session.load(foro.Usuario.class, new Integer(id_usuario));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -73,9 +73,9 @@ public class UsuarioDAO {
 		}
 	}
 	
-	public static Usuario getUsuarioByORMID(PersistentSession session, int attribute) throws PersistentException {
+	public static Usuario getUsuarioByORMID(PersistentSession session, int id_usuario) throws PersistentException {
 		try {
-			return (Usuario) session.get(foro.Usuario.class, new Integer(attribute));
+			return (Usuario) session.get(foro.Usuario.class, new Integer(id_usuario));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -83,9 +83,9 @@ public class UsuarioDAO {
 		}
 	}
 	
-	public static Usuario loadUsuarioByORMID(PersistentSession session, int attribute, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Usuario loadUsuarioByORMID(PersistentSession session, int id_usuario, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Usuario) session.load(foro.Usuario.class, new Integer(attribute), lockMode);
+			return (Usuario) session.load(foro.Usuario.class, new Integer(id_usuario), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -93,9 +93,9 @@ public class UsuarioDAO {
 		}
 	}
 	
-	public static Usuario getUsuarioByORMID(PersistentSession session, int attribute, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Usuario getUsuarioByORMID(PersistentSession session, int id_usuario, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Usuario) session.get(foro.Usuario.class, new Integer(attribute), lockMode);
+			return (Usuario) session.get(foro.Usuario.class, new Integer(id_usuario), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -322,16 +322,20 @@ public class UsuarioDAO {
 	}
 	
 	public static boolean deleteAndDissociate(foro.Usuario usuario)throws PersistentException {
-		if (usuario instanceof foro.Moderador) {
-			return foro.ModeradorDAO.deleteAndDissociate((foro.Moderador) usuario);
+		if (usuario instanceof Moderador) {
+			return ModeradorDAO.deleteAndDissociate((Moderador) usuario);
+		}
+		
+		if (usuario instanceof Administrador) {
+			return AdministradorDAO.deleteAndDissociate((Administrador) usuario);
 		}
 		
 		try {
-			foro.Usuario[] lEs_amigo_des = usuario.es_amigo_de.toArray();
-			for(int i = 0; i < lEs_amigo_des.length; i++) {
-				lEs_amigo_des[i].es_su_amigo.remove(usuario);
+			if (usuario.getEliminado_por() != null) {
+				usuario.getEliminado_por().elimina.remove(usuario);
 			}
-			foro.Temas[] lCrea_uns = usuario.crea_un.toArray();
+			
+			foro.Tema[] lCrea_uns = usuario.crea_un.toArray();
 			for(int i = 0; i < lCrea_uns.length; i++) {
 				lCrea_uns[i].setCreado_por(null);
 			}
@@ -339,11 +343,15 @@ public class UsuarioDAO {
 			for(int i = 0; i < lEscribes.length; i++) {
 				lEscribes[i].setPertenece_a(null);
 			}
+			foro.Usuario[] lEs_amigo_des = usuario.es_amigo_de.toArray();
+			for(int i = 0; i < lEs_amigo_des.length; i++) {
+				lEs_amigo_des[i].es_su_amigo.remove(usuario);
+			}
 			foro.Usuario[] lReporta_as = usuario.reporta_a.toArray();
 			for(int i = 0; i < lReporta_as.length; i++) {
 				lReporta_as[i].es_reportado_por.remove(usuario);
 			}
-			foro.Notificaciones[] lTienes = usuario.tiene.toArray();
+			foro.Notificacion[] lTienes = usuario.tiene.toArray();
 			for(int i = 0; i < lTienes.length; i++) {
 				lTienes[i].setDe(null);
 			}
@@ -351,10 +359,6 @@ public class UsuarioDAO {
 			for(int i = 0; i < lEs_su_amigos.length; i++) {
 				lEs_su_amigos[i].es_amigo_de.remove(usuario);
 			}
-			if (usuario.getEliminado_por() != null) {
-				usuario.getEliminado_por().elimina.remove(usuario);
-			}
-			
 			foro.Mensaje[] lGustas = usuario.gusta.toArray();
 			for(int i = 0; i < lGustas.length; i++) {
 				lGustas[i].es_gustado.remove(usuario);
@@ -363,7 +367,7 @@ public class UsuarioDAO {
 			for(int i = 0; i < lEs_reportado_pors.length; i++) {
 				lEs_reportado_pors[i].reporta_a.remove(usuario);
 			}
-			foro.Temas[] lLe_da_me_gustas = usuario.le_da_me_gusta.toArray();
+			foro.Tema[] lLe_da_me_gustas = usuario.le_da_me_gusta.toArray();
 			for(int i = 0; i < lLe_da_me_gustas.length; i++) {
 				lLe_da_me_gustas[i].es_gustado.remove(usuario);
 			}
@@ -376,16 +380,20 @@ public class UsuarioDAO {
 	}
 	
 	public static boolean deleteAndDissociate(foro.Usuario usuario, org.orm.PersistentSession session)throws PersistentException {
-		if (usuario instanceof foro.Moderador) {
-			return foro.ModeradorDAO.deleteAndDissociate((foro.Moderador) usuario, session);
+		if (usuario instanceof Moderador) {
+			return ModeradorDAO.deleteAndDissociate((Moderador) usuario, session);
+		}
+		
+		if (usuario instanceof Administrador) {
+			return AdministradorDAO.deleteAndDissociate((Administrador) usuario, session);
 		}
 		
 		try {
-			foro.Usuario[] lEs_amigo_des = usuario.es_amigo_de.toArray();
-			for(int i = 0; i < lEs_amigo_des.length; i++) {
-				lEs_amigo_des[i].es_su_amigo.remove(usuario);
+			if (usuario.getEliminado_por() != null) {
+				usuario.getEliminado_por().elimina.remove(usuario);
 			}
-			foro.Temas[] lCrea_uns = usuario.crea_un.toArray();
+			
+			foro.Tema[] lCrea_uns = usuario.crea_un.toArray();
 			for(int i = 0; i < lCrea_uns.length; i++) {
 				lCrea_uns[i].setCreado_por(null);
 			}
@@ -393,11 +401,15 @@ public class UsuarioDAO {
 			for(int i = 0; i < lEscribes.length; i++) {
 				lEscribes[i].setPertenece_a(null);
 			}
+			foro.Usuario[] lEs_amigo_des = usuario.es_amigo_de.toArray();
+			for(int i = 0; i < lEs_amigo_des.length; i++) {
+				lEs_amigo_des[i].es_su_amigo.remove(usuario);
+			}
 			foro.Usuario[] lReporta_as = usuario.reporta_a.toArray();
 			for(int i = 0; i < lReporta_as.length; i++) {
 				lReporta_as[i].es_reportado_por.remove(usuario);
 			}
-			foro.Notificaciones[] lTienes = usuario.tiene.toArray();
+			foro.Notificacion[] lTienes = usuario.tiene.toArray();
 			for(int i = 0; i < lTienes.length; i++) {
 				lTienes[i].setDe(null);
 			}
@@ -405,10 +417,6 @@ public class UsuarioDAO {
 			for(int i = 0; i < lEs_su_amigos.length; i++) {
 				lEs_su_amigos[i].es_amigo_de.remove(usuario);
 			}
-			if (usuario.getEliminado_por() != null) {
-				usuario.getEliminado_por().elimina.remove(usuario);
-			}
-			
 			foro.Mensaje[] lGustas = usuario.gusta.toArray();
 			for(int i = 0; i < lGustas.length; i++) {
 				lGustas[i].es_gustado.remove(usuario);
@@ -417,7 +425,7 @@ public class UsuarioDAO {
 			for(int i = 0; i < lEs_reportado_pors.length; i++) {
 				lEs_reportado_pors[i].reporta_a.remove(usuario);
 			}
-			foro.Temas[] lLe_da_me_gustas = usuario.le_da_me_gusta.toArray();
+			foro.Tema[] lLe_da_me_gustas = usuario.le_da_me_gusta.toArray();
 			for(int i = 0; i < lLe_da_me_gustas.length; i++) {
 				lLe_da_me_gustas[i].es_gustado.remove(usuario);
 			}

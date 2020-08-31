@@ -12,26 +12,35 @@
 	<target depends="init" name="build">
 		<javac srcdir="." destdir="classes" source="1.5" target="1.5" fork="yes">
 			<classpath refid="build.classpath"/>
-			<include name="BD_Videos.java"/>
-			<include name="Video.java"/>
-			<include name="Foto.java"/>
-			<include name="BD_Imagenes.java"/>
-			<include name="BD_Secciones.java"/>
-			<include name="BD_Administradores.java"/>
-			<include name="BD_Moderadores.java"/>
-			<include name="BD_Usuarios.java"/>
-			<include name="BD_Notificaciones.java"/>
-			<include name="Notificaciones.java"/>
-			<include name="Usuario.java"/>
-			<include name="Moderador.java"/>
+			<include name="BD_Administrador.java"/>
+			<include name="BD_Seccion.java"/>
+			<include name="BD_Tema.java"/>
+			<include name="Tema.java"/>
+			<include name="Seccion.java"/>
 			<include name="Administrador.java"/>
-			<include name="Secciones.java"/>
-			<include name="Temas.java"/>
-			<include name="BD_Temas.java"/>
-			<include name="BD_Pincipal.java"/>
-			<include name="BD_Mensajes.java"/>
-			<include name="Mensaje.java"/>
-			<include name="Media.java"/>
+			<include name="Moderador.java"/>
+			<include name="BD_Moderador.java"/>
+			<include name="Notificacion.java"/>
+			<include name="BD_Notificacion.java"/>
+			<include name="Video.java"/>
+			<include name="BD_Videos.java"/>
+			<include name="FORO/BD_Usuario.java"/>
+			<include name="FORO/Usuario.java"/>
+			<include name="FORO/BD_Mensaje.java"/>
+			<include name="FORO/Mensaje.java"/>
+			<include name="FORO/Media.java"/>
+			<include name="FORO/Foto.java"/>
+			<include name="FORO/BD_Imagenes.java"/>
+			<include name="FORO/BD_Principal.java"/>
+			<include name="iCorreo.java"/>
+			<include name="iModerador.java"/>
+			<include name="iComún_privilegiados.java"/>
+			<include name="iAdministrador.java"/>
+			<include name="iComún_registrados.java"/>
+			<include name="iUsuario_propietario_mensaje.java"/>
+			<include name="iUsuario_Registrado.java"/>
+			<include name="iCom�n_usuarios.java"/>
+			<include name="iUsuario_No_Registrado.java"/>
 		</javac>
 	</target>
 </project>

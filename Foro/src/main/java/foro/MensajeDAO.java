@@ -19,10 +19,10 @@ import org.hibernate.LockMode;
 import java.util.List;
 
 public class MensajeDAO {
-	public static Mensaje loadMensajeByORMID(int attribute) throws PersistentException {
+	public static Mensaje loadMensajeByORMID(int id_mensaje) throws PersistentException {
 		try {
 			PersistentSession session = foro.CUPersistentManager.instance().getSession();
-			return loadMensajeByORMID(session, attribute);
+			return loadMensajeByORMID(session, id_mensaje);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -30,10 +30,10 @@ public class MensajeDAO {
 		}
 	}
 	
-	public static Mensaje getMensajeByORMID(int attribute) throws PersistentException {
+	public static Mensaje getMensajeByORMID(int id_mensaje) throws PersistentException {
 		try {
 			PersistentSession session = foro.CUPersistentManager.instance().getSession();
-			return getMensajeByORMID(session, attribute);
+			return getMensajeByORMID(session, id_mensaje);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -41,10 +41,10 @@ public class MensajeDAO {
 		}
 	}
 	
-	public static Mensaje loadMensajeByORMID(int attribute, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Mensaje loadMensajeByORMID(int id_mensaje, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = foro.CUPersistentManager.instance().getSession();
-			return loadMensajeByORMID(session, attribute, lockMode);
+			return loadMensajeByORMID(session, id_mensaje, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -52,10 +52,10 @@ public class MensajeDAO {
 		}
 	}
 	
-	public static Mensaje getMensajeByORMID(int attribute, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Mensaje getMensajeByORMID(int id_mensaje, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = foro.CUPersistentManager.instance().getSession();
-			return getMensajeByORMID(session, attribute, lockMode);
+			return getMensajeByORMID(session, id_mensaje, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -63,9 +63,9 @@ public class MensajeDAO {
 		}
 	}
 	
-	public static Mensaje loadMensajeByORMID(PersistentSession session, int attribute) throws PersistentException {
+	public static Mensaje loadMensajeByORMID(PersistentSession session, int id_mensaje) throws PersistentException {
 		try {
-			return (Mensaje) session.load(foro.Mensaje.class, new Integer(attribute));
+			return (Mensaje) session.load(foro.Mensaje.class, new Integer(id_mensaje));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -73,9 +73,9 @@ public class MensajeDAO {
 		}
 	}
 	
-	public static Mensaje getMensajeByORMID(PersistentSession session, int attribute) throws PersistentException {
+	public static Mensaje getMensajeByORMID(PersistentSession session, int id_mensaje) throws PersistentException {
 		try {
-			return (Mensaje) session.get(foro.Mensaje.class, new Integer(attribute));
+			return (Mensaje) session.get(foro.Mensaje.class, new Integer(id_mensaje));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -83,9 +83,9 @@ public class MensajeDAO {
 		}
 	}
 	
-	public static Mensaje loadMensajeByORMID(PersistentSession session, int attribute, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Mensaje loadMensajeByORMID(PersistentSession session, int id_mensaje, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Mensaje) session.load(foro.Mensaje.class, new Integer(attribute), lockMode);
+			return (Mensaje) session.load(foro.Mensaje.class, new Integer(id_mensaje), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -93,9 +93,9 @@ public class MensajeDAO {
 		}
 	}
 	
-	public static Mensaje getMensajeByORMID(PersistentSession session, int attribute, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Mensaje getMensajeByORMID(PersistentSession session, int id_mensaje, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Mensaje) session.get(foro.Mensaje.class, new Integer(attribute), lockMode);
+			return (Mensaje) session.get(foro.Mensaje.class, new Integer(id_mensaje), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();

@@ -1,8 +1,9 @@
 package com.example.Foro;
 
-//import basededatos.iModerador;
+import java.util.Vector;
 
-public class Moderador /*extends Usuario_Registrado */{
-	//public iModerador _iModerador;
-	public Ajustes_moderador _unnamed_Ajustes_moderador_;
+
+public class Moderador extends Usuario {
+	public BD_Moderador _unnamed_BD_Moderador_;
+	public Vector<Mensaje> _borra = new Vector<Mensaje>();
 }

@@ -1,11 +1,9 @@
 package com.example.Foro;
 
-import foro.Foto;
-
 import java.util.Vector;
 
 
 public class BD_Imagenes {
-	public BD_Pincipal _bD_Pincipal;
+	public BD_Principal _bD_Principal;
 	public Vector<Foto> _unnamed_Foto_ = new Vector<Foto>();
 }

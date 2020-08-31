@@ -8,97 +8,47 @@
  <body>
   <vaadin-vertical-layout size-full>
    <vaadin-horizontal-layout width-full>
-    <vaadin-button style-name="borderless boton1" size-full plain-text :expand>
+    <vaadin-button style-name="borderless boton1" size-full plain-text _id="foro_html" :expand>
       Foro 
     </vaadin-button>
     <vaadin-horizontal-layout :right>
-     <vaadin-button style-name="borderless boton1" plain-text>
+     <vaadin-button style-name="borderless boton1" plain-text _id="notificaciones_html">
        Notificaciones 
      </vaadin-button>
-     <vaadin-button style-name="borderless boton1" responsive>
+     <vaadin-button style-name="borderless boton1" responsive _id="ajustes_html">
        Ajustes 
      </vaadin-button>
-     <vaadin-button style-name="borderless boton1" plain-text>
+     <vaadin-button style-name="borderless boton1" plain-text _id="cerrarsesion_html">
        Cerrar Sesión 
      </vaadin-button>
     </vaadin-horizontal-layout>
    </vaadin-horizontal-layout>
    <vaadin-horizontal-layout style-name="portada" size-full :expand>
     <vaadin-vertical-layout spacing="false" width-auto height-full margin="false">
-     <vaadin-button style-name="borderless boton2" width-full plain-text>
+     <vaadin-button style-name="borderless boton2" width-full plain-text _id="perfil_html">
        Perfil 
      </vaadin-button>
-     <vaadin-button style-name="borderless boton2" width-full plain-text>
+     <vaadin-button style-name="borderless boton2" width-full plain-text _id="usuarios_html">
        Lista de usuarios 
      </vaadin-button>
-     <vaadin-button style-name="borderless boton2" width-full plain-text>
+     <vaadin-button style-name="borderless boton2" width-full plain-text _id="amigos_html">
        Amigos 
      </vaadin-button>
-     <vaadin-button style-name="borderless boton2" plain-text>
+     <vaadin-button style-name="borderless boton2" plain-text _id="reportados_html">
        Usuarios en revisión 
      </vaadin-button>
-     <vaadin-button style-name="borderless boton2" width-full plain-text>
+     <vaadin-button style-name="borderless boton2" width-full plain-text _id="baneados_html">
        Usuarios baneados 
      </vaadin-button>
-     <vaadin-button style-name="borderless boton2" width-full plain-text>
+     <vaadin-button style-name="borderless boton2" width-full plain-text _id="mensajes_html">
        Modificar mensajes 
      </vaadin-button>
     </vaadin-vertical-layout>
-    <vaadin-vertical-layout size-full :expand>
+    <vaadin-vertical-layout :expand>
      <vaadin-label plain-text :center>
-       Usuarios 
+       Lista de Usuarios 
      </vaadin-label>
-     <vaadin-horizontal-layout width-full>
-      <vaadin-button style-name="borderless" plain-text>
-        Nombre Usuario 
-      </vaadin-button>
-      <vaadin-button plain-text>
-        Añadir 
-      </vaadin-button>
-     </vaadin-horizontal-layout>
-     <vaadin-horizontal-layout width-full>
-      <vaadin-button style-name="borderless" plain-text>
-        Nombre Usuario 
-      </vaadin-button>
-      <vaadin-button plain-text>
-        Añadir 
-      </vaadin-button>
-     </vaadin-horizontal-layout>
-     <vaadin-horizontal-layout width-full>
-      <vaadin-button style-name="borderless" plain-text>
-        Nombre Usuario 
-      </vaadin-button>
-      <vaadin-button plain-text>
-        Añadir 
-      </vaadin-button>
-     </vaadin-horizontal-layout>
-     <vaadin-horizontal-layout width-full>
-      <vaadin-button style-name="borderless" plain-text>
-        Nombre Usuario 
-      </vaadin-button>
-      <vaadin-button plain-text>
-        Añadir 
-      </vaadin-button>
-     </vaadin-horizontal-layout>
-     <vaadin-horizontal-layout width-full>
-      <vaadin-button style-name="borderless" plain-text>
-        Nombre Usuario 
-      </vaadin-button>
-      <vaadin-button plain-text>
-        Añadir 
-      </vaadin-button>
-     </vaadin-horizontal-layout>
-     <vaadin-horizontal-layout width-full>
-      <vaadin-button style-name="borderless" plain-text>
-        Nombre Usuario 
-      </vaadin-button>
-      <vaadin-button plain-text>
-        Añadir 
-      </vaadin-button>
-     </vaadin-horizontal-layout>
-     <vaadin-button plain-text :center>
-       Ver más 
-     </vaadin-button>
+     <vaadin-vertical-layout spacing="false" size-full margin="false" _id="listausuarios_html"></vaadin-vertical-layout>
     </vaadin-vertical-layout>
    </vaadin-horizontal-layout>
   </vaadin-vertical-layout>

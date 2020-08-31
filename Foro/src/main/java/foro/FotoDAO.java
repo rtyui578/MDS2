@@ -19,10 +19,10 @@ import org.hibernate.LockMode;
 import java.util.List;
 
 public class FotoDAO {
-	public static Foto loadFotoByORMID(int attribute) throws PersistentException {
+	public static Foto loadFotoByORMID(int id_media) throws PersistentException {
 		try {
 			PersistentSession session = foro.CUPersistentManager.instance().getSession();
-			return loadFotoByORMID(session, attribute);
+			return loadFotoByORMID(session, id_media);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -30,10 +30,10 @@ public class FotoDAO {
 		}
 	}
 	
-	public static Foto getFotoByORMID(int attribute) throws PersistentException {
+	public static Foto getFotoByORMID(int id_media) throws PersistentException {
 		try {
 			PersistentSession session = foro.CUPersistentManager.instance().getSession();
-			return getFotoByORMID(session, attribute);
+			return getFotoByORMID(session, id_media);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -41,10 +41,10 @@ public class FotoDAO {
 		}
 	}
 	
-	public static Foto loadFotoByORMID(int attribute, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Foto loadFotoByORMID(int id_media, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = foro.CUPersistentManager.instance().getSession();
-			return loadFotoByORMID(session, attribute, lockMode);
+			return loadFotoByORMID(session, id_media, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -52,10 +52,10 @@ public class FotoDAO {
 		}
 	}
 	
-	public static Foto getFotoByORMID(int attribute, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Foto getFotoByORMID(int id_media, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = foro.CUPersistentManager.instance().getSession();
-			return getFotoByORMID(session, attribute, lockMode);
+			return getFotoByORMID(session, id_media, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -63,9 +63,9 @@ public class FotoDAO {
 		}
 	}
 	
-	public static Foto loadFotoByORMID(PersistentSession session, int attribute) throws PersistentException {
+	public static Foto loadFotoByORMID(PersistentSession session, int id_media) throws PersistentException {
 		try {
-			return (Foto) session.load(foro.Foto.class, new Integer(attribute));
+			return (Foto) session.load(foro.Foto.class, new Integer(id_media));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -73,9 +73,9 @@ public class FotoDAO {
 		}
 	}
 	
-	public static Foto getFotoByORMID(PersistentSession session, int attribute) throws PersistentException {
+	public static Foto getFotoByORMID(PersistentSession session, int id_media) throws PersistentException {
 		try {
-			return (Foto) session.get(foro.Foto.class, new Integer(attribute));
+			return (Foto) session.get(foro.Foto.class, new Integer(id_media));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -83,9 +83,9 @@ public class FotoDAO {
 		}
 	}
 	
-	public static Foto loadFotoByORMID(PersistentSession session, int attribute, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Foto loadFotoByORMID(PersistentSession session, int id_media, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Foto) session.load(foro.Foto.class, new Integer(attribute), lockMode);
+			return (Foto) session.load(foro.Foto.class, new Integer(id_media), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -93,9 +93,9 @@ public class FotoDAO {
 		}
 	}
 	
-	public static Foto getFotoByORMID(PersistentSession session, int attribute, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Foto getFotoByORMID(PersistentSession session, int id_media, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Foto) session.get(foro.Foto.class, new Integer(attribute), lockMode);
+			return (Foto) session.get(foro.Foto.class, new Integer(id_media), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -316,6 +316,39 @@ public class FotoDAO {
 			return true;
 		}
 		catch (Exception e) {
+			e.printStackTrace();
+			throw new PersistentException(e);
+		}
+	}
+	
+	public static boolean deleteAndDissociate(foro.Foto foto)throws PersistentException {
+		try {
+			if (foto.getEs_de() != null) {
+				foto.getEs_de().contiene.remove(foto);
+			}
+			
+			return delete(foto);
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			throw new PersistentException(e);
+		}
+	}
+	
+	public static boolean deleteAndDissociate(foro.Foto foto, org.orm.PersistentSession session)throws PersistentException {
+		try {
+			if (foto.getEs_de() != null) {
+				foto.getEs_de().contiene.remove(foto);
+			}
+			
+			try {
+				session.delete(foto);
+				return true;
+			} catch (Exception e) {
+				return false;
+			}
+		}
+		catch(Exception e) {
 			e.printStackTrace();
 			throw new PersistentException(e);
 		}

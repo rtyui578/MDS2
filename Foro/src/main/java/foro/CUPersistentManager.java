@@ -39,14 +39,14 @@ public class CUPersistentManager extends PersistentManager {
 		super.configureMetadataSources(aMetadataSources);
 		aMetadataSources.addAnnotatedClass(foro.Usuario.class);
 		aMetadataSources.addAnnotatedClass(foro.Mensaje.class);
-		aMetadataSources.addAnnotatedClass(foro.Temas.class);
-		aMetadataSources.addAnnotatedClass(foro.Video.class);
-		aMetadataSources.addAnnotatedClass(foro.Foto.class);
-		aMetadataSources.addAnnotatedClass(foro.Notificaciones.class);
+		aMetadataSources.addAnnotatedClass(foro.Tema.class);
+		aMetadataSources.addAnnotatedClass(foro.Notificacion.class);
 		aMetadataSources.addAnnotatedClass(foro.Moderador.class);
 		aMetadataSources.addAnnotatedClass(foro.Administrador.class);
 		aMetadataSources.addAnnotatedClass(foro.Media.class);
-		aMetadataSources.addAnnotatedClass(foro.Secciones.class);
+		aMetadataSources.addAnnotatedClass(foro.Seccion.class);
+		aMetadataSources.addAnnotatedClass(foro.Video.class);
+		aMetadataSources.addAnnotatedClass(foro.Foto.class);
 	}
 	
 	public String getProjectName() {

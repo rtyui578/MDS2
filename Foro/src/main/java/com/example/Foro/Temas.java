@@ -9,7 +9,7 @@ public class Temas {
 	private int _id_tema;
 	private String _nombre;
 	private int _num__likes;
-	public BD_Temas _unnamed_BD_Temas_;
+	public BD_Tema _unnamed_BD_Temas_;
 	public Secciones _pertenece_a;
 	public Vector<Usuario> _es_gustado = new Vector<Usuario>();
 	public Temas _publico;

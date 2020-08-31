@@ -17,9 +17,11 @@ import java.io.Serializable;
 import javax.persistence.*;
 @Entity
 @org.hibernate.annotations.Proxy(lazy=false)
-@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
+@Table(name="Administrador")
+@Inheritance(strategy=InheritanceType.JOINED)
 @DiscriminatorValue("Administrador")
-public class Administrador extends foro.Moderador implements Serializable {
+@PrimaryKeyJoinColumn(name="UsuarioId_usuario", referencedColumnName="Id_usuario")
+public class Administrador extends foro.Usuario implements Serializable {
 	public Administrador() {
 	}
 	
@@ -42,7 +44,7 @@ public class Administrador extends foro.Moderador implements Serializable {
 		
 	};
 	
-	@OneToMany(mappedBy="es_creada_por", targetEntity=foro.Secciones.class)	
+	@OneToMany(mappedBy="es_creada_por", targetEntity=foro.Seccion.class)	
 	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE, org.hibernate.annotations.CascadeType.LOCK})	
 	@org.hibernate.annotations.LazyCollection(org.hibernate.annotations.LazyCollectionOption.TRUE)	
 	private java.util.Set ORM_crea = new java.util.HashSet();
@@ -61,7 +63,7 @@ public class Administrador extends foro.Moderador implements Serializable {
 	}
 	
 	@Transient	
-	public final foro.SeccionesSetCollection crea = new foro.SeccionesSetCollection(this, _ormAdapter, foro.ORMConstants.KEY_ADMINISTRADOR_CREA, foro.ORMConstants.KEY_SECCIONES_ES_CREADA_POR, foro.ORMConstants.KEY_MUL_ONE_TO_MANY);
+	public final foro.SeccionSetCollection crea = new foro.SeccionSetCollection(this, _ormAdapter, foro.ORMConstants.KEY_ADMINISTRADOR_CREA, foro.ORMConstants.KEY_SECCION_ES_CREADA_POR, foro.ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	private void setORM_Elimina(java.util.Set value) {
 		this.ORM_elimina = value;

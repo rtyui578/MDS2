@@ -18,9 +18,9 @@ import javax.persistence.*;
 @Entity
 @org.hibernate.annotations.Proxy(lazy=false)
 @Table(name="Media")
-@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
+@Inheritance(strategy=InheritanceType.JOINED)
 @DiscriminatorValue("Media")
-public class Media extends foro.Video implements Serializable {
+public class Media implements Serializable {
 	public Media() {
 	}
 	
@@ -38,31 +38,27 @@ public class Media extends foro.Video implements Serializable {
 		
 	};
 	
-	@ManyToOne(targetEntity=foro.Mensaje.class, fetch=FetchType.LAZY)	
-	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.LOCK})	
-	@JoinColumns(value={ @JoinColumn(name="MensajeAttribute", referencedColumnName="Attribute") }, foreignKey=@ForeignKey(name="FKVideo564433"))	
-	private foro.Mensaje es_de;
-	
-	@Column(name="`Column`", nullable=true, length=10)	
-	private int ID;
-	
-	@Column(name="Id_media", nullable=true, length=10)	
+	@Column(name="Id_media", nullable=false, length=10)	
+	@Id	
+	@GeneratedValue(generator="FORO_MEDIA_ID_MEDIA_GENERATOR")	
+	@org.hibernate.annotations.GenericGenerator(name="FORO_MEDIA_ID_MEDIA_GENERATOR", strategy="native")	
 	private int id_media;
 	
-	public void setID(int value) {
-		this.ID = value;
-	}
+	@ManyToOne(targetEntity=foro.Mensaje.class, fetch=FetchType.LAZY)	
+	@org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.LOCK})	
+	@JoinColumns(value={ @JoinColumn(name="MensajeId_mensaje", referencedColumnName="Id_mensaje", nullable=false) }, foreignKey=@ForeignKey(name="FKMedia851088"))	
+	private foro.Mensaje es_de;
 	
-	public int getID() {
-		return ID;
-	}
-	
-	public void setId_media(int value) {
+	private void setId_media(int value) {
 		this.id_media = value;
 	}
 	
 	public int getId_media() {
 		return id_media;
+	}
+	
+	public int getORMID() {
+		return getId_media();
 	}
 	
 	public void setEs_de(foro.Mensaje value) {
@@ -90,7 +86,7 @@ public class Media extends foro.Video implements Serializable {
 	}
 	
 	public String toString() {
-		return super.toString();
+		return String.valueOf(getId_media());
 	}
 	
 }

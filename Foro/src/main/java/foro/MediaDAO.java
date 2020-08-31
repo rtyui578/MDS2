@@ -19,10 +19,10 @@ import org.hibernate.LockMode;
 import java.util.List;
 
 public class MediaDAO {
-	public static Media loadMediaByORMID(int attribute) throws PersistentException {
+	public static Media loadMediaByORMID(int id_media) throws PersistentException {
 		try {
 			PersistentSession session = foro.CUPersistentManager.instance().getSession();
-			return loadMediaByORMID(session, attribute);
+			return loadMediaByORMID(session, id_media);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -30,10 +30,10 @@ public class MediaDAO {
 		}
 	}
 	
-	public static Media getMediaByORMID(int attribute) throws PersistentException {
+	public static Media getMediaByORMID(int id_media) throws PersistentException {
 		try {
 			PersistentSession session = foro.CUPersistentManager.instance().getSession();
-			return getMediaByORMID(session, attribute);
+			return getMediaByORMID(session, id_media);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -41,10 +41,10 @@ public class MediaDAO {
 		}
 	}
 	
-	public static Media loadMediaByORMID(int attribute, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Media loadMediaByORMID(int id_media, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = foro.CUPersistentManager.instance().getSession();
-			return loadMediaByORMID(session, attribute, lockMode);
+			return loadMediaByORMID(session, id_media, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -52,10 +52,10 @@ public class MediaDAO {
 		}
 	}
 	
-	public static Media getMediaByORMID(int attribute, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Media getMediaByORMID(int id_media, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = foro.CUPersistentManager.instance().getSession();
-			return getMediaByORMID(session, attribute, lockMode);
+			return getMediaByORMID(session, id_media, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -63,9 +63,9 @@ public class MediaDAO {
 		}
 	}
 	
-	public static Media loadMediaByORMID(PersistentSession session, int attribute) throws PersistentException {
+	public static Media loadMediaByORMID(PersistentSession session, int id_media) throws PersistentException {
 		try {
-			return (Media) session.load(foro.Media.class, new Integer(attribute));
+			return (Media) session.load(foro.Media.class, new Integer(id_media));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -73,9 +73,9 @@ public class MediaDAO {
 		}
 	}
 	
-	public static Media getMediaByORMID(PersistentSession session, int attribute) throws PersistentException {
+	public static Media getMediaByORMID(PersistentSession session, int id_media) throws PersistentException {
 		try {
-			return (Media) session.get(foro.Media.class, new Integer(attribute));
+			return (Media) session.get(foro.Media.class, new Integer(id_media));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -83,9 +83,9 @@ public class MediaDAO {
 		}
 	}
 	
-	public static Media loadMediaByORMID(PersistentSession session, int attribute, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Media loadMediaByORMID(PersistentSession session, int id_media, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Media) session.load(foro.Media.class, new Integer(attribute), lockMode);
+			return (Media) session.load(foro.Media.class, new Integer(id_media), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -93,9 +93,9 @@ public class MediaDAO {
 		}
 	}
 	
-	public static Media getMediaByORMID(PersistentSession session, int attribute, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Media getMediaByORMID(PersistentSession session, int id_media, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Media) session.get(foro.Media.class, new Integer(attribute), lockMode);
+			return (Media) session.get(foro.Media.class, new Integer(id_media), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -322,6 +322,14 @@ public class MediaDAO {
 	}
 	
 	public static boolean deleteAndDissociate(foro.Media media)throws PersistentException {
+		if (media instanceof Video) {
+			return VideoDAO.deleteAndDissociate((Video) media);
+		}
+		
+		if (media instanceof Foto) {
+			return FotoDAO.deleteAndDissociate((Foto) media);
+		}
+		
 		try {
 			if (media.getEs_de() != null) {
 				media.getEs_de().contiene.remove(media);
@@ -336,6 +344,14 @@ public class MediaDAO {
 	}
 	
 	public static boolean deleteAndDissociate(foro.Media media, org.orm.PersistentSession session)throws PersistentException {
+		if (media instanceof Video) {
+			return VideoDAO.deleteAndDissociate((Video) media, session);
+		}
+		
+		if (media instanceof Foto) {
+			return FotoDAO.deleteAndDissociate((Foto) media, session);
+		}
+		
 		try {
 			if (media.getEs_de() != null) {
 				media.getEs_de().contiene.remove(media);

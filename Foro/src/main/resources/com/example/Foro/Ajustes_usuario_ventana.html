@@ -8,31 +8,31 @@
  <body>
   <vaadin-vertical-layout style-name="portada" size-full>
    <vaadin-horizontal-layout width-full>
-    <vaadin-button style-name="borderless boton1" size-full plain-text :expand>
+    <vaadin-button style-name="borderless boton1" size-full plain-text _id="foro_html" :expand>
       Foro 
     </vaadin-button>
     <vaadin-horizontal-layout :right>
-     <vaadin-button style-name="borderless boton1" plain-text>
+     <vaadin-button style-name="borderless boton1" plain-text _id="notificaciones_html">
        Notificaciones 
      </vaadin-button>
-     <vaadin-button style-name="borderless boton1" responsive>
+     <vaadin-button style-name="borderless boton1" responsive _id="ajustes_html">
        Ajustes 
      </vaadin-button>
-     <vaadin-button style-name="borderless boton1" plain-text>
+     <vaadin-button style-name="borderless boton1" plain-text _id="cerrarsesion_html">
        Cerrar Sesión 
      </vaadin-button>
     </vaadin-horizontal-layout>
    </vaadin-horizontal-layout>
    <vaadin-horizontal-layout style-name="portada" size-full :expand>
     <vaadin-vertical-layout spacing="false" width-auto height-full margin="false">
-     <vaadin-button style-name="borderless boton2" width-full plain-text>
+     <vaadin-button style-name="borderless boton2" width-full plain-text _id="amigos_html">
+       Amigos 
+     </vaadin-button>
+     <vaadin-button style-name="borderless boton2" width-full plain-text _id="perfil_html">
        Perfil 
      </vaadin-button>
-     <vaadin-button style-name="borderless boton2" plain-text>
+     <vaadin-button style-name="borderless boton2" plain-text _id="usuarios_html">
        Lista de usuarios 
-     </vaadin-button>
-     <vaadin-button style-name="borderless boton2" width-full plain-text>
-       Amigos 
      </vaadin-button>
     </vaadin-vertical-layout>
     <vaadin-vertical-layout spacing="false" size-full margin="false" :expand>
@@ -40,38 +40,31 @@
       <vaadin-label plain-text>
         Nombre usuario 
       </vaadin-label>
-      <vaadin-label plain-text>
+      <vaadin-label plain-text _id="nombreusuario_html">
         Nombre usuario 
       </vaadin-label>
      </vaadin-horizontal-layout>
      <vaadin-horizontal-layout width-full margin>
       <vaadin-label plain-text>
-        Nombre usuario 
+        Email : 
       </vaadin-label>
-      <vaadin-label plain-text>
+      <vaadin-label plain-text _id="emailusuario_htmlm">
         Nombre usuario 
       </vaadin-label>
      </vaadin-horizontal-layout>
      <vaadin-horizontal-layout width-full margin>
       <vaadin-label plain-text>
+        Contraseña: 
+      </vaadin-label>
+      <vaadin-label plain-text _id="contraseña_html">
         Nombre usuario 
       </vaadin-label>
-      <vaadin-label plain-text>
-        Nombre usuario 
-      </vaadin-label>
-     </vaadin-horizontal-layout>
-     <vaadin-horizontal-layout margin>
-      <vaadin-label plain-text>
-        Label 
-      </vaadin-label>
-      <vaadin-image></vaadin-image>
      </vaadin-horizontal-layout>
      <vaadin-horizontal-layout :center>
-      <vaadin-slider></vaadin-slider>
-      <vaadin-button style-name="primary" plain-text>
+      <vaadin-button style-name="primary" plain-text _id="modificarcontraseña_html">
         Modificar contraseña 
       </vaadin-button>
-      <vaadin-button style-name="primary" plain-text>
+      <vaadin-button style-name="primary" plain-text _id="modificarperfil_html">
         Modificar perfil 
       </vaadin-button>
      </vaadin-horizontal-layout>

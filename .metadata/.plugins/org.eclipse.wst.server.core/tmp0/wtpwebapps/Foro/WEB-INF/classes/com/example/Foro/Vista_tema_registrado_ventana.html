@@ -8,79 +8,37 @@
  <body>
   <vaadin-vertical-layout size-full>
    <vaadin-horizontal-layout width-full>
-    <vaadin-button style-name="borderless boton1" size-full plain-text :expand>
+    <vaadin-button style-name="borderless boton1" size-full plain-text _id="foro_html" :expand>
       Foro 
     </vaadin-button>
-    <vaadin-horizontal-layout :right>
-     <vaadin-button style-name="borderless boton1" plain-text>
-       Notificaciones 
-     </vaadin-button>
-     <vaadin-button style-name="borderless boton1" responsive>
+    <vaadin-horizontal-layout>
+     <vaadin-button style-name="borderless boton1" responsive _id="ajustes_html">
        Ajustes 
      </vaadin-button>
-     <vaadin-button style-name="borderless boton1" plain-text>
-       Cerrar Sesión 
+     <vaadin-button style-name="borderless boton1" plain-text _id="notificaciones_html">
+       Notificaciones 
+     </vaadin-button>
+     <vaadin-button style-name="borderless boton1" plain-text _id="cerrarsesion_html">
+       Cerrar Sesió 
      </vaadin-button>
     </vaadin-horizontal-layout>
    </vaadin-horizontal-layout>
-   <vaadin-horizontal-layout responsive width-full>
-    <vaadin-image></vaadin-image>
-    <vaadin-vertical-layout size-auto>
-     <vaadin-label style-name="titulo" plain-text>
+   <vaadin-horizontal-layout width-full>
+    <vaadin-vertical-layout spacing="false" size-auto margin="false" :expand>
+     <vaadin-label style-name="titulo" plain-text _id="titulotema_html">
        Titulo 
-     </vaadin-label>
-     <vaadin-label style-name="titulo" plain-text>
-       Subtitulo 
      </vaadin-label>
     </vaadin-vertical-layout>
    </vaadin-horizontal-layout>
-   <vaadin-vertical-layout responsive margin="false">
+   <vaadin-vertical-layout responsive size-full margin="false" :expand>
     <vaadin-label style-name="titulo" plain-text :center>
       Comentarios 
     </vaadin-label>
-    <vaadin-horizontal-layout style-name="label1">
-     <vaadin-image></vaadin-image>
-     <vaadin-label plain-text>
-       a sg sdfh serstdh rueujsu5jhdfs dsfh hgfk asdg kñjasd igudgs ahhsryhsfasda 
-     </vaadin-label>
-     <vaadin-button style-name="borderless like" plain-text :right>
-       Like 
-     </vaadin-button>
-     <vaadin-button style-name="borderless like" plain-text>
-       Responder 
-     </vaadin-button>
-    </vaadin-horizontal-layout>
-    <vaadin-horizontal-layout style-name="label1">
-     <vaadin-image></vaadin-image>
-     <vaadin-label plain-text>
-       a sg sdfh serstdh rueujsu5jhdfs dsfh hgfk asdg kñjasd igudgs ahhsryhsfasda 
-     </vaadin-label>
-     <vaadin-button style-name="borderless like" plain-text :right>
-       Like 
-     </vaadin-button>
-     <vaadin-button style-name="borderless like" plain-text>
-       Responder 
-     </vaadin-button>
-    </vaadin-horizontal-layout>
-    <vaadin-horizontal-layout style-name="label1">
-     <vaadin-image></vaadin-image>
-     <vaadin-label plain-text>
-       a sg sdfh serstdh rueujsu5jhdfs dsfh hgfk asdg kñjasd igudgs ahhsryhsfasda 
-     </vaadin-label>
-     <vaadin-button style-name="borderless like" plain-text :right>
-       Like 
-     </vaadin-button>
-     <vaadin-button style-name="borderless like" plain-text>
-       Responder 
-     </vaadin-button>
-    </vaadin-horizontal-layout>
-    <vaadin-button style-name="boton1" plain-text :center>
-      Ver más 
-    </vaadin-button>
+    <vaadin-vertical-layout size-full _id="comentarios_html" :expand></vaadin-vertical-layout>
    </vaadin-vertical-layout>
-   <vaadin-vertical-layout size-full :expand>
-    <vaadin-text-field width-full value="Escribe tu comentario"></vaadin-text-field>
-    <vaadin-button style-name="primary" plain-text :center>
+   <vaadin-vertical-layout height="152px">
+    <vaadin-text-field width-full value="Escribe tu comentario" _id="contenidocomentario_html"></vaadin-text-field>
+    <vaadin-button style-name="primary" plain-text _id="publicar_html" :center>
       Publicalo 
     </vaadin-button>
    </vaadin-vertical-layout>

@@ -70,8 +70,6 @@ public class MensajeSetCollection extends org.orm.util.ORMSet {
 	/**
 	 * Return an sorted array containing all of the persistent objects in ORMSet
 	 * @param propertyName Name of the property for sorting:<ul>
-	 * <li>attribute</li>
-	 * <li>ID</li>
 	 * <li>id_mensaje</li>
 	 * <li>num_likes</li>
 	 * <li>contenido</li>
@@ -85,8 +83,6 @@ public class MensajeSetCollection extends org.orm.util.ORMSet {
 	/**
 	 * Return an sorted array containing all of the persistent objects in ORMSet
 	 * @param propertyName Name of the property for sorting:<ul>
-	 * <li>attribute</li>
-	 * <li>ID</li>
 	 * <li>id_mensaje</li>
 	 * <li>num_likes</li>
 	 * <li>contenido</li>

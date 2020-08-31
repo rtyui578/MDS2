@@ -19,22 +19,29 @@ import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
 public class FotoDetachedCriteria extends AbstractORMDetachedCriteria {
-	public final IntegerExpression attribute;
-	public final IntegerExpression ID;
+	public final IntegerExpression id_media;
+	public final IntegerExpression es_deId;
+	public final AssociationExpression es_de;
 	public final StringExpression enlace;
 	
 	public FotoDetachedCriteria() {
 		super(foro.Foto.class, foro.FotoCriteria.class);
-		attribute = new IntegerExpression("attribute", this.getDetachedCriteria());
-		ID = new IntegerExpression("ID", this.getDetachedCriteria());
+		id_media = new IntegerExpression("id_media", this.getDetachedCriteria());
+		es_deId = new IntegerExpression("es_de.id_mensaje", this.getDetachedCriteria());
+		es_de = new AssociationExpression("es_de", this.getDetachedCriteria());
 		enlace = new StringExpression("enlace", this.getDetachedCriteria());
 	}
 	
 	public FotoDetachedCriteria(DetachedCriteria aDetachedCriteria) {
 		super(aDetachedCriteria, foro.FotoCriteria.class);
-		attribute = new IntegerExpression("attribute", this.getDetachedCriteria());
-		ID = new IntegerExpression("ID", this.getDetachedCriteria());
+		id_media = new IntegerExpression("id_media", this.getDetachedCriteria());
+		es_deId = new IntegerExpression("es_de.id_mensaje", this.getDetachedCriteria());
+		es_de = new AssociationExpression("es_de", this.getDetachedCriteria());
 		enlace = new StringExpression("enlace", this.getDetachedCriteria());
+	}
+	
+	public MensajeDetachedCriteria createEs_deCriteria() {
+		return new MensajeDetachedCriteria(createCriteria("es_de"));
 	}
 	
 	public Foto uniqueFoto(PersistentSession session) {
