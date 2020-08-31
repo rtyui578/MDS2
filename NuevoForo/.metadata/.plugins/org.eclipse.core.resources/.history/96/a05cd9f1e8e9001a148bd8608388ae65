@@ -1,0 +1,46 @@
+package com.example.Foro;
+
+import com.vaadin.navigator.Navigator;
+import com.vaadin.navigator.View;
+import com.vaadin.ui.Button;
+import com.vaadin.ui.Label;
+import com.vaadin.ui.VerticalLayout;
+
+public class Ajustes extends Ajustes_ventana implements View {
+	
+	Button ajustes,notificacion,cerrarsesion,usuarios,amigos,perfil,foro,modificarcontrasena,modificarperfil;
+	VerticalLayout listaDeUsuarios,vistaperfil,vistalista,vistaamigos;
+	Label nombreusuario,email,contrasena;
+	Navigator navegador;
+	
+	public Ajustes() {
+		
+	}
+	
+	public void inicio(int idusuario, int tipo) {
+		foro=this.foro_html;
+		ajustes=this.ajustes_html;
+		notificacion=this.notificaciones_html;
+		cerrarsesion=this.cerrarsesion_html;
+		
+		modificarcontrasena=this.modificarcontrasena_html;
+		modificarperfil=this.modificarperfil_html;
+		nombreusuario=this.nombreusuario_html;
+		email=this.emailusuario_htmlm;
+		contrasena=this.contrasena_html;
+		
+		usuarios=this.usuarios_html;
+		amigos=this.amigos_html;
+		perfil=this.perfil_html;
+		
+		vistaperfil=this.vista_perfil_html;
+		vistaamigos=this.vista_amigos_html;
+		vistalista=this.vista_lista_usuarios_html;
+		
+		
+	}
+	public void setNavegador(Navigator nav) {
+		navegador=nav;
+	}
+	
+}

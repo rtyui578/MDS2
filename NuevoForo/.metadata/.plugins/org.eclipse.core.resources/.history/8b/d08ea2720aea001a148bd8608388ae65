@@ -1,0 +1,10 @@
+package com.example.Foro;
+
+public class Modificar_contraseña {
+	
+	
+
+	public boolean modificar_Contraseña() {
+		throw new UnsupportedOperationException();
+	}
+}

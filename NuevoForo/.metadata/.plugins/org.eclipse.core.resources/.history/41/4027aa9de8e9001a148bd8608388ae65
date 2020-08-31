@@ -1,0 +1,16 @@
+package com.example.Foro;
+
+import com.vaadin.navigator.Navigator;
+import com.vaadin.navigator.View;
+import com.vaadin.ui.Button;
+import com.vaadin.ui.Label;
+import com.vaadin.ui.VerticalLayout;
+
+public class Ajustes extends Ajustes_ventana implements View {
+	
+	Button ajustes,notificacion,cerrarsesion,usuarios,amigos,perfil,foro,modificarcontrasena,modificarperfil;
+	VerticalLayout listaDeUsuarios,vistaperfil,vistalista,vistaamigos;
+	Label nombreusuario,email,contrasena;
+	Navigator navegador;
+	
+}

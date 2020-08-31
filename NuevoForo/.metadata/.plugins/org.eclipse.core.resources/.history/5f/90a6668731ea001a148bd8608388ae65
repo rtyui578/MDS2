@@ -1,0 +1,62 @@
+package com.example.Foro;
+
+import java.util.Vector;
+
+import com.vaadin.navigator.Navigator;
+import com.vaadin.navigator.View;
+import com.vaadin.ui.Button;
+import com.vaadin.ui.VerticalLayout;
+
+import basededatos.BD_Principal;
+
+
+public class Secciones extends Secciones_ventana implements View {
+	
+	VerticalLayout listausuarios,listasecciones,creacionseccion;
+	Button iniciarsesion,registrarse,foro;
+	Navigator navegador;
+	BD_Principal bd;
+	
+	public Secciones() {
+		
+	}
+	
+	public void inicio(int idusuario) {
+		listasecciones=this.listasecciones_html;
+		listausuarios=this.listausuarios_html;
+		foro=this.foro_html;
+		iniciarsesion=this.iniciarsesion_html;
+		registrarse=this.registrarse_html;
+		creacionseccion=this.crearseccion_html1;
+		int i=0;
+		bd = new BD_Principal();
+		
+		basededatos.Seccion[] lista1 = bd.listaSecciones();
+		Vista_seccion_heredar[] itemlistaSecciones = new Vista_seccion_heredar[lista1.length];
+		for( i=0;i<itemlistaSecciones.length;i++) {
+			itemlistaSecciones[i] = new Vista_seccion_heredar();
+			itemlistaSecciones[i].setNavegador(navegador);
+			itemlistaSecciones[i].inicio(lista1[i].getId_seccion(),idusuario);
+		}
+		listasecciones.addComponents(itemlistaSecciones);
+		listasecciones.setHeight(lista1.length*50 + "%");
+		
+		basededatos.Usuario[] lista4 = bd.listaUsuarios(idusuario);
+		Vista_usuario_heredar[] itemListaUsuarios = new Vista_usuario_heredar[lista4.length];
+		for(i=0;i<itemListaUsuarios.length;i++) {
+			itemListaUsuarios[i] = new Vista_usuario_heredar();
+			itemListaUsuarios[i].setNavegador(navegador);
+			itemListaUsuarios[i].inicio(idusuario,lista4[i].getId_usuario());
+		}
+		listausuarios.addComponents(itemListaUsuarios);
+		listausuarios.setHeight(lista4.length*20 + "%");
+		
+		if(bd.listaAdministradores().contains(idusuario)) {
+			
+		}
+	}
+	
+	public void setNavegador(Navigator nav) {
+		navegador=nav;
+	}
+}

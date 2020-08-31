@@ -1,0 +1,65 @@
+package com.example.Foro;
+
+import org.orm.PersistentException;
+import com.vaadin.navigator.Navigator;
+import com.vaadin.navigator.View;
+import com.vaadin.ui.Button;
+import com.vaadin.ui.Label;
+import com.vaadin.ui.Button.ClickEvent;
+
+import basededatos.Seccion;
+import basededatos.SeccionDAO;
+
+public class Vista_seccion_heredar extends Vista_seccion_ventana implements View {
+	Label nombre,numeromensajes,numerotemas;
+	Button borrar,nombreseccion;
+	Navigator navegador;
+	
+	public Vista_seccion_heredar() {
+		
+	}
+	
+	public void inicio(int idseccion, int idusuario) {
+		Seccion seccion=null;
+		try {
+			seccion = SeccionDAO.getSeccionByORMID(idseccion);
+		} catch (PersistentException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		nombre = this.nombre_html;
+		nombre.setValue(seccion.getTitulo_seccion());
+		borrar=this.borrar_html;
+		nombreseccion=this.botonnombreseccion_html;
+		nombreseccion.setCaption(seccion.getTitulo_seccion());
+		nombre.setVisible(false);
+		numerotemas=this.numerotemas_html;
+		numerotemas.setValue("Numero temas: "+seccion.tiene.toArray().length);
+		nombreseccion.addClickListener(new Button.ClickListener() {
+			
+			@Override
+			public void buttonClick(ClickEvent event) {
+				// TODO Auto-generated method stub
+				Sección seccion =  new Sección();
+				seccion.setNavegador(navegador);
+				seccion.inicio(idseccion, idusuario);
+				navegador.addView("Foro_no_registrado", seccion);
+		        navegador.navigateTo("Foro_no_registrado");
+			}
+		});
+		borrar.addClickListener(new Button.ClickListener() {
+			
+			@Override
+			public void buttonClick(ClickEvent event) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+	}
+	
+	public void setNavegador(Navigator nav) {
+		navegador=nav;
+		
+	}
+
+}

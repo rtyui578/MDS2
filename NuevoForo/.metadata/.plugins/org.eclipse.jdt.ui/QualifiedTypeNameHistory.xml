@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="basededatos.SeccionDAO"/>
+    <fullyQualifiedTypeName name="basededatos.Seccion"/>
+    <fullyQualifiedTypeName name="com.vaadin.annotations.PreserveOnRefresh"/>
+    <fullyQualifiedTypeName name="basededatos.TemaDAO"/>
+    <fullyQualifiedTypeName name="basededatos.Notificacion"/>
+    <fullyQualifiedTypeName name="basededatos.NotificacionDAO"/>
+    <fullyQualifiedTypeName name="basededatos.MediaDAO"/>
+    <fullyQualifiedTypeName name="com.vaadin.ui.PasswordField"/>
+    <fullyQualifiedTypeName name="org.orm.PersistentException"/>
+    <fullyQualifiedTypeName name="com.vaadin.ui.Label"/>
+    <fullyQualifiedTypeName name="com.vaadin.ui.HorizontalLayout"/>
+    <fullyQualifiedTypeName name="com.vaadin.navigator.Navigator"/>
+    <fullyQualifiedTypeName name="com.vaadin.ui.Button"/>
+    <fullyQualifiedTypeName name="com.vaadin.ui.VerticalLayout"/>
+    <fullyQualifiedTypeName name="com.vaadin.ui.TextField"/>
+    <fullyQualifiedTypeName name="basededatos.Mensaje"/>
+    <fullyQualifiedTypeName name="basededatos.UsuarioDAO"/>
+    <fullyQualifiedTypeName name="basededatos.Tema"/>
+    <fullyQualifiedTypeName name="basededatos.BD_Principal"/>
+    <fullyQualifiedTypeName name="com.vaadin.ui.Button.ClickListener"/>
+    <fullyQualifiedTypeName name="basededatos.Usuario"/>
+    <fullyQualifiedTypeName name="com.vaadin.navigator.View"/>
+    <fullyQualifiedTypeName name="basededatos.MensajeDAO"/>
+    <fullyQualifiedTypeName name="basededatos.MensajeCriteria"/>
+    <fullyQualifiedTypeName name="basededatos.iUsuario_Registrado"/>
+</qualifiedTypeNameHistroy>

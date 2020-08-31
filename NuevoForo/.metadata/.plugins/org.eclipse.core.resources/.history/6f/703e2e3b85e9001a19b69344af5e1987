@@ -1,0 +1,7 @@
+package com.example.Foro;
+
+import com.vaadin.navigator.View;
+
+public class Vista_seccion_heredar extends Vista_seccion_ventana implements View{
+
+}

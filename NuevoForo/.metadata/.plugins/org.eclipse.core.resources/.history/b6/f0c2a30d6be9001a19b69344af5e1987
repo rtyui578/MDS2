@@ -1,0 +1,28 @@
+package interfaz;
+
+public class Ajustes {
+	private Image _fotoPerfil;
+	private Switch _perfilPublicoS;
+	private Label _nombreUsuarioTituloL;
+	private Label _notificacionesCorreoL;
+	private Label _modificarPerfilL;
+	private Label _nombreUsuarioL;
+	private Label _nombreCompletoL;
+	private Label _nombreCompletoTituloL;
+	private Label _fotoPerfilL;
+	private Button _modificarContraseñaB;
+	private Label _modificarContraseñaL;
+	private Switch _notificacionesCorreoS;
+	private Button _modificarPerfilB;
+	private Label _perfilPublicoL;
+	private Label _descripcionTituloL;
+	private Label _descripcionL;
+	public Común_registrados _unnamed_Común_registrados_;
+	public Amigos _unnamed_Amigos_;
+	public Modificar_contraseña _unnamed_Modificar_contraseña_;
+	public Modificar_perfil _unnamed_Modificar_perfil_;
+
+	public void modificarContraseña(Object aModificar_contraseña) {
+		throw new UnsupportedOperationException();
+	}
+}

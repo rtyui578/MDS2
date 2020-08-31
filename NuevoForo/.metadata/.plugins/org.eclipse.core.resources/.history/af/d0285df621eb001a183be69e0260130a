@@ -1,0 +1,8 @@
+package com.example.Foro;
+import java.util.Vector;
+
+
+public class Mensajes {
+	public Tema _unnamed_Tema_;
+	public Vector<Mensaje> _unnamed_Mensaje_ = new Vector<Mensaje>();
+}

@@ -1,0 +1,55 @@
+package com.example.Foro;
+
+import org.orm.PersistentException;
+
+import com.vaadin.navigator.Navigator;
+import com.vaadin.navigator.View;
+import com.vaadin.ui.Button;
+import com.vaadin.ui.Label;
+
+import basededatos.TemaDAO;
+
+public class Tema extends Tema_ventana implements View {
+	
+	Label nombre,mensajes,likes;
+	Button borrar,like,nombreboton;
+	Navigator navegador;
+	
+	public Tema() {
+		
+	}
+
+	public void inicio(int idtema) {
+		basededatos.Tema tema=null;
+		try {
+			tema=TemaDAO.getTemaByORMID(idtema);
+		} catch (PersistentException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		mensajes=this.numeromensajes_html;
+		likes=this.numerolikes_html;
+		borrar=this.borrar_html;
+		like=this.like_html;
+		nombreboton=this.nombretemaboton_html;
+		likes.setValue("Numlikes:"+tema.getNum_likes_tema());
+		mensajes.setValue("Numero mensajes:"+tema.tiene.toArray().length);
+		borrar.setVisible(false);
+		like.setVisible(false);
+		}
+	
+	public void setNavegador(Navigator nav) {
+		navegador=nav;
+	}
+	public void Eliminar_tema() {
+		throw new UnsupportedOperationException();
+	}
+
+	public void Privatizar_tema() {
+		throw new UnsupportedOperationException();
+	}
+
+	public void Dar_me_gusta() {
+		throw new UnsupportedOperationException();
+	}
+}

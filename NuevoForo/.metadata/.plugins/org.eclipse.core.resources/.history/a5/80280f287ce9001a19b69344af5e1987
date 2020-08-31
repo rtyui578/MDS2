@@ -1,0 +1,46 @@
+package com.example.Foro;
+
+import java.util.Vector;
+
+import com.vaadin.navigator.Navigator;
+import com.vaadin.navigator.View;
+import com.vaadin.ui.Button;
+import com.vaadin.ui.VerticalLayout;
+
+import basededatos.BD_Principal;
+
+
+public class Secciones extends Secciones_ventana implements View {
+	
+	VerticalLayout listausuarios,listasecciones;
+	Button iniciarsesion,registrarse,foro;
+	Navigator navegador;
+	BD_Principal bd;
+	
+	public Secciones() {
+		
+	}
+	
+	public void inicio(int idusuario) {
+		listasecciones=this.listasecciones_html;
+		foro=this.foro_html;
+		iniciarsesion=this.iniciarsesion_html;
+		registrarse=this.registrarse_html;
+		int i=0;
+		bd = new BD_Principal();
+		BD_Secciones bdsecciones = new BD_Secciones();
+		Seccion[] lista1 = bdsecciones.listaSecciones();
+		Item_lista_seccion_heredar[] itemlistaSecciones = new Item_lista_seccion_heredar[lista1.length];
+		for( i=0;i<itemlistaSecciones.length;i++) {
+			itemlistaSecciones[i] = new Item_lista_seccion_heredar();
+			itemlistaSecciones[i].setNavegador(navegador);
+			itemlistaSecciones[i].Iniciar(lista1[i],1,0);
+		}
+		listasecciones.addComponents(itemlistaSecciones);
+		listasecciones.setHeight(lista1.length*70 + "%");
+	}
+	
+	public void setNavegador(Navigator nav) {
+		navegador=nav;
+	}
+}

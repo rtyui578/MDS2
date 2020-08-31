@@ -1,0 +1,12 @@
+package interfaz;
+
+import java.util.Vector;
+import interfaz.Usuario_Reportado;
+
+public class Usuarios_reportados {
+	private Label _tituloUsuarios;
+	private Button _verMasB;
+	private Label _verMasL;
+	public Ajustes_administrador _unnamed_Ajustes_administrador_;
+	public Vector<Usuario_Reportado> _unnamed_Usuario_Reportado_ = new Vector<Usuario_Reportado>();
+}

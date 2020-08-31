@@ -1,0 +1,64 @@
+package com.example.Foro;
+
+import org.orm.PersistentException;
+import com.vaadin.navigator.Navigator;
+import com.vaadin.navigator.View;
+import com.vaadin.ui.Button;
+import com.vaadin.ui.Label;
+import com.vaadin.ui.Button.ClickEvent;
+
+import basededatos.BD_Principal;
+import basededatos.MensajeDAO;
+
+public class Vista_mensaje_heredar extends Vista_mensaje_ventana implements View {
+
+	Label contenido,likes,respuestas;
+	Button borrar,like,contestar,autor;
+	Navigator navegador;
+	BD_Principal bd;
+	basededatos.Mensaje mensaje;
+	
+	public Vista_mensaje_heredar() {
+		
+	}
+	public void inicio(int idmensaje, int idusuario) {
+		likes=this.likes_html;
+		respuestas=this.respuestas_html;
+		autor=this.usuarioautor_html;
+		borrar=this.borrar_html;
+		like=this.like_html;
+		contestar=this.contestar_html;
+		contenido=this.contenido_html;
+		bd= new BD_Principal();
+		mensaje=null;
+		try {
+			mensaje = MensajeDAO.getMensajeByORMID(idmensaje);
+		} catch (PersistentException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		contenido.setValue(mensaje.getContenido_mensaje());
+		autor.setCaption(mensaje.getPertenece_a().getNombre_usuario());
+		respuestas.setValue("Respuestas : " + bd.respuestas(idmensaje).size());
+		likes.setValue("Likes :" + mensaje.getNum_likes_mensaje());
+		
+		autor.addClickListener(new Button.ClickListener() {
+			
+			@Override
+			public void buttonClick(ClickEvent event) {
+				// TODO Auto-generated method stub
+				Usuario usuario = new Usuario();
+				usuario.setNavegador(navegador);
+				usuario.inicio(idusuario, mensaje.getPertenece_a().getId_usuario(), 1);
+				navegador.addView("usuario", usuario);
+				navegador.navigateTo("usuario");
+			}
+		});
+		
+	}
+	
+	public void setNavegador(Navigator nav) {
+		navegador=nav;
+	}
+}

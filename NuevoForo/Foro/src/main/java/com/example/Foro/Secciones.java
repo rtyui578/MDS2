@@ -1,0 +1,177 @@
+package com.example.Foro;
+
+import java.util.Vector;
+
+import com.vaadin.navigator.Navigator;
+import com.vaadin.navigator.View;
+import com.vaadin.ui.Button;
+import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.ui.TextField;
+import com.vaadin.ui.VerticalLayout;
+import com.vaadin.ui.Button.ClickEvent;
+
+import basededatos.BD_Principal;
+
+
+public class Secciones extends Secciones_ventana implements View {
+	
+	VerticalLayout listausuarios,listasecciones,creacionseccion;
+	HorizontalLayout partenoregistrado,parteregistrado;
+	Button iniciarsesion,registrarse,foro,cerrarsesion,ajustes,notificaciones,crearseccion;
+	TextField titulo;
+	Navigator navegador;
+	BD_Principal bd;
+	MyUI m;
+	int id;
+	
+	public Secciones() {
+		
+	}
+	
+	public Secciones(MyUI myui) {
+		// TODO Auto-generated constructor stub
+		m=myui;
+	}
+
+	public void inicio(int idusuario) {
+		id=idusuario;
+		foro=this.foro_html;
+		iniciarsesion=this.iniciarsesion_html;
+		registrarse=this.registrarse_html;
+		ajustes=this.ajustes_html;
+		notificaciones=this.notificacion_html;
+		cerrarsesion=this.cerrarsesion_html;
+		
+		
+		listasecciones=this.listasecciones_html;
+		listausuarios=this.listausuarios_html;
+		creacionseccion=this.crearseccion_html1;
+		partenoregistrado=this.partenoregistrado_html;
+		parteregistrado=this.parteregistrado_html;
+		crearseccion=this.crearseccion_html;
+		titulo=this.titulo_html;
+		
+		int i=0;
+		bd = new BD_Principal();
+		
+		basededatos.Seccion[] lista1 = bd.listaSecciones();
+		Vista_seccion_heredar[] itemlistaSecciones = new Vista_seccion_heredar[lista1.length];
+		for( i=0;i<itemlistaSecciones.length;i++) {
+			itemlistaSecciones[i] = new Vista_seccion_heredar(m);
+			itemlistaSecciones[i].setNavegador(navegador);
+			itemlistaSecciones[i].inicio(lista1[i].getId_seccion(),idusuario);
+		}
+		listasecciones.addComponents(itemlistaSecciones);
+		listasecciones.setHeight(lista1.length*50 + "%");
+		
+		basededatos.Usuario[] lista4 = bd.listaUsuarios(idusuario);
+		Vista_usuario_heredar[] itemListaUsuarios = new Vista_usuario_heredar[lista4.length];
+		for(i=0;i<itemListaUsuarios.length;i++) {
+			itemListaUsuarios[i] = new Vista_usuario_heredar(m);
+			itemListaUsuarios[i].setNavegador(navegador);
+			itemListaUsuarios[i].inicio(idusuario,lista4[i].getId_usuario(),0);
+		}
+		listausuarios.addComponents(itemListaUsuarios);
+		listausuarios.setHeight(lista4.length*20 + "%");
+		
+		if(bd.listaAdministradores().contains(idusuario)) {
+			creacionseccion.setVisible(true);
+		}
+		
+		if(idusuario==-1) {
+			partenoregistrado.setVisible(true);
+			parteregistrado.setVisible(false);
+		}
+		else {
+			partenoregistrado.setVisible(false);
+			parteregistrado.setVisible(true);
+		}
+		
+		foro.addClickListener(e->{
+			Visualizar v =  new Visualizar(m);
+			v.inicio(idusuario);
+			m.setContent(v);
+		});
+	
+		notificaciones.addClickListener(e->{
+			Notificaciones notificaciones =  new Notificaciones(m);
+			notificaciones.inicio(idusuario);
+			m.setContent(notificaciones);
+		});
+	
+		iniciarsesion.addClickListener(e->{
+			Iniciar_Sesion is =  new Iniciar_Sesion(m);
+			is.inicio();
+			m.setContent(is);
+		});
+	
+		registrarse.addClickListener(e->{
+			Registrarse reg =  new Registrarse(m);
+			reg.inicio();
+			m.setContent(reg);
+		});
+	
+		cerrarsesion.addClickListener(e->{
+			Visualizar v =  new Visualizar(m);
+			v.inicio(-1);
+			m.setContent(v);
+		});
+		
+		if(bd.listaAdministradores().contains(idusuario)) {
+			ajustes.addClickListener(e-> {
+					Ajustes_administrador ajustes =  new Ajustes_administrador(m);
+					ajustes.inicio(idusuario,1);
+					m.setContent(ajustes);
+				
+			});
+		}
+		else if(!bd.listaAdministradores().contains(idusuario) && bd.listaModeradores().contains(idusuario)) {
+			ajustes.addClickListener(e-> {
+					Ajustes_moderador ajustes =  new Ajustes_moderador(m);
+					ajustes.inicio(idusuario,1);
+					m.setContent(ajustes);
+			});
+			
+		}
+		else {
+			ajustes.addClickListener(e-> {
+				Ajustes ajustes =  new Ajustes(m);
+				ajustes.inicio(idusuario,1);
+				m.setContent(ajustes);
+			
+		});
+		}
+		crearseccion.addClickListener(e-> {
+				/*bd.crearSeccion(titulo.getValue(), idusuario);
+				Secciones secciones =  new Secciones(m);
+				secciones.inicio(idusuario);
+				m.setContent(secciones);*/
+			crearSeccion();
+		});
+		
+	}
+	
+	public void crearSeccion() {
+		bd.crearSeccion(titulo.getValue(), id);
+		Secciones secciones =  new Secciones(m);
+		secciones.inicio(id);
+		m.setContent(secciones);
+	}
+	
+	public basededatos.Seccion[] listaSecciones(){
+		basededatos.Seccion[] lista1 = bd.listaSecciones();
+		Vista_seccion_heredar[] itemlistaSecciones = new Vista_seccion_heredar[lista1.length];
+		for( int i=0;i<itemlistaSecciones.length;i++) {
+			itemlistaSecciones[i] = new Vista_seccion_heredar(m);
+			itemlistaSecciones[i].setNavegador(navegador);
+			itemlistaSecciones[i].inicio(lista1[i].getId_seccion(),id);
+		}
+		listasecciones.addComponents(itemlistaSecciones);
+		listasecciones.setHeight(lista1.length*50 + "%");
+		return lista1;
+	}
+	
+	public void setNavegador(Navigator nav) {
+		navegador=nav;
+	}
+}

@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;mytheme&quot;}">
+  <meta name="vaadin-version" content="8.1.5">
+ </head>
+ <body>
+  <vaadin-vertical-layout size-full>
+   <vaadin-horizontal-layout width-full>
+    <vaadin-button style-name="borderless boton1" size-full plain-text _id="foro_html" :expand>
+      Foro 
+    </vaadin-button>
+    <vaadin-horizontal-layout visible="false" _id="partenoregistrado_html" :right>
+     <vaadin-button style-name="borderless boton1" responsive _id="registrarse_html">
+       Registrarse 
+     </vaadin-button>
+     <vaadin-button style-name="borderless boton1" plain-text _id="iniciarsesion_html">
+       Iniciar Sesión 
+     </vaadin-button>
+    </vaadin-horizontal-layout>
+    <vaadin-horizontal-layout _id="parteregistrado_html">
+     <vaadin-button style-name="borderless boton1" plain-text _id="notificacion_html">
+       Notificaciones 
+     </vaadin-button>
+     <vaadin-button style-name="borderless boton1" responsive _id="ajustes_html">
+       Ajustes 
+     </vaadin-button>
+     <vaadin-button style-name="borderless boton1" plain-text _id="cerrarsesion_html">
+       Cerrar Sesión 
+     </vaadin-button>
+    </vaadin-horizontal-layout>
+   </vaadin-horizontal-layout>
+   <vaadin-horizontal-layout style-name="horizonte" responsive size-full :expand>
+    <vaadin-vertical-layout style-name="contenedor" width-auto height-full>
+     <vaadin-vertical-layout style-name="contenido" width-auto height-full :expand>
+      <vaadin-button style-name="borderless titular" plain-text _id="boton_secciones_html" :center>
+        Secciones 
+      </vaadin-button>
+      <vaadin-panel size-full :expand>
+       <vaadin-vertical-layout spacing="false" height="150%" margin="false" _id="listasecciones_html"></vaadin-vertical-layout>
+      </vaadin-panel>
+     </vaadin-vertical-layout>
+    </vaadin-vertical-layout>
+    <vaadin-panel width="40%" height-full :right>
+     <vaadin-vertical-layout style-name="usuariosconectados" spacing="false" responsive size-full margin="false" _id="listausuarios_html"></vaadin-vertical-layout>
+    </vaadin-panel>
+   </vaadin-horizontal-layout>
+  </vaadin-vertical-layout>
+ </body>
+</html>

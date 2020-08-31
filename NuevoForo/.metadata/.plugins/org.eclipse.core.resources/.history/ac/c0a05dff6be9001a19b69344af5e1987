@@ -1,0 +1,31 @@
+package interfaz;
+
+public class Modificar_perfil {
+	private TextField _nombreCompletoTF;
+	private Label _modificarL;
+	private Label _nombreCompletoL;
+	private Button _modificarB;
+	private Label _descripcionL;
+	private TextField _descripcionTF;
+	private Button _adjuntarImagenB;
+	private Label _fotoPerfilL;
+	private Label _adjuntarImagenL;
+	private Label _tituloL;
+	public Ajustes _unnamed_Ajustes_;
+
+	public void modificarPerfil(String aNombreCompleto, String aDescripcion, String aImagen) {
+		throw new UnsupportedOperationException();
+	}
+
+	public void modificarUInformacion_____void() {
+		throw new UnsupportedOperationException();
+	}
+
+	public void modificarContraseña() {
+		throw new UnsupportedOperationException();
+	}
+
+	public boolean modificar_Contraseña() {
+		throw new UnsupportedOperationException();
+	}
+}

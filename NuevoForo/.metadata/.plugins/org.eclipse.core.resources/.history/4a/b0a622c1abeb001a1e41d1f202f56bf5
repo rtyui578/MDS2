@@ -1,0 +1,73 @@
+package com.example.Foro;
+
+import org.orm.PersistentException;
+
+import com.vaadin.navigator.Navigator;
+import com.vaadin.navigator.View;
+import com.vaadin.ui.Button;
+import com.vaadin.ui.PasswordField;
+import com.vaadin.ui.TextField;
+import com.vaadin.ui.Button.ClickEvent;
+
+import basededatos.BD_Principal;
+import basededatos.UsuarioDAO;
+
+public class Registrarse extends Registrarse_ventana implements View {
+	
+
+	TextField nombreusuario,nombre;
+	PasswordField contrasena;
+	Button registrarse;
+	Navigator navegador;
+	BD_Principal bd;
+	MyUI m;
+	
+	public Registrarse() {
+		
+	}
+	
+	public Registrarse(MyUI myui) {
+		// TODO Auto-generated constructor stub
+		m=myui;
+	}
+
+	public void inicio() {
+		nombreusuario=this.nombreusuario_html;
+		nombre=this.nombre_html;
+		contrasena=this.contrasena_html;
+		registrarse=this.registrarse_html;
+		registrarse.addClickListener(new Button.ClickListener() {
+			
+			@Override
+			public void buttonClick(ClickEvent event) {
+				// TODO Auto-generated method stub
+				nombreusuario.getValue();
+				basededatos.Usuario user = new basededatos.Usuario();
+			    user.setContrasena(contrasena.getValue());
+				user.setNombre_usuario(nombreusuario.getValue());
+				user.setEmail(nombre.getValue());
+				try {
+					UsuarioDAO.save(user);
+				} catch (PersistentException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				Iniciar_Sesion is = new Iniciar_Sesion(m);
+				is.inicio();
+				m.setContent(is);
+			}
+		});
+	}
+	
+	public void setNavegador(Navigator nav) {
+		navegador=nav;
+	}
+	public void registrarse() {
+		throw new UnsupportedOperationException();
+	}
+
+	public boolean Registrarse() {
+		throw new UnsupportedOperationException();
+	}
+}

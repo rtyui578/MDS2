@@ -1,0 +1,52 @@
+package com.example.Foro;
+
+import org.orm.PersistentException;
+
+import com.vaadin.navigator.Navigator;
+import com.vaadin.navigator.View;
+import com.vaadin.ui.Button;
+import com.vaadin.ui.Label;
+
+import basededatos.Seccion;
+import basededatos.SeccionDAO;
+
+public class Sección extends Sección_ventana implements View {
+	
+	Label nombre,numeromensajes,numerotemas;
+	Button borrar,nombreseccion;
+	Navigator navegador;
+	
+	public Sección() {
+		
+	}
+	
+	public void inicio(int idseccion) {
+		Seccion seccion=null;
+		try {
+			seccion = SeccionDAO.getSeccionByORMID(idseccion);
+		} catch (PersistentException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		nombre = this.nombre_html;
+		nombre.setValue(seccion.getTitulo_seccion());
+		borrar=this.borrar_html;
+		nombreseccion=this.botonnombreseccion_html;
+		nombreseccion.setCaption(seccion.getTitulo_seccion());
+		nombre.setVisible(false);
+		numerotemas=this.numerotemas_html;
+		numerotemas.setValue("Numero temas: "+seccion.tiene.toArray().length);
+	}
+	
+	public void setNavegador(Navigator nav) {
+		navegador=nav;
+		
+	}
+	public void cerrarSesion() {
+		throw new UnsupportedOperationException();
+	}
+
+	public void buscar(String aBusqueda) {
+		throw new UnsupportedOperationException();
+	}
+}

@@ -1,0 +1,9 @@
+package interfaz;
+
+import java.util.Vector;
+import interfaz.Notificación;
+
+public class Notificaciones {
+	public Común_registrados _unnamed_Común_registrados_;
+	public Vector<Notificación> _unnamed_Notificación_ = new Vector<Notificación>();
+}

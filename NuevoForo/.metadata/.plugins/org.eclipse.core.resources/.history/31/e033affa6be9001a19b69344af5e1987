@@ -1,0 +1,16 @@
+package com.example.Foro;
+
+public class Modificar_contrase�a {
+	private TextField _repetirNuevaContrase�aTF;
+	private Label _contrase�aAntiguaL;
+	private TextField _nuevaContrase�aTF;
+	private Label _modificarTituloL;
+	private Label _nuevaContrase�aL;
+	private TextField _contrase�aAntiguaTF;
+	private Label _repetirNuevaContrae�aL;
+	public Ajustes _unnamed_Ajustes_;
+
+	public boolean modificar_Contrase�a() {
+		throw new UnsupportedOperationException();
+	}
+}

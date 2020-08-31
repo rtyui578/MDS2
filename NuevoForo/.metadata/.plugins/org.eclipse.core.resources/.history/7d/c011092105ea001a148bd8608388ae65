@@ -1,0 +1,19 @@
+package com.example.Foro;
+
+import com.vaadin.navigator.Navigator;
+import com.vaadin.navigator.View;
+
+public class Ajustes_moderador extends Ajustes_moderador_ventana implements View {
+	
+	public Ajustes_moderador(){
+		
+	}
+	
+	public void inicio(int idusuario,int tipo) {
+		
+	}
+	
+	public void setNavegador(Navigator nav) {
+		
+	}
+}

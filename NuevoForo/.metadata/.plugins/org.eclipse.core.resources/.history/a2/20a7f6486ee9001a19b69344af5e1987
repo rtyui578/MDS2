@@ -1,0 +1,7 @@
+package com.example.Foro;
+
+import com.vaadin.navigator.View;
+
+public class Visualizar extends Visualizar_ventana implements View {
+
+}

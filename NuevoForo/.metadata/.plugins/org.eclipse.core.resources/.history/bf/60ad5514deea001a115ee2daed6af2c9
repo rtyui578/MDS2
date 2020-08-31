@@ -1,0 +1,6 @@
+package interfaz;
+
+public class Común_usuarios {
+	public Logo _unnamed_Logo_;
+	public Secciones _unnamed_Secciones_;
+}

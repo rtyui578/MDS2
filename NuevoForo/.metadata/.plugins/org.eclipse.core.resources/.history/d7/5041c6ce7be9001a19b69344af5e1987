@@ -1,0 +1,8 @@
+package com.example.Foro;
+
+import java.util.Vector;
+
+
+public class Secciones extends Secciones_ventana implements View {
+	
+}

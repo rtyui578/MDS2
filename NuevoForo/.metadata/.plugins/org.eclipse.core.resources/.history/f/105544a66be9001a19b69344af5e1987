@@ -1,0 +1,10 @@
+package interfaz;
+
+import InterfazDeUsuario.Mensajes_No_Interacción;
+
+public class Mensaje_No_Interacción {
+	private Label _contenidoInicialL;
+	private Label _fechaL;
+	private Label _numeroComentariosL;
+	public Mensajes_No_Interacción _unnamed_Mensajes_No_Interacción_;
+}

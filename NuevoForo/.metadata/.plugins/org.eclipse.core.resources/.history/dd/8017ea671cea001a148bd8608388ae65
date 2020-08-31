@@ -1,0 +1,41 @@
+package com.example.Foro;
+
+import org.orm.PersistentException;
+import com.vaadin.navigator.Navigator;
+import com.vaadin.navigator.View;
+import com.vaadin.ui.Button;
+
+import basededatos.UsuarioDAO;
+
+public class Vista_usuario_heredar extends Vista_usuario_ventana implements View {
+	
+	Button reportar,banear,agregar,nombreboton;
+	Navigator navegador;
+	
+	public Vista_usuario_heredar() {
+		
+	}
+	
+	public void inicio(int idusuario) {
+		reportar=this.reportar_html;
+		banear=this.banear_html;
+		agregar=this.agregar_html;
+		nombreboton=this.nombreusuario_html;
+		basededatos.Usuario user = null;
+		try {
+			user = UsuarioDAO.getUsuarioByORMID(idusuario);
+		} catch (PersistentException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		nombreboton.setCaption(user.getNombre_usuario());
+		agregar.setVisible(false);
+		banear.setVisible(false);
+		reportar.setVisible(false);
+	}
+	
+	public void setNavegador(Navigator nav) {
+		navegador=nav;
+	}
+
+}

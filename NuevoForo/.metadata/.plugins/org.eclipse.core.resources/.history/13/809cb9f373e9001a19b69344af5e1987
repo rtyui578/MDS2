@@ -1,0 +1,65 @@
+package com.example.Foro;
+
+import com.vaadin.navigator.Navigator;
+import com.vaadin.navigator.View;
+import com.vaadin.ui.Button;
+import com.vaadin.ui.Label;
+
+import basededatos.TemaDAO;
+
+public class Tema extends Tema_ventana implements View {
+	
+	Label nombre,mensajes,likes;
+	Button borrar,like,nombreboton;
+	Navigator navegador;
+	
+	public Tema() {
+		
+	}
+
+	public void inicio(int idtema) {
+		basededatos.Tema tema=null;
+		tema=TemaDAO.getTemaByORMID(idtema);
+		mensajes=this.numeromensajes_html;
+		likes=this.numerolikes_html;
+		borrar=this.borrar_html;
+		like=this.like_html;
+		nombreboton=this.nombretemaboton_html;
+		likes.setValue("Numlikes:"+tema.getNum_likes_tema());
+		mensajes.setValue("Numero mensajes:"+tema.tiene.toArray().length);
+		try {
+			nombreboton.setCaption(tema.getTitulo_tema());
+			} catch(NullPointerException e) {
+		}
+		//Nivel -1 para Usuarios No Registrados
+		if(nivel==-1) {
+			borrar.setVisible(false);
+			like.setVisible(false);
+			nombreboton.addClickListener(new Button.ClickListener() {
+				@Override
+				public void buttonClick(ClickEvent event) {
+					// TODO Auto-generated method stub
+					Vista_tema_no_registrado_heredar vtnrh = new Vista_tema_no_registrado_heredar();
+					vtnrh.setNavegador(navegador);
+					vtnrh.iniciar(tema.getId_tema());
+					navegador.addView("vtr", vtnrh);
+					navegador.navigateTo("vtr");
+				}
+			});
+		}
+	}
+	public void setNavegador(Navigator nav) {
+		navegador=nav;
+	}
+	public void Eliminar_tema() {
+		throw new UnsupportedOperationException();
+	}
+
+	public void Privatizar_tema() {
+		throw new UnsupportedOperationException();
+	}
+
+	public void Dar_me_gusta() {
+		throw new UnsupportedOperationException();
+	}
+}

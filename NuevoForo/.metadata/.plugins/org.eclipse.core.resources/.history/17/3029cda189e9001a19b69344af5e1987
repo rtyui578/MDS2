@@ -1,0 +1,20 @@
+package com.example.Foro;
+
+import com.vaadin.ui.Label;
+
+import basededatos.NotificacionDAO;
+
+public class Notificación extends Notificación_ventana implements View {
+	
+	Label n;
+	
+	public Notificación(int idnotificacion){
+		basededatos.Notificacion notificacion = NotificacionDAO.getNotificacionByORMID(idnotificacion);
+		n=this.valor_html;
+		n.setValue(notificacion.getContenido_notificacion());
+	}
+
+	public void Eliminar_notificación() {
+		throw new UnsupportedOperationException();
+	}
+}

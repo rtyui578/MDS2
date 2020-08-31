@@ -1,0 +1,182 @@
+package com.example.Foro;
+
+import org.orm.PersistentException;
+
+import com.vaadin.navigator.Navigator;
+import com.vaadin.navigator.View;
+import com.vaadin.ui.Button;
+import com.vaadin.ui.Label;
+import com.vaadin.ui.VerticalLayout;
+import com.vaadin.ui.Button.ClickEvent;
+
+import basededatos.BD_Principal;
+import basededatos.UsuarioDAO;
+
+public class Ajustes extends Ajustes_ventana implements View {
+	
+	Button ajustes,notificacion,cerrarsesion,usuarios,amigos,perfil,foro,modificarcontrasena,modificarperfil;
+	VerticalLayout listadeusuarios,listaamigos,vistaperfil,vistalista,vistaamigos;
+	Label nombreusuario,email,contrasena;
+	Navigator navegador;
+	BD_Principal bd;
+	MyUI m;
+	int idusuario;
+	public Ajustes() {
+		
+	}
+	
+	public Ajustes(MyUI myui) {
+		// TODO Auto-generated constructor stub
+		m=myui;
+	}
+
+	public void inicio(int idusuario, int tipo) {
+		foro=this.foro_html;
+		ajustes=this.ajustes_html;
+		notificacion=this.notificaciones_html;
+		cerrarsesion=this.cerrarsesion_html;
+		
+		modificarcontrasena=this.modificarcontrasena_html;
+		modificarperfil=this.modificarperfil_html;
+		nombreusuario=this.nombreusuario_html;
+		email=this.emailusuario_htmlm;
+		contrasena=this.contrasena_html;
+		
+		usuarios=this.usuarios_html;
+		amigos=this.amigos_html;
+		perfil=this.perfil_html;
+		
+		vistaperfil=this.vista_perfil_html;
+		vistaamigos=this.vista_amigos_html;
+		vistalista=this.vista_lista_usuarios_html;
+		
+		listadeusuarios = this.listausuarios_html;
+		listaamigos = this.listaamigos_html;
+		this.idusuario=idusuario;
+		basededatos.Usuario user=null;
+		try {
+			user = UsuarioDAO.getUsuarioByORMID(idusuario);
+		} catch (PersistentException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		bd = new BD_Principal();
+		
+		//Vista del perfil
+		if(tipo==1) {
+			vistalista.setVisible(false);
+			vistaamigos.setVisible(false);
+			vistaperfil.setVisible(true);
+			nombreusuario.setValue(user.getNombre_usuario());
+			email.setValue(user.getEmail());
+			contrasena.setValue(user.getContrasena());
+		}
+		//Vista de lista de usuarios
+		else if(tipo==2) {
+			vistaperfil.setVisible(false);
+			vistaamigos.setVisible(false);
+			vistalista.setVisible(true);
+			basededatos.Usuario[] usuarios=bd.listaUsuarios(idusuario);
+			Vista_usuario_heredar[] listaItems = new Vista_usuario_heredar[usuarios.length];
+			for(int i=0;i<usuarios.length;i++) {
+				listaItems[i]=new Vista_usuario_heredar(m);
+				listaItems[i].setNavegador(navegador);
+				listaItems[i].inicio(idusuario,usuarios[i].getId_usuario(),0);
+				}
+			listadeusuarios.addComponents(listaItems);
+			listadeusuarios.setHeight(usuarios.length*20 + "%");
+		}
+		
+		else {
+			vistalista.setVisible(false);
+			vistaperfil.setVisible(false);
+			vistaamigos.setVisible(true);
+			basededatos.Usuario[] usuarios=bd.listaAmigos(idusuario);
+			System.out.println(usuarios.length);
+			Vista_usuario_heredar[] listaItems = new Vista_usuario_heredar[usuarios.length];
+			for(int i=0;i<usuarios.length;i++) {
+				listaItems[i]=new Vista_usuario_heredar(m);
+				listaItems[i].setNavegador(navegador);
+				listaItems[i].inicio(idusuario,usuarios[i].getId_usuario(),0);
+			}
+				
+			listaamigos.addComponents(listaItems);
+			listaamigos.setHeight(usuarios.length*20 + "%");
+		}
+		
+		
+		foro.addClickListener(e->{
+			Visualizar v =  new Visualizar(m);
+			v.inicio(idusuario);
+			m.setContent(v);
+		});
+	
+		notificacion.addClickListener(e->{
+			Notificaciones notificaciones =  new Notificaciones(m);
+			notificaciones.inicio(idusuario);
+			m.setContent(notificaciones);
+		});
+
+
+		cerrarsesion.addClickListener(e->{
+			Visualizar v =  new Visualizar(m);
+			v.inicio(-1);
+			m.setContent(v);
+		});
+		
+		ajustes.addClickListener(e-> {
+					Ajustes ajustes =  new Ajustes(m);
+					ajustes.inicio(idusuario,1);
+					m.setContent(ajustes);
+				});
+		
+		
+		perfil.addClickListener(e->{
+				Ajustes ajustesperfil =  new Ajustes(m);
+				ajustesperfil.inicio(idusuario,1);
+				m.setContent(ajustesperfil);
+		});
+		
+		
+		amigos.addClickListener(e-> {
+				/*Ajustes ajustesamigos =  new Ajustes(m);
+				ajustesamigos.inicio(idusuario,3);
+				m.setContent(ajustesamigos);*/
+			listaAmigos();
+		});
+		
+		
+		usuarios.addClickListener(e->{
+				Ajustes usuarios =  new Ajustes(m);
+				usuarios.inicio(idusuario,2);
+				m.setContent(usuarios);
+		});
+		
+		modificarperfil.addClickListener(e-> {
+				Modificar_perfil mperfil = new Modificar_perfil(m);
+				mperfil.inicio(idusuario);
+				m.setContent(mperfil);
+		});
+		
+		modificarcontrasena.addClickListener(e-> {
+				Modificar_contrasena mcontrasena = new Modificar_contrasena(m);
+				mcontrasena.inicio(idusuario);
+				m.setContent(mcontrasena);
+		});
+	}
+	public void setNavegador(Navigator nav) {
+		navegador=nav;
+	}
+	
+	public Usuario[] listaAmigos() {
+		Ajustes ajustesamigos =  new Ajustes(m);
+		ajustesamigos.inicio(idusuario,3);
+		m.setContent(ajustesamigos);
+		return null;
+	}
+	
+	public Usuario listaUsuarios() {
+		return null;
+	}
+	
+}

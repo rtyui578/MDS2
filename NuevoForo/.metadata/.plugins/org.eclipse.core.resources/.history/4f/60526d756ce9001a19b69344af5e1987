@@ -1,0 +1,9 @@
+package interfaz;
+
+import java.util.Vector;
+import interfaz.Sección;
+
+public class Secciones {
+	public Común_usuarios _unnamed_Común_usuarios_;
+	public Vector<Sección> _unnamed_Sección_ = new Vector<Sección>();
+}

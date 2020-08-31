@@ -1,0 +1,9 @@
+package com.example.Foro;
+
+public class Notificación {
+
+
+	public void Eliminar_notificación() {
+		throw new UnsupportedOperationException();
+	}
+}

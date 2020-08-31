@@ -1,0 +1,6 @@
+package com.example.Foro;
+
+
+public class Notificaciones extends Notificaciones_ventana implements View {
+
+}

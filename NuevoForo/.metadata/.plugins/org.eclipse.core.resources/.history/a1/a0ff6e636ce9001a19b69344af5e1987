@@ -1,0 +1,13 @@
+package interfaz;
+
+public class Reportar {
+	private Label _enviarL;
+	private Button _enviarB;
+	private TextBox _mensaje;
+	private Label _tituloL;
+	public Usuario _unnamed_Usuario_;
+
+	public void reportarUsuario_____void() {
+		throw new UnsupportedOperationException();
+	}
+}

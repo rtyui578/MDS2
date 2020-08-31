@@ -1,0 +1,46 @@
+package com.example.Foro;
+
+import org.orm.PersistentException;
+
+import com.vaadin.navigator.Navigator;
+import com.vaadin.navigator.View;
+import com.vaadin.ui.Button;
+import com.vaadin.ui.VerticalLayout;
+
+import basededatos.BD_Principal;
+import basededatos.UsuarioDAO;
+
+
+public class Notificaciones extends Notificaciones_ventana implements View {
+	
+	Button foro,ajustes,notificaciones,cerrarsesion;
+	VerticalLayout listanotificaciones;
+	Navigator navegador;
+	BD_Principal bd;
+	
+	public Notificaciones() {
+		
+	}
+	
+	public void inicio(int idusuario) {
+		
+		foro=this.foro_html;
+		ajustes=this.ajustes_html;
+		notificaciones=this.notificaciones_html;
+		cerrarsesion=this.cerrarsesion_html;
+		listanotificaciones=this.listanotificaciones_html;
+		bd = new BD_Principal();
+		basededatos.Notificacion[] notificaciones=bd.notificacionesUsuario(idusuario);
+		Notificación[] lista = new Notificación[notificaciones.length];
+		for(int i=0;i<notificaciones.length;i++) {
+			lista[i] = new Notificación(notificaciones[i].getId_notificacion());
+				
+		}
+		listanotificaciones.addComponents(lista);
+	}
+	
+	public void setNavegador(Navigator nav) {
+		navegador=nav;
+	}
+
+}

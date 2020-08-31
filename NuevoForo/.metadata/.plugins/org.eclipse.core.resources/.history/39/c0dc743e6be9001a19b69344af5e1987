@@ -1,0 +1,6 @@
+package com.example.Foro;
+import interfaz.Amigo;
+
+public class Amigos {
+
+}

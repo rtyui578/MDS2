@@ -1,0 +1,34 @@
+package com.example.Foro;
+
+import com.vaadin.navigator.Navigator;
+import com.vaadin.navigator.View;
+import com.vaadin.ui.Button;
+import com.vaadin.ui.PasswordField;
+import com.vaadin.ui.TextField;
+
+import basededatos.BD_Principal;
+
+public class Registrarse extends Registrarse_ventana implements View {
+	
+
+	TextField nombreusuario,nombre;
+	PasswordField contrasena;
+	Button registrarse;
+	Navigator navegador;
+	BD_Principal bd;
+	
+	public Registrarse() {
+		
+	}
+	
+	public void setNavegador(Navigator nav) {
+		navegador=nav;
+	}
+	public void registrarse() {
+		throw new UnsupportedOperationException();
+	}
+
+	public boolean Registrarse() {
+		throw new UnsupportedOperationException();
+	}
+}

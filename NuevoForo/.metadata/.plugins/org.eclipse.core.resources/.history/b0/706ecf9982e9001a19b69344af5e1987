@@ -1,0 +1,46 @@
+package com.example.Foro;
+
+import com.vaadin.navigator.Navigator;
+import com.vaadin.navigator.View;
+import com.vaadin.ui.Button;
+import com.vaadin.ui.TextField;
+import com.vaadin.ui.VerticalLayout;
+
+import basededatos.BD_Principal;
+
+public class Temas extends Temas_ventana implements View {
+	
+	VerticalLayout listausuarios,listatemas;
+	Button iniciarsesion,registrarse,foro,ajustes,notificaciones,cerrarsesion,publicartema;
+	Navigator navegador;
+	TextField titulo;
+	BD_Principal bd;
+	
+	public Temas() {
+		
+	}
+	
+	public void inicio(int idusuario) {
+		listatemas=this.listatemas_html;
+		foro=this.foro_html;
+		ajustes=this.ajustes_html;
+		cerrarsesion=this.cerrarsesion_html;
+		notificaciones=this.notificacion_html;
+		int i=0;
+
+		basededatos.Tema[] lista2 = bd.listaTemas(-1);
+		Tema[] itemListaTemas = new Tema[lista2.length];
+		for(i=0;i<itemListaTemas.length;i++) {
+			itemListaTemas[i] = new Tema();
+			itemListaTemas[i].setNavegador(navegador);
+		    itemListaTemas[i].inicio(lista2[i].getId_tema());
+		}
+		listatemas.addComponents(itemListaTemas);
+		listatemas.setHeight(lista2.length*70 + "%");
+	}
+	
+	public void setNavegador(Navigator nav) {
+		navegador=nav;
+	}
+
+}

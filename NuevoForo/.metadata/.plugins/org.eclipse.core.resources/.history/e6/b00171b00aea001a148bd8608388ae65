@@ -1,0 +1,29 @@
+package com.example.Foro;
+
+import com.vaadin.navigator.Navigator;
+import com.vaadin.navigator.View;
+import com.vaadin.ui.Button;
+import com.vaadin.ui.PasswordField;
+
+public class Modificar_contraseña extends Modificar_contraseña_ventana implements View {
+	
+	Button aceptar;
+	PasswordField ncontrasena2,acontrasena,ncontrasena;
+	Navigator navegador;
+	
+	public Modificar_contraseña() {
+		
+	}
+
+	public void inicio(int idusuario) {
+		
+	}
+	
+	public void setNavegador(Navigator nav) {
+		
+	}
+	
+	public boolean modificar_Contraseña() {
+		throw new UnsupportedOperationException();
+	}
+}

@@ -1,0 +1,13 @@
+package com.example.Foro;
+
+public class Crear_tema {
+	
+
+	public void crearTema_____void() {
+		throw new UnsupportedOperationException();
+	}
+
+	public void crearTema() {
+		throw new UnsupportedOperationException();
+	}
+}

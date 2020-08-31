@@ -1,0 +1,10 @@
+package com.example.Foro;
+import java.util.Vector;
+
+import com.vaadin.navigator.View;
+
+
+public class Mensajes extends Mensajes_ventana implements View{
+	public Tema _unnamed_Tema_;
+	public Vector<Mensaje> _unnamed_Mensaje_ = new Vector<Mensaje>();
+}

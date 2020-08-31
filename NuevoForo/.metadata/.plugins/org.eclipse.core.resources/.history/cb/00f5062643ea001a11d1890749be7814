@@ -1,0 +1,88 @@
+package com.example.Foro;
+
+import com.vaadin.navigator.Navigator;
+import com.vaadin.navigator.View;
+import com.vaadin.ui.Button;
+import com.vaadin.ui.PasswordField;
+import com.vaadin.ui.TextField;
+import com.vaadin.ui.Button.ClickEvent;
+
+import basededatos.BD_Principal;
+
+public class Iniciar_Sesión extends Iniciar_Sesión_ventana implements View {
+	
+
+	TextField nombre;
+	PasswordField contrasena;
+	Button entrar,registrarse;
+	Navigator navegador;
+	BD_Principal bd;
+	
+	public void Iniciar_Sesión() {
+		
+	}
+	
+	public void inicio() {
+		nombre=this.nombre_html;
+		contrasena=this.contrasena_html;
+		entrar=this.entrar_html;
+		registrarse=this.registrarse_html;
+		bd = new BD_Principal();
+		basededatos.Usuario[] usuarios = bd.usuariosBaneados();
+		entrar.addClickListener(new Button.ClickListener() {
+			
+			@Override
+			public void buttonClick(ClickEvent event) {
+				// TODO Auto-generated method stub
+				boolean reportado=false;
+				int pasa =bd.iniciarSesion(nombre.getValue(), contrasena.getValue());
+				System.out.println(bd.listaAdministradores().toString());
+				for(int i=0;i<usuarios.length;i++) {
+					if(usuarios[i].getId_usuario()==pasa) {
+						reportado=true;
+					}
+				}
+			if(pasa!=-1) {
+				if(reportado) {
+					nombre.setCaption("Lo sentimos, no puedes acceder");
+				}
+				else {
+					Visualizar visualizar = new Visualizar();
+					visualizar.setNavegador(navegador);
+					visualizar.inicio(pasa);
+					navegador.addView("visualizar", visualizar);
+					navegador.navigateTo("visualizar");
+				}
+					
+				}
+			 else {
+				 nombre.setCaption("No pasastes");
+			 }
+			}
+			});
+		
+		
+		registrarse.addClickListener(new Button.ClickListener() {
+			
+			@Override
+			public void buttonClick(ClickEvent event) {
+				// TODO Auto-generated method stub
+			}
+		});
+	}
+	
+	public void setNavegador(Navigator nav) {
+		navegador=nav;
+	}
+	public void iniciarSesion(String aNombreUsuario, String aContraseña) {
+		throw new UnsupportedOperationException();
+	}
+
+	public void recordarContraseña() {
+		throw new UnsupportedOperationException();
+	}
+
+	public void iniciarSesion_____boolean() {
+		throw new UnsupportedOperationException();
+	}
+}

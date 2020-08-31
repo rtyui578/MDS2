@@ -1,0 +1,10 @@
+package interfaz;
+
+import InterfazDeUsuario.Seccion;
+import java.util.Vector;
+import InterfazDeUsuario.Tema_Publico;
+
+public class Temas_publicos {
+	public Seccion _unnamed_Seccion_;
+	public Vector<Tema_Publico> _unnamed_Tema_Publico_ = new Vector<Tema_Publico>();
+}

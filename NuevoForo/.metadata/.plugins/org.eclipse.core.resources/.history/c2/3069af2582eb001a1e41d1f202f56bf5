@@ -1,0 +1,173 @@
+package com.example.Foro;
+
+import com.vaadin.navigator.Navigator;
+import com.vaadin.navigator.View;
+import com.vaadin.ui.Button;
+import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.ui.VerticalLayout;
+import com.vaadin.ui.Button.ClickEvent;
+
+import basededatos.*;
+
+public class Visualizar extends Visualizar_ventana implements View {
+
+	VerticalLayout listausuarios,listamensajes,listatemas,listasecciones;
+	HorizontalLayout noregistrado,registrado;
+	Button cerrarsesion,notificaciones,ajustes,foro,secciones,temas,iniciarsesion,registrarse;
+	Navigator navegador;
+	BD_Principal bd;
+	MyUI m;
+	
+	public Visualizar() {
+		
+	}
+	
+	public Visualizar(MyUI myUI) {
+		// TODO Auto-generated constructor stub
+		m=myUI;
+	}
+
+	public void inicio(int idusuario) {
+		int numeroSecciones=3;
+		int numeroTemas=3;
+		int numeroMensajes=3;
+		int numeroUsuarios=3;
+		bd = new BD_Principal();
+		listausuarios=this.listausuarios_html;
+		listamensajes=this.listamensajes_html;
+		listatemas=this.listatemas_html;
+		listasecciones=this.listasecciones_html;
+		cerrarsesion=this.cerrarsesion_html;
+		notificaciones=this.notificacion_html;
+		ajustes=this.ajustes_html;
+		foro=this.foro_html;
+		secciones=this.boton_secciones_html;
+		temas=this.boton_temas_html;
+		registrado=this.parteregistrado_html;
+		noregistrado=this.partenoregistrado_html;
+		iniciarsesion=this.iniciarsesion_html;
+		registrarse=this.registrarse_html;
+		int i;
+		
+		if(idusuario==-1) {
+		    registrado.setVisible(false);
+			noregistrado.setVisible(true);
+		}
+		 
+		
+		basededatos.Seccion[] lista1 = bd.listaSecciones();
+		Vista_seccion_heredar[] itemlistaSecciones = new Vista_seccion_heredar[numeroSecciones];
+		for( i=0;i<itemlistaSecciones.length;i++) {
+			itemlistaSecciones[i] = new Vista_seccion_heredar();
+			itemlistaSecciones[i].setNavegador(navegador);
+			itemlistaSecciones[i].inicio(lista1[i].getId_seccion(), idusuario);
+		}
+		listasecciones.addComponents(itemlistaSecciones);
+		
+		
+		basededatos.Tema[] lista2 = bd.listaTemas(0);
+		Vista_tema_heredar[] itemListaTemas = new Vista_tema_heredar[numeroTemas];
+		for(i=0;i<itemListaTemas.length;i++) {
+			itemListaTemas[i] = new Vista_tema_heredar();
+			itemListaTemas[i].setNavegador(navegador);
+		    itemListaTemas[i].inicio(lista2[i].getId_tema(), idusuario);
+		}
+		listatemas.addComponents(itemListaTemas);
+		
+		
+		basededatos.Mensaje[] lista3 = bd.ultimoMensajes();
+		Vista_mensaje_heredar[] itemListaMensajes = new Vista_mensaje_heredar[numeroMensajes];
+		for(i=0;i<itemListaMensajes.length;i++) {
+			itemListaMensajes[i] = new Vista_mensaje_heredar();
+			itemListaMensajes[i].setNavegador(navegador);
+			itemListaMensajes[i].inicio(lista3[i].getId_mensaje(),idusuario);
+		}
+		listamensajes.addComponents(itemListaMensajes);
+		
+
+		
+		
+		basededatos.Usuario[] lista4 = bd.listaUsuarios(idusuario);
+		Vista_usuario_heredar[] itemListaUsuarios = new Vista_usuario_heredar[numeroUsuarios];
+		for(i=0;i<itemListaUsuarios.length;i++) {
+			itemListaUsuarios[i] = new Vista_usuario_heredar();
+			itemListaUsuarios[i].setNavegador(navegador);
+			itemListaUsuarios[i].inicio(idusuario,lista4[i].getId_usuario(),0);
+		}
+		listausuarios.addComponents(itemListaUsuarios);
+		
+		foro.addClickListener(e->{
+				Visualizar v =  new Visualizar(m);
+				v.inicio(idusuario);
+				m.setContent(v);
+		});
+		
+		secciones.addClickListener(e->{
+				Secciones secciones =  new Secciones(m);
+				secciones.inicio(idusuario);
+				m.setContent(secciones);
+		});
+		
+		temas.addClickListener(e->{
+				Temas temas =  new Temas();
+				temas.inicio(idusuario);
+				m.setContent(temas);
+		});
+		
+		notificaciones.addClickListener(e->{
+				Notificaciones notificaciones =  new Notificaciones();
+				notificaciones.inicio(idusuario);
+				m.setContent(notificaciones);
+		});
+		
+		iniciarsesion.addClickListener(e->{
+				Iniciar_Sesion is =  new Iniciar_Sesion();
+				is.inicio();
+				m.setContent(is);
+		});
+		
+		registrarse.addClickListener(e->{
+				Registrarse reg =  new Registrarse();
+				reg.inicio();
+				m.setContent(reg);
+		});
+		
+		cerrarsesion.addClickListener(e->{
+				Visualizar v =  new Visualizar();
+				v.inicio(-1);
+				m.setContent(v);
+		});
+		
+		System.out.println(bd.listaAdministradores().toString());
+		System.out.println(bd.listaModeradores().toString());
+		
+		if(bd.listaAdministradores().contains(idusuario)) {
+			ajustes.addClickListener(e-> {
+					Ajustes_administrador ajustes =  new Ajustes_administrador();
+					ajustes.inicio(idusuario,1);
+					m.setContent(secciones);
+				
+			});
+		}
+		else if(!bd.listaAdministradores().contains(idusuario) && bd.listaModeradores().contains(idusuario)) {
+			ajustes.addClickListener(e-> {
+					Ajustes_administrador ajustes =  new Ajustes_administrador();
+					ajustes.inicio(idusuario,1);
+					m.setContent(secciones);
+			});
+			
+		}
+		else {
+			ajustes.addClickListener(e-> {
+				Ajustes_administrador ajustes =  new Ajustes_administrador();
+				ajustes.inicio(idusuario,1);
+				m.setContent(secciones);
+			
+		});
+		}
+	}
+	
+	public void setNavegador(Navigator nav) {
+		navegador=nav;
+	}
+}

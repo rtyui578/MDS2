@@ -1,0 +1,9 @@
+package com.example.Foro;
+
+public class Cerrar_sesión {
+
+
+	public void cerrarSesion() {
+		throw new UnsupportedOperationException();
+	}
+}

@@ -1,0 +1,6 @@
+package com.example.Foro;
+import interfaz.Notificaci�n;
+
+public class Notificaciones {
+
+}

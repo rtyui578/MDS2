@@ -1,0 +1,5 @@
+package interfaz;
+
+public class Correo {
+	public Recordar_contrasena _unnamed_Recordar_contrasena_;
+}

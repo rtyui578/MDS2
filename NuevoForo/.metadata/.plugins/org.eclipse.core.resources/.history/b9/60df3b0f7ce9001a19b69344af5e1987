@@ -1,0 +1,28 @@
+package com.example.Foro;
+
+import java.util.Vector;
+
+import com.vaadin.navigator.Navigator;
+import com.vaadin.navigator.View;
+import com.vaadin.ui.Button;
+import com.vaadin.ui.VerticalLayout;
+
+
+public class Secciones extends Secciones_ventana implements View {
+	
+	VerticalLayout listausuarios,listasecciones;
+	Button iniciarsesion,registrarse,foro;
+	Navigator navegador;
+	
+	public Secciones() {
+		
+	}
+	
+	public void inicio(int idusuario) {
+		
+	}
+	
+	public void setNavegador(Navigator nav) {
+		navegador=nav;
+	}
+}

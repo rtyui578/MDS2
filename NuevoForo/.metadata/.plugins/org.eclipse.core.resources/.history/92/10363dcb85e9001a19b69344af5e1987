@@ -1,0 +1,134 @@
+package com.example.Foro;
+
+import com.vaadin.navigator.Navigator;
+import com.vaadin.navigator.View;
+import com.vaadin.ui.Button;
+import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.ui.VerticalLayout;
+import com.vaadin.ui.Button.ClickEvent;
+
+import basededatos.*;
+
+public class Visualizar extends Visualizar_ventana implements View {
+
+	VerticalLayout listausuarios,listamensajes,listatemas,listasecciones;
+	HorizontalLayout noregistrado,registrado;
+	Button cerrarsesion,notificaciones,ajustes,foro,secciones,temas,iniciarsesion,registrarse;
+	Navigator navegador;
+	BD_Principal bd;
+	
+	public Visualizar() {
+		
+	}
+	
+	public void inicio(int idusuario) {
+		int numeroSecciones=3;
+		int numeroTemas=3;
+		int numeroMensajes=3;
+		int numeroUsuarios=3;
+		bd = new BD_Principal();
+		listausuarios=this.listausuarios_html;
+		listamensajes=this.listamensajes_html;
+		listatemas=this.listatemas_html;
+		listasecciones=this.listasecciones_html;
+		cerrarsesion=this.cerrarsesion_html;
+		notificaciones=this.notificacion_html;
+		ajustes=this.ajustes_html;
+		foro=this.foro_html;
+		secciones=this.boton_secciones_html;
+		temas=this.boton_temas_html;
+		registrado=this.parteregistrado_html;
+		noregistrado=this.partenoregistrado_html;
+		int i;
+		
+		if(idusuario==-1) {
+		    registrado.setVisible(false);
+			noregistrado.setVisible(true);
+		}
+		 
+		
+		Seccion[] lista1 = bd.listaSecciones();
+		Vista_seccion_heredar[] itemlistaSecciones = new Vista_seccion_heredar[numeroSecciones];
+		for( i=0;i<itemlistaSecciones.length;i++) {
+			itemlistaSecciones[i] = new Vista_seccion_heredar();
+			itemlistaSecciones[i].setNavegador(navegador);
+			itemlistaSecciones[i].inicio(lista1[i].getId_seccion());
+		}
+		listasecciones.addComponents(itemlistaSecciones);
+		
+		
+		basededatos.Tema[] lista2 = bd.listaTemas(-1);
+		Vista_tema_heredar[] itemListaTemas = new Vista_tema_heredar[numeroTemas];
+		for(i=0;i<itemListaTemas.length;i++) {
+			itemListaTemas[i] = new Vista_tema_heredar();
+			itemListaTemas[i].setNavegador(navegador);
+		    itemListaTemas[i].inicio(lista2[i].getId_tema());
+		}
+		listatemas.addComponents(itemListaTemas);
+		
+		
+		basededatos.Mensaje[] lista3 = bd.ultimoMensajes();
+		Mensaje[] itemListaMensajes = new Mensaje[numeroMensajes];
+		for(i=0;i<itemListaMensajes.length;i++) {
+			itemListaMensajes[i] = new Mensaje();
+			itemListaMensajes[i].setNavegador(navegador);
+			itemListaMensajes[i].inicio(lista3[i].getId_mensaje());
+		}
+		listamensajes.addComponents(itemListaMensajes);
+		
+
+		
+		
+		basededatos.Usuario[] lista4 = bd.listaUsuarios(idusuario);
+		Usuario[] itemListaUsuarios = new Usuario[numeroUsuarios];
+		for(i=0;i<itemListaUsuarios.length;i++) {
+			itemListaUsuarios[i] = new Usuario();
+			itemListaUsuarios[i].setNavegador(navegador);
+			itemListaUsuarios[i].inicio(lista4[i].getId_usuario());
+		}
+		listausuarios.addComponents(itemListaUsuarios);
+		
+		foro.addClickListener(new Button.ClickListener() {
+			
+			@Override
+			public void buttonClick(ClickEvent event) {
+				// TODO Auto-generated method stub
+				Visualizar v =  new Visualizar();
+				v.setNavegador(navegador);
+				v.inicio(idusuario);
+				navegador.addView("Foro_no_registrado", v);
+		        navegador.navigateTo("Foro_no_registrado");
+			}
+		});
+		
+		secciones.addClickListener(new Button.ClickListener() {
+			
+			@Override
+			public void buttonClick(ClickEvent event) {
+				// TODO Auto-generated method stub
+				Secciones secciones =  new Secciones();
+				secciones.setNavegador(navegador);
+				secciones.inicio(idusuario);
+				navegador.addView("Foro_no_registrado", secciones);
+		        navegador.navigateTo("Foro_no_registrado");
+			}
+		});
+		
+		temas.addClickListener(new Button.ClickListener() {
+			
+			@Override
+			public void buttonClick(ClickEvent event) {
+				// TODO Auto-generated method stub
+				Temas temas =  new Temas();
+				temas.setNavegador(navegador);
+				temas.inicio(idusuario);
+				navegador.addView("Foro_no_registrado", temas);
+		        navegador.navigateTo("Foro_no_registrado");
+			}
+		});
+	}
+	
+	public void setNavegador(Navigator nav) {
+		navegador=nav;
+	}
+}

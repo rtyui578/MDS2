@@ -1,0 +1,15 @@
+package com.example.Foro;
+
+import com.vaadin.navigator.View;
+
+public class Registrarse extends Registrarse_ventana implements View {
+	
+
+	public void registrarse() {
+		throw new UnsupportedOperationException();
+	}
+
+	public boolean Registrarse() {
+		throw new UnsupportedOperationException();
+	}
+}

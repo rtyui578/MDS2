@@ -1,0 +1,10 @@
+package com.example.Foro;
+
+public class Usuario_Reportado {
+	//private event _eliminar;
+	public Usuarios_reportados _unnamed_Usuarios_reportados_;
+
+	public void Eliminar() {
+		throw new UnsupportedOperationException();
+	}
+}

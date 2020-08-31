@@ -1,0 +1,8 @@
+package com.example.Foro;
+
+public class Reportar {
+
+	public void reportarUsuario_____void() {
+		throw new UnsupportedOperationException();
+	}
+}

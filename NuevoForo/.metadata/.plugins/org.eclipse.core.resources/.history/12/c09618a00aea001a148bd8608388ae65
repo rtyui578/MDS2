@@ -1,0 +1,12 @@
+package com.example.Foro;
+
+import com.vaadin.navigator.View;
+
+public class Modificar_contraseña extends Modificar_contraseña_ventana implements View {
+	
+	
+
+	public boolean modificar_Contraseña() {
+		throw new UnsupportedOperationException();
+	}
+}

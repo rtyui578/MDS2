@@ -1,0 +1,9 @@
+package com.example.Foro;
+
+//import InterfazDeUsuario.Ajustes_Registrado;
+
+public class Usuario_Registrado extends Común_registrados {
+	public Cerrar_sesion _unnamed_Cerrar_sesion_;
+	public Temas_no_ocultos _unnamed_Temas_no_ocultos_;
+	//public Ajustes_Registrado _unnamed_Ajustes_Registrado_;
+}

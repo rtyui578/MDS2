@@ -1,0 +1,7 @@
+package com.example.Foro;
+
+import com.vaadin.navigator.View;
+
+public class Notificaciones extends Notificaciones_ventana implements View {
+
+}

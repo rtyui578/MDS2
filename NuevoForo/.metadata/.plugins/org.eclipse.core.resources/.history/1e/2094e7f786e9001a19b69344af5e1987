@@ -1,0 +1,77 @@
+package com.example.Foro;
+
+import org.orm.PersistentException;
+
+import com.vaadin.navigator.Navigator;
+import com.vaadin.navigator.View;
+import com.vaadin.ui.Button;
+import com.vaadin.ui.Label;
+import com.vaadin.ui.TextField;
+import com.vaadin.ui.VerticalLayout;
+
+import basededatos.BD_Principal;
+import basededatos.TemaDAO;
+
+public class Tema extends Tema_ventana implements View {
+	
+	Button foro,ajustes,notificaciones,cerrarsesion,vermas,publicar;
+	Label titulotema;
+	VerticalLayout mensajes;
+	TextField contenido;
+	Navigator navegador;
+	BD_Principal bd;
+	
+	public Tema() {
+		
+	}
+
+	public void inicio(int idtema) {
+		bd = new BD_Principal();
+		basededatos.Tema tema=null;
+		try {
+			tema=TemaDAO.getTemaByORMID(idtema);
+		} catch (PersistentException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		publicar=this.publicar_html;
+		foro=this.foro_html;
+		ajustes=this.ajustes_html;
+		notificaciones=this.notificacion_html;
+		cerrarsesion=this.cerrarsesion_html;
+		titulotema=this.titulotema_html;
+		mensajes=this.comentarios_html;
+		contenido=this.contenidocomentario_html;
+		Mensaje[] listamensajes = bd.mensajesTema(idtema);
+		Item_lista_mensaje_heredar[] itemLista = new Item_lista_mensaje_heredar[listamensajes.length];
+		for(int i=0;i<listamensajes.length;i++) {
+			itemLista[i] = new Item_lista_mensaje_heredar();
+			itemLista[i].setNavegador(navegador);
+			itemLista[i].inicio(listamensajes[i],2,idusuario);
+		}
+		mensajes.addComponents(itemLista);
+		mensajes.setHeight(listamensajes.length*60 + "%");
+		try {
+			tema=TemaDAO.getTemaByORMID(idtema);
+			titulotema.setValue(tema.getTitulo_tema());
+		} catch (PersistentException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		}
+	
+	public void setNavegador(Navigator nav) {
+		navegador=nav;
+	}
+	public void Eliminar_tema() {
+		throw new UnsupportedOperationException();
+	}
+
+	public void Privatizar_tema() {
+		throw new UnsupportedOperationException();
+	}
+
+	public void Dar_me_gusta() {
+		throw new UnsupportedOperationException();
+	}
+}

@@ -1,0 +1,8 @@
+package interfaz;
+
+import InterfazDeUsuario.Usuarios_Revision;
+
+public class Ajustes_moderador {
+	public Moderador _unnamed_Moderador_;
+	public Usuarios_Revision _unnamed_Usuarios_Revision_;
+}

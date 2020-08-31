@@ -1,0 +1,189 @@
+package com.example.Foro;
+
+import org.orm.PersistentException;
+
+import com.vaadin.navigator.Navigator;
+import com.vaadin.navigator.View;
+import com.vaadin.ui.Button;
+import com.vaadin.ui.Label;
+import com.vaadin.ui.VerticalLayout;
+import com.vaadin.ui.Button.ClickEvent;
+import com.vaadin.ui.HorizontalLayout;
+
+import basededatos.BD_Principal;
+import basededatos.Seccion;
+import basededatos.SeccionDAO;
+
+public class Sección extends Sección_ventana implements View {
+	
+	Button foro,ajustes,cerrarsesion,notificaciones,iniciarsesion,registrarse,creartema;
+	HorizontalLayout parteregistrado,partenoregistrado;
+	VerticalLayout temas,creaciontema;
+	Label tituloseccion;
+	Navigator navegador;
+	BD_Principal bd;
+	
+	public Sección() {
+		
+	}
+	
+	public void inicio(int idseccion, int idusuario) {
+		bd = new BD_Principal();
+		Seccion seccion=null;
+		try {
+			seccion = SeccionDAO.getSeccionByORMID(idseccion);
+		} catch (PersistentException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		cerrarsesion=this.cerrarsesion_html;
+		notificaciones=this.notificacion_html;
+		ajustes=this.ajustes_html;
+		foro=this.foro_html;
+		iniciarsesion=this.iniciarsesion_html;
+		registrarse=this.registrarse_html;
+		
+		creartema=this.creartema_html;
+		temas=this.tema_html;
+		tituloseccion=this.tituloseccion_html;
+		parteregistrado=this.parteregistrado_html;
+		partenoregistrado=this.partenoregistrado_html;
+		creaciontema=this.creaciontema_html;
+		int i;
+		tituloseccion.setValue(seccion.getTitulo_seccion());
+		
+		
+		basededatos.Tema[] lista2 = bd.temasSeccion(idseccion);
+		Vista_tema_heredar[] itemListaTemas = new Vista_tema_heredar[lista2.length];
+		for(i=0;i<lista2.length;i++) {
+			itemListaTemas[i] = new Vista_tema_heredar();
+			itemListaTemas[i].setNavegador(navegador);
+			itemListaTemas[i].inicio(lista2[i].getId_tema(), idusuario);
+		}
+		temas.addComponents(itemListaTemas);
+		temas.setHeight(lista2.length*50 + "%");
+		
+		foro.addClickListener(new Button.ClickListener() {
+			
+			@Override
+			public void buttonClick(ClickEvent event) {
+				// TODO Auto-generated method stub
+				Visualizar v =  new Visualizar();
+				v.setNavegador(navegador);
+				v.inicio(idusuario);
+				navegador.addView("Foro_no_registrado", v);
+		        navegador.navigateTo("Foro_no_registrado");
+			}
+		});
+		
+		notificaciones.addClickListener(new Button.ClickListener() {
+			
+			@Override
+			public void buttonClick(ClickEvent event) {
+				// TODO Auto-generated method stub
+				Notificaciones notificaciones =  new Notificaciones();
+				notificaciones.setNavegador(navegador);
+				notificaciones.inicio(idusuario);
+				navegador.addView("Foro_no_registrado", notificaciones);
+		        navegador.navigateTo("Foro_no_registrado");
+			}
+		});
+		
+		if(bd.listaAdministradores().contains(idusuario)) {
+			ajustes.addClickListener(new Button.ClickListener() {
+				
+				@Override
+				public void buttonClick(ClickEvent event) {
+					// TODO Auto-generated method stub
+					Ajustes_administrador ajustes =  new Ajustes_administrador();
+					ajustes.setNavegador(navegador);
+					ajustes.inicio(idusuario,1);
+					navegador.addView("ajustes", ajustes);
+			        navegador.navigateTo("ajustes");
+				}
+			});
+		}
+		else if(!bd.listaAdministradores().contains(idusuario) && bd.listaModeradores().contains(idusuario)) {
+			ajustes.addClickListener(new Button.ClickListener() {
+				
+				@Override
+				public void buttonClick(ClickEvent event) {
+					// TODO Auto-generated method stub
+					Ajustes_moderador ajustes =  new Ajustes_moderador();
+					ajustes.setNavegador(navegador);
+					ajustes.inicio(idusuario,1);
+					navegador.addView("ajustes", ajustes);
+			        navegador.navigateTo("ajustes");
+				}
+			});
+		}
+		else {
+			ajustes.addClickListener(new Button.ClickListener() {
+				
+				@Override
+				public void buttonClick(ClickEvent event) {
+					// TODO Auto-generated method stub
+					Ajustes ajustes =  new Ajustes();
+					ajustes.setNavegador(navegador);
+					ajustes.inicio(idusuario,1);
+					navegador.addView("ajustes", ajustes);
+			        navegador.navigateTo("ajustes");
+				}
+			});
+		}
+		
+		cerrarsesion.addClickListener(new Button.ClickListener() {
+			
+			@Override
+			public void buttonClick(ClickEvent event) {
+				// TODO Auto-generated method stub
+				// TODO Auto-generated method stub
+				Visualizar v =  new Visualizar();
+				v.setNavegador(navegador);
+				v.inicio(-1);
+				navegador.addView("Foro_no_registrado", v);
+		        navegador.navigateTo("Foro_no_registrado");
+			}
+		});
+		
+		iniciarsesion.addClickListener(new Button.ClickListener() {
+			
+			@Override
+			public void buttonClick(ClickEvent event) {
+				// TODO Auto-generated method stub
+				Iniciar_Sesión is =  new Iniciar_Sesión();
+				is.setNavegador(navegador);
+				is.inicio();
+				navegador.addView("Iniciar_sesion", is);
+		        navegador.navigateTo("Iniciar_sesion");
+			}
+		});
+		
+		registrarse.addClickListener(new Button.ClickListener() {
+			
+			@Override
+			public void buttonClick(ClickEvent event) {
+				// TODO Auto-generated method stub
+				Registrarse reg =  new Registrarse();
+				reg.setNavegador(navegador);
+				reg.inicio();
+				navegador.addView("Registrarse", reg);
+		        navegador.navigateTo("Registrarse");
+			}
+		});
+		}
+	
+	
+	public void setNavegador(Navigator nav) {
+		navegador=nav;
+		
+	}
+	public void cerrarSesion() {
+		throw new UnsupportedOperationException();
+	}
+
+	public void buscar(String aBusqueda) {
+		throw new UnsupportedOperationException();
+	}
+}

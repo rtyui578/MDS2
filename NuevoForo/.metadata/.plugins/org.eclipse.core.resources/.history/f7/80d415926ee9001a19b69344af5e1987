@@ -1,0 +1,104 @@
+package com.example.Foro;
+
+import com.vaadin.navigator.Navigator;
+import com.vaadin.navigator.View;
+import com.vaadin.ui.Button;
+import com.vaadin.ui.VerticalLayout;
+import basededatos.*;
+
+public class Visualizar extends Visualizar_ventana implements View {
+
+	VerticalLayout listausuarios,listamensajes,listatemas,listasecciones;
+	Button cerrarsesion,notificaciones,ajustes,foro,secciones,temas,iniciarsesion,registrarse;
+	Navigator navegador;
+	BD_Principal bd;
+	
+	public Visualizar() {
+		
+	}
+	
+	public void inicio(int idusuario) {
+		int numeroSecciones=3;
+		int numeroTemas=3;
+		int numeroMensajes=3;
+		int numeroUsuarios=3;
+		BD_Administradores bdadmin = new BD_Administradores();
+		BD_Moderadores bdmod = new BD_Moderadores();
+		listausuarios=this.usuarios_html;
+		listamensajes=this.listamensajes_html;
+		listatemas=this.listatemas_html;
+		listasecciones=this.listasecciones_html;
+		cerrarsesion=this.cerrarsesion_html;
+		notificaciones=this.notificacion_html;
+		ajustes=this.ajustes_html;
+		foro=this.foro_html;
+		secciones=this.boton_secciones_html;
+		temas=this.boton_temas_html;
+		int i;
+		
+		
+		
+		BD_Secciones bdsecciones = new BD_Secciones();
+		Seccion[] lista1 = bdsecciones.listaSecciones();
+		Item_lista_secciones_heredar[] itemlistaSecciones = new Item_lista_secciones_heredar[numeroSecciones];
+		for( i=0;i<itemlistaSecciones.length;i++) {
+			itemlistaSecciones[i] = new Item_lista_secciones_heredar();
+			itemlistaSecciones[i].setNavegador(navegador);
+			itemlistaSecciones[i].iniciar(lista1[i],1,idusuario);
+		}
+		listasecciones.addComponents(itemlistaSecciones);
+		
+		
+		
+		BD_Temas bdtemas = new BD_Temas();
+		Tema[] lista2 = bdtemas.listaTemas(-1);
+		Item_lista_tema_heredar[] itemListaTemas = new Item_lista_tema_heredar[numeroTemas];
+		for(i=0;i<itemListaTemas.length;i++) {
+			itemListaTemas[i] = new Item_lista_tema_heredar();
+			itemListaTemas[i].setNavegador(navegador);
+		    itemListaTemas[i].iniciar(lista2[i],1,idusuario);
+		}
+		listatemas.addComponents(itemListaTemas);
+		
+		
+		BD_Mensajes bdmensaje = new BD_Mensajes();
+		Mensaje[] lista3 = bdmensaje.ultimoMensajes();
+		Item_lista_mensaje_heredar[] itemListaMensajes = new Item_lista_mensaje_heredar[numeroMensajes];
+		for(i=0;i<itemListaMensajes.length;i++) {
+			itemListaMensajes[i] = new Item_lista_mensaje_heredar();
+			itemListaMensajes[i].setNavegador(navegador);
+			itemListaMensajes[i].inicio(lista3[i],2,idusuario);
+		}
+		listamensajes.addComponents(itemListaMensajes);
+		
+		BD_Usuarios bdusuario = new BD_Usuarios();
+		
+		if(!bdadmin.listaAdministradores().contains(idusuario) && bdmod.listaModeradores().contains(idusuario)) {
+			Usuario[] lista4 = bdusuario.listaUsuarios(idusuario);
+			Item_lista_usuario_heredar[] itemListaUsuarios = new Item_lista_usuario_heredar[numeroUsuarios];
+			for(i=0;i<itemListaUsuarios.length;i++) {
+				itemListaUsuarios[i] = new Item_lista_usuario_heredar();
+				itemListaUsuarios[i].setNavegador(navegador);
+				itemListaUsuarios[i].inicio(lista4[i],8,idusuario);
+			}
+			listausuarios.addComponents(itemListaUsuarios);
+		}
+		else {
+			Usuario[] lista4 = bdusuario.listaUsuarios(idusuario);
+			Item_lista_usuario_heredar[] itemListaUsuarios = new Item_lista_usuario_heredar[numeroUsuarios];
+			for(i=0;i<itemListaUsuarios.length;i++) {
+				itemListaUsuarios[i] = new Item_lista_usuario_heredar();
+				itemListaUsuarios[i].setNavegador(navegador);
+				itemListaUsuarios[i].inicio(lista4[i],3,idusuario);
+			}
+			listausuarios.addComponents(itemListaUsuarios);
+		}
+		
+		
+		
+	}
+	
+	public void setNavegador(Navigator nav) {
+		navegador=nav;
+	}
+}

@@ -1,0 +1,141 @@
+package com.example.Foro;
+
+import org.orm.PersistentException;
+
+import com.vaadin.navigator.Navigator;
+import com.vaadin.navigator.View;
+import com.vaadin.ui.Button;
+import com.vaadin.ui.VerticalLayout;
+import com.vaadin.ui.Button.ClickEvent;
+
+import basededatos.BD_Principal;
+import basededatos.UsuarioDAO;
+
+
+public class Notificaciones extends Notificaciones_ventana implements View {
+	
+	Button foro,ajustes,notificaciones,cerrarsesion;
+	VerticalLayout listanotificaciones;
+	Navigator navegador;
+	BD_Principal bd;
+	MyUI m;
+	
+	public Notificaciones() {
+		
+	}
+	
+	public Notificaciones(MyUI myui) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public void inicio(int idusuario) {
+		
+		foro=this.foro_html;
+		ajustes=this.ajustes_html;
+		notificaciones=this.notificaciones_html;
+		cerrarsesion=this.cerrarsesion_html;
+		listanotificaciones=this.listanotificaciones_html;
+		bd = new BD_Principal();
+		basededatos.Notificacion[] lnotificaciones=bd.notificacionesUsuario(idusuario);
+		Notificacion[] lista = new Notificacion[lnotificaciones.length];
+		for(int i=0;i< lnotificaciones.length;i++) {
+			lista[i] = new Notificacion(lnotificaciones[i].getId_notificacion());
+				
+		}
+		listanotificaciones.addComponents(lista);
+		listanotificaciones.setHeight(lnotificaciones.length*30 + "%");
+		
+
+		foro.addClickListener(new Button.ClickListener() {
+			
+			@Override
+			public void buttonClick(ClickEvent event) {
+				// TODO Auto-generated method stub
+				Visualizar v =  new Visualizar();
+				v.setNavegador(navegador);
+				v.inicio(idusuario);
+				navegador.addView("Foro_no_registrado", v);
+		        navegador.navigateTo("Foro_no_registrado");
+			}
+		});
+		
+		cerrarsesion.addClickListener(new Button.ClickListener() {
+			
+			@Override
+			public void buttonClick(ClickEvent event) {
+				// TODO Auto-generated method stub
+				// TODO Auto-generated method stub
+				Visualizar v =  new Visualizar();
+				v.setNavegador(navegador);
+				v.inicio(-1);
+				navegador.addView("Foro_no_registrado", v);
+		        navegador.navigateTo("Foro_no_registrado");
+			}
+		});
+		
+		notificaciones.addClickListener(new Button.ClickListener() {
+			
+			@Override
+			public void buttonClick(ClickEvent event) {
+				// TODO Auto-generated method stub
+				Notificaciones notificaciones =  new Notificaciones();
+				notificaciones.setNavegador(navegador);
+				notificaciones.inicio(idusuario);
+				navegador.addView("Foro_no_registrado", notificaciones);
+		        navegador.navigateTo("Foro_no_registrado");
+			}
+		});
+		
+		if(bd.listaAdministradores().contains(idusuario)) {
+			ajustes.addClickListener(new Button.ClickListener() {
+				
+				@Override
+				public void buttonClick(ClickEvent event) {
+					// TODO Auto-generated method stub
+					Ajustes_administrador ajustes =  new Ajustes_administrador();
+					ajustes.setNavegador(navegador);
+					ajustes.inicio(idusuario,1);
+					navegador.addView("ajustes", ajustes);
+			        navegador.navigateTo("ajustes");
+				}
+			});
+		}
+		else if(!bd.listaAdministradores().contains(idusuario) && bd.listaModeradores().contains(idusuario)) {
+			ajustes.addClickListener(new Button.ClickListener() {
+				
+				@Override
+				public void buttonClick(ClickEvent event) {
+					// TODO Auto-generated method stub
+					Ajustes_moderador ajustes =  new Ajustes_moderador();
+					ajustes.setNavegador(navegador);
+					ajustes.inicio(idusuario,1);
+					navegador.addView("ajustes", ajustes);
+			        navegador.navigateTo("ajustes");
+				}
+			});
+		}
+		else {
+			ajustes.addClickListener(new Button.ClickListener() {
+				
+				@Override
+				public void buttonClick(ClickEvent event) {
+					// TODO Auto-generated method stub
+					Ajustes ajustes =  new Ajustes();
+					ajustes.setNavegador(navegador);
+					ajustes.inicio(idusuario,1);
+					navegador.addView("ajustes", ajustes);
+			        navegador.navigateTo("ajustes");
+				}
+			});
+		}
+	}
+	
+	public void setNavegador(Navigator nav) {
+		navegador=nav;
+	}
+	
+	public Notificacion[] notificacionesUsuario() {
+		return null;
+	}
+
+}

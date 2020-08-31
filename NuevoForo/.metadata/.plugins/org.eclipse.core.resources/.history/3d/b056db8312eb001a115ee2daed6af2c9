@@ -1,0 +1,10 @@
+package com.example.Foro;
+
+public class UsuarioAdm extends Usuario {
+	//private event _conceder_privilegios;
+	public UsuariosAdm _unnamed_UsuariosAdm_;
+
+	public void Conceder_privilegios() {
+		throw new UnsupportedOperationException();
+	}
+}

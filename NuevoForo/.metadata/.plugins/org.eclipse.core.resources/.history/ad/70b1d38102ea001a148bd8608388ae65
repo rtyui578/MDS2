@@ -1,0 +1,156 @@
+package com.example.Foro;
+
+import org.orm.PersistentException;
+
+import com.vaadin.navigator.Navigator;
+import com.vaadin.navigator.View;
+import com.vaadin.ui.Button;
+import com.vaadin.ui.Label;
+import com.vaadin.ui.TextField;
+import com.vaadin.ui.VerticalLayout;
+
+import basededatos.BD_Principal;
+import basededatos.UsuarioDAO;
+
+public class Ajustes_administrador extends Ajustes_administrador_ventana implements View {
+	
+	Button ajustes,notificacion,cerrarsesion,foro;
+	Button usuariosreportados,amigos,usuariosbaneados,modificarmensajes,listausuarios,perfil;
+	Button modificarcontrasena,modificarperfil;
+	VerticalLayout listadeusuarios,listaamigos,listareportados,listabaneados,listamensaje;
+	VerticalLayout vistaperfil,vistalista,vistaamigos,vistareportados,vistabaneados,vistamensajes;
+	Label nombreusuario,email,contrasena;
+	TextField numeromensajes;
+	Navigator navegador;
+	BD_Principal bd;
+	int numeroMensajes;
+	
+	public Ajustes_administrador() {
+		
+	}
+	
+	public void inicio(int idusuario, int tipo) {
+		bd = new BD_Principal();
+		foro=this.foro_html;
+		ajustes=this.ajustes_html;
+		notificacion=this.notificaciones_html;
+		cerrarsesion=this.cerrarsesion_html;
+		
+		vistaperfil=this.vista_perfil_html;
+		vistalista=this.vista_lista_usuarios_html;
+		vistaamigos=this.vista_amigos_html;
+		vistareportados=this.vista_usuarios_revision_html;
+		vistabaneados=this.vista_usuarios_baneados_html;
+		vistamensajes=this.vista_mensajes_html;
+		
+		listadeusuarios=this.listausuarios_html;
+		listaamigos=this.listaamigos_html;
+		listareportados=this.listausuariosrevision_html;
+		listabaneados=this.listaususariosbaneados_html;
+		nombreusuario=this.nombreusuario_html;
+		email=this.emailusuario_htmlm;
+		contrasena=this.contrasena_html;
+		numeromensajes=this.numeromensajes_html;
+
+	
+		listausuarios=this.usuarios_html;
+		modificarmensajes=this.mensajes_html;
+		usuariosbaneados=this.baneados_html;
+		usuariosreportados=this.reportados_html;
+		amigos=this.amigos_html;
+		perfil=this.perfil_html;
+		
+		basededatos.Usuario user=null;
+		try {
+			user = UsuarioDAO.getUsuarioByORMID(idusuario);
+		} catch (PersistentException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		//Vista del perfil
+		if(tipo==1) {
+			vistalista.setVisible(false);
+			vistaamigos.setVisible(false);
+			vistaperfil.setVisible(true);
+			nombreusuario.setValue(user.getNombre_usuario());
+			email.setValue(user.getEmail());
+			contrasena.setValue(user.getContrasena());
+		}
+			
+		//Vista de lista de usuarios
+		else if(tipo==2) {
+			vistaperfil.setVisible(false);
+			vistaamigos.setVisible(false);
+			vistalista.setVisible(true);
+			basededatos.Usuario[] usuarios=bd.listaUsuarios(idusuario);
+			Vista_usuario_heredar[] listaItems = new Vista_usuario_heredar[usuarios.length];
+			for(int i=0;i<usuarios.length;i++) {
+				listaItems[i]=new Vista_usuario_heredar();
+				listaItems[i].setNavegador(navegador);
+				listaItems[i].inicio(usuarios[i].getId_usuario());
+				}
+			listadeusuarios.addComponents(listaItems);
+			listadeusuarios.setHeight(usuarios.length*20 + "%");
+		}
+		
+		//Vista de lista de amigos
+		else if(tipo==3) {
+			vistalista.setVisible(false);
+			vistaperfil.setVisible(false);
+			vistaamigos.setVisible(true);
+			basededatos.Usuario[] usuarios=bd.listaAmigos(idusuario);
+			System.out.println(usuarios.length);
+			Vista_usuario_heredar[] listaItems = new Vista_usuario_heredar[usuarios.length];
+			for(int i=0;i<usuarios.length;i++) {
+				listaItems[i]=new Vista_usuario_heredar();
+				listaItems[i].setNavegador(navegador);
+				listaItems[i].inicio(usuarios[i].getId_usuario());
+			}
+				
+			listaamigos.addComponents(listaItems);
+			listaamigos.setHeight(usuarios.length*20 + "%");
+		}
+		
+		//Vista de lista de reportados
+		else if(tipo==4) {
+			basededatos.Usuario[] usuarios = bd.usuariosReportados();
+			Vista_usuario_heredar[] listaItems = new Vista_usuario_heredar[usuarios.length];
+			for(int i=0;i<usuarios.length;i++) {
+				listaItems[i]=new Vista_usuario_heredar();
+				listaItems[i].setNavegador(navegador);
+				listaItems[i].inicio(usuarios[i].getId_usuario());
+			}
+					
+			listareportados.addComponents(listaItems);
+			listareportados.setHeight(usuarios.length*40 + "%");
+		}
+		
+		//Vista de lista de baneados
+		else if(tipo==5) {
+			basededatos.Usuario[] usuarios = bd.usuariosBaneados();
+			Vista_usuario_heredar[] listaItems = new Vista_usuario_heredar[usuarios.length];
+			for(int i=0;i<usuarios.length;i++) {
+				listaItems[i]=new Vista_usuario_heredar();
+				listaItems[i].setNavegador(navegador);
+				listaItems[i].inicio(usuarios[i].getId_usuario());
+			}
+					
+			listabaneados.addComponents(listaItems);
+			listabaneados.setHeight(usuarios.length*40 + "%");
+		}
+		
+		//Vista numero mensajes
+		else {
+			try {
+				numeromensajes.setValue(numeroMensajes+"");
+			}catch(NullPointerException e) {
+				numeromensajes.setValue("No definido");
+			}
+		}
+	}
+	
+	public void setNavegador(Navigator nav) {
+		navegador=nav;
+	}
+	
+}

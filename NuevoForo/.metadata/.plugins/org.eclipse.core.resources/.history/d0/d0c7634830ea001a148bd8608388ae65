@@ -1,0 +1,58 @@
+package com.example.Foro;
+
+import org.orm.PersistentException;
+import com.vaadin.navigator.Navigator;
+import com.vaadin.navigator.View;
+import com.vaadin.ui.Button;
+import com.vaadin.ui.Label;
+import com.vaadin.ui.Button.ClickEvent;
+
+import basededatos.TemaDAO;
+
+public class Vista_tema_heredar extends Vista_tema_ventana implements View {
+
+	Label nombre,mensajes,likes;
+	Button borrar,like,nombreboton;
+	Navigator navegador;
+	
+	public Vista_tema_heredar() {
+		
+	}
+
+	public void inicio(int idtema, int idusuario) {
+		basededatos.Tema tema=null;
+		try {
+			tema=TemaDAO.getTemaByORMID(idtema);
+		} catch (PersistentException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		mensajes=this.numeromensajes_html;
+		likes=this.numerolikes_html;
+		borrar=this.borrar_html;
+		like=this.like_html;
+		nombreboton=this.nombretemaboton_html;
+		nombreboton.setCaption(tema.getTitulo_tema());
+		likes.setValue("Numlikes:"+tema.getNum_likes_tema());
+		mensajes.setValue("Numero mensajes:"+tema.tiene.toArray().length);
+		borrar.setVisible(false);
+		like.setVisible(false);
+		nombreboton.addClickListener(new Button.ClickListener() {
+			
+			@Override
+			public void buttonClick(ClickEvent event) {
+				// TODO Auto-generated method stub
+				Tema tema =  new Tema();
+				tema.setNavegador(navegador);
+				tema.inicio(idtema);
+				navegador.addView("Foro_no_registrado", tema);
+		        navegador.navigateTo("Foro_no_registrado");
+			}
+		});
+	}
+	
+	
+	public void setNavegador(Navigator nav) {
+		navegador=nav;
+	}
+}

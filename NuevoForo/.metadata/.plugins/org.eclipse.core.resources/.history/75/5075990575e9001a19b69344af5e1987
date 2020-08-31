@@ -1,0 +1,16 @@
+package com.example.Foro;
+public class Mensaje {
+	
+
+	public void Dar_me_gusta() {
+		throw new UnsupportedOperationException();
+	}
+
+	public void Eliiminar_mensaje() {
+		throw new UnsupportedOperationException();
+	}
+
+	public void Eliminar_usuario() {
+		throw new UnsupportedOperationException();
+	}
+}

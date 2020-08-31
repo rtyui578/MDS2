@@ -1,0 +1,27 @@
+package com.example.Foro;
+
+import com.vaadin.navigator.Navigator;
+import com.vaadin.navigator.View;
+import com.vaadin.ui.Button;
+import com.vaadin.ui.VerticalLayout;
+
+
+public class Notificaciones extends Notificaciones_ventana implements View {
+	
+	Button foro,ajustes,notificaciones,cerrarsesion;
+	VerticalLayout listanotificaciones;
+	Navigator navegador;
+	
+	public Notificaciones() {
+		
+	}
+	
+	public void inicio(int idusuario) {
+		
+	}
+	
+	public void setNavegador(Navigator nav) {
+		navegador=nav;
+	}
+
+}

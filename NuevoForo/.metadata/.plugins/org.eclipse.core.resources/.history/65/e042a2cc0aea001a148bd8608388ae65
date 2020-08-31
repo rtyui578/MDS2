@@ -1,0 +1,41 @@
+package com.example.Foro;
+
+import com.vaadin.navigator.Navigator;
+import com.vaadin.navigator.View;
+import com.vaadin.ui.Button;
+import com.vaadin.ui.PasswordField;
+import com.vaadin.ui.Button.ClickEvent;
+
+public class Modificar_contraseña extends Modificar_contraseña_ventana implements View {
+	
+	Button aceptar;
+	PasswordField ncontrasena2,acontrasena,ncontrasena;
+	Navigator navegador;
+	
+	public Modificar_contraseña() {
+		
+	}
+
+	public void inicio(int idusuario) {
+		acontrasena=this.acontrasena_html;
+		ncontrasena=this.ncontrasena_html;
+		ncontrasena2=this.ncontrasena2_html;
+		aceptar=this.aceptar_html;
+		aceptar.addClickListener(new Button.ClickListener() {
+			
+			@Override
+			public void buttonClick(ClickEvent event) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+	}
+	
+	public void setNavegador(Navigator nav) {
+		
+	}
+	
+	public boolean modificar_Contraseña() {
+		throw new UnsupportedOperationException();
+	}
+}

@@ -1,0 +1,10 @@
+package interfaz;
+
+import InterfazDeUsuario.Usuarios_Revision;
+
+public class Usuarios_Para_Revision extends Usuario {
+	private Label _nombreUsuarioL;
+	private Button _nombreUsuarioB;
+	public Usuarios_Revision _unnamed_Usuarios_Revision_;
+	public Marcar_para_revisión _unnamed_Marcar_para_revisión_;
+}

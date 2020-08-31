@@ -1,0 +1,66 @@
+package com.example.Foro;
+
+import org.orm.PersistentException;
+
+import com.vaadin.navigator.Navigator;
+import com.vaadin.navigator.View;
+import com.vaadin.ui.Button;
+import com.vaadin.ui.TextField;
+import com.vaadin.ui.Button.ClickEvent;
+
+import basededatos.UsuarioDAO;
+
+public class Modificar_perfil extends Modificar_perfil_ventana implements View {
+	
+	Button cambiar;
+	TextField nombre,email;
+	Navigator navegador;
+
+	public Modificar_perfil() {
+		
+	}
+
+	public void inicio(int idusuario) {
+		cambiar=this.cambiar_html;
+		nombre=this.nombre_html;
+		email=this.emial_html;
+		
+		try {
+			basededatos.Usuario user = UsuarioDAO.getUsuarioByORMID(idusuario);
+			nombre.setValue(user.getNombre_usuario());
+			email.setValue(user.getEmail());
+		} catch (PersistentException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+		cambiar.addClickListener(new Button.ClickListener() {
+			
+			@Override
+			public void buttonClick(ClickEvent event) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+	}
+	
+	public void setNavegador(Navigator nav) {
+		navegador=nav;
+	}
+	
+	public void modificarPerfil(String aNombreCompleto, String aDescripcion, String aImagen) {
+		throw new UnsupportedOperationException();
+	}
+
+	public void modificarUInformacion_____void() {
+		throw new UnsupportedOperationException();
+	}
+
+	public void modificarContraseña() {
+		throw new UnsupportedOperationException();
+	}
+
+	public boolean modificar_Contraseña() {
+		throw new UnsupportedOperationException();
+	}
+}

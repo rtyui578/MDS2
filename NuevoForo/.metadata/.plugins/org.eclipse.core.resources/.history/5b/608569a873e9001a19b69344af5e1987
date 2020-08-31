@@ -1,0 +1,19 @@
+package com.example.Foro;
+
+import com.vaadin.navigator.View;
+
+public class Tema extends Tema_ventana implements View {
+	
+
+	public void Eliminar_tema() {
+		throw new UnsupportedOperationException();
+	}
+
+	public void Privatizar_tema() {
+		throw new UnsupportedOperationException();
+	}
+
+	public void Dar_me_gusta() {
+		throw new UnsupportedOperationException();
+	}
+}

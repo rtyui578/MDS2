@@ -1,0 +1,77 @@
+package com.example.Foro;
+
+import org.orm.PersistentException;
+import com.vaadin.navigator.Navigator;
+import com.vaadin.navigator.View;
+import com.vaadin.ui.Button;
+import com.vaadin.ui.PasswordField;
+import basededatos.BD_Principal;
+import basededatos.UsuarioDAO;
+import com.vaadin.ui.Button.ClickEvent;
+
+public class Modificar_contraseña extends Modificar_contraseña_ventana implements View {
+	
+	Button aceptar;
+	PasswordField ncontrasena2,acontrasena,ncontrasena;
+	Navigator navegador;
+	BD_Principal bd;
+	
+	public Modificar_contraseña() {
+		
+	}
+
+	public void inicio(int idusuario) {
+		bd = new BD_Principal();
+		acontrasena=this.acontrasena_html;
+		ncontrasena=this.ncontrasena_html;
+		ncontrasena2=this.ncontrasena2_html;
+		aceptar=this.aceptar_html;
+		aceptar.addClickListener(new Button.ClickListener() {
+			
+			@Override
+			public void buttonClick(ClickEvent event) {
+				// TODO Auto-generated method stub
+				try {
+					basededatos.Usuario user = UsuarioDAO.getUsuarioByORMID(idusuario);
+					if(acontrasena.getValue().equals(user.getContrasena()) && ncontrasena.getValue().equals(ncontrasena2.getValue())) {
+						user.setContrasena(ncontrasena.getValue());
+						UsuarioDAO.save(user);
+						
+					}
+					if(bd.listaAdministradores().contains(idusuario)) {
+							Ajustes_administrador ajustes =  new Ajustes_administrador();
+							ajustes.setNavegador(navegador);
+							ajustes.inicio(idusuario,1);
+							navegador.addView("ajustes", ajustes);
+						       navegador.navigateTo("ajustes");
+					}
+					else if(!bd.listaAdministradores().contains(idusuario) && bd.listaModeradores().contains(idusuario)) {
+							Ajustes_moderador ajustes =  new Ajustes_moderador();
+							ajustes.setNavegador(navegador);
+							ajustes.inicio(idusuario,1);
+							navegador.addView("ajustes", ajustes);
+						      navegador.navigateTo("ajustes");
+					}
+					else {
+							Ajustes ajustes =  new Ajustes();
+							ajustes.setNavegador(navegador);
+							ajustes.inicio(idusuario,1);
+							navegador.addView("ajustes", ajustes);
+						       navegador.navigateTo("ajustes");
+						}
+				} catch (PersistentException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+	
+	public void setNavegador(Navigator nav) {
+		
+	}
+	
+	public boolean modificar_Contraseña() {
+		throw new UnsupportedOperationException();
+	}
+}

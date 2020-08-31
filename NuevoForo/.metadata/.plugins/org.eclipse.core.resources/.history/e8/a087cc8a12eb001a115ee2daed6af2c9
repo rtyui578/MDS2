@@ -1,0 +1,7 @@
+package com.example.Foro;
+
+import basededatos.Usuario;
+
+public class Usuarios_Para_Revision extends Usuario {
+	
+}

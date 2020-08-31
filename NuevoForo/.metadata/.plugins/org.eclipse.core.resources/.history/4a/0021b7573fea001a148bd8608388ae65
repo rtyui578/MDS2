@@ -1,0 +1,179 @@
+package com.example.Foro;
+
+import org.orm.PersistentException;
+import com.vaadin.navigator.Navigator;
+import com.vaadin.navigator.View;
+import com.vaadin.ui.Button;
+import com.vaadin.ui.TextField;
+import com.vaadin.ui.VerticalLayout;
+import com.vaadin.ui.Button.ClickEvent;
+import basededatos.BD_Principal;
+import basededatos.MensajeDAO;
+
+public class Responder extends Responder_ventana implements View{
+	public Mensaje _unnamed_Mensaje_;
+	public Responder _unnamed_Responder_;
+
+	Button ajustes,notificaciones,cerrarsesion,foro,publicar,titulotema;
+	VerticalLayout mensajes;
+	Navigator navegador;
+	TextField comentario;
+	BD_Principal bd;
+	basededatos.Mensaje mensaje;
+	
+	public Responder() {
+		
+	}
+	
+	public void inicio(int idusuario,int idmensaje) {
+		foro=this.foro_html;
+		ajustes=this.ajustes_html;
+		notificaciones=this.notificaciones_html;
+		cerrarsesion=this.cerrarsesion_html;
+		publicar=this.publicar_html;
+		comentario=this.contenidocomentario_html;
+		titulotema=this.titulotema_html;
+		mensajes=this.mensajes_html;
+		bd = new BD_Principal();
+		mensaje=null;
+		try {
+			mensaje = MensajeDAO.getMensajeByORMID(idmensaje);
+		} catch (PersistentException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		titulotema.setCaption(mensaje.getEs_de().getTitulo_tema());
+		
+		basededatos.Mensaje[] listamensajes = new basededatos.Mensaje[bd.respuestas(mensaje.getId_mensaje()).size()];
+		for(int i=0;i<listamensajes.length;i++) {
+			listamensajes[i]=bd.respuestas(mensaje.getId_mensaje()).get(i);
+		}
+		
+		Vista_mensaje_heredar[] itemLista = new Vista_mensaje_heredar[listamensajes.length];
+		for(int i=0;i<listamensajes.length;i++) {
+			itemLista[i] = new Vista_mensaje_heredar();
+			itemLista[i].setNavegador(navegador);
+			itemLista[i].inicio(listamensajes[i].getId_mensaje(),idusuario);
+		}
+		mensajes.addComponents(itemLista);
+		mensajes.setHeight(listamensajes.length*70 + "%");
+		
+		foro.addClickListener(new Button.ClickListener() {
+			
+			@Override
+			public void buttonClick(ClickEvent event) {
+				// TODO Auto-generated method stub
+				Visualizar v =  new Visualizar();
+				v.setNavegador(navegador);
+				v.inicio(idusuario);
+				navegador.addView("Foro_no_registrado", v);
+		        navegador.navigateTo("Foro_no_registrado");
+			}
+		});
+		
+		notificaciones.addClickListener(new Button.ClickListener() {
+			
+			@Override
+			public void buttonClick(ClickEvent event) {
+				// TODO Auto-generated method stub
+				Notificaciones notificaciones =  new Notificaciones();
+				notificaciones.setNavegador(navegador);
+				notificaciones.inicio(idusuario);
+				navegador.addView("Foro_no_registrado", notificaciones);
+		        navegador.navigateTo("Foro_no_registrado");
+			}
+		});
+		
+		if(bd.listaAdministradores().contains(idusuario)) {
+			ajustes.addClickListener(new Button.ClickListener() {
+				
+				@Override
+				public void buttonClick(ClickEvent event) {
+					// TODO Auto-generated method stub
+					Ajustes_administrador ajustes =  new Ajustes_administrador();
+					ajustes.setNavegador(navegador);
+					ajustes.inicio(idusuario,1);
+					navegador.addView("ajustes", ajustes);
+			        navegador.navigateTo("ajustes");
+				}
+			});
+		}
+		else if(!bd.listaAdministradores().contains(idusuario) && bd.listaModeradores().contains(idusuario)) {
+			ajustes.addClickListener(new Button.ClickListener() {
+				
+				@Override
+				public void buttonClick(ClickEvent event) {
+					// TODO Auto-generated method stub
+					Ajustes_moderador ajustes =  new Ajustes_moderador();
+					ajustes.setNavegador(navegador);
+					ajustes.inicio(idusuario,1);
+					navegador.addView("ajustes", ajustes);
+			        navegador.navigateTo("ajustes");
+				}
+			});
+		}
+		else {
+			ajustes.addClickListener(new Button.ClickListener() {
+				
+				@Override
+				public void buttonClick(ClickEvent event) {
+					// TODO Auto-generated method stub
+					Ajustes ajustes =  new Ajustes();
+					ajustes.setNavegador(navegador);
+					ajustes.inicio(idusuario,1);
+					navegador.addView("ajustes", ajustes);
+			        navegador.navigateTo("ajustes");
+				}
+			});
+		}
+		
+		cerrarsesion.addClickListener(new Button.ClickListener() {
+			
+			@Override
+			public void buttonClick(ClickEvent event) {
+				// TODO Auto-generated method stub
+				// TODO Auto-generated method stub
+				Visualizar v =  new Visualizar();
+				v.setNavegador(navegador);
+				v.inicio(-1);
+				navegador.addView("Foro_no_registrado", v);
+		        navegador.navigateTo("Foro_no_registrado");
+			}
+		});
+		
+		titulotema.addClickListener(new Button.ClickListener() {
+			
+			@Override
+			public void buttonClick(ClickEvent event) {
+				// TODO Auto-generated method stub
+				Tema tema = new Tema();
+				tema.setNavegador(navegador);
+				tema.inicio(mensaje.getEs_de().getId_tema(), idusuario);
+				navegador.addView("tema", tema);
+				navegador.navigateTo("tema");
+			}
+		});
+		
+		publicar.addClickListener(new Button.ClickListener() {
+			
+			@Override
+			public void buttonClick(ClickEvent event) {
+				// TODO Auto-generated method stub
+				bd.crearMensaje(comentario.getValue(), idusuario, mensaje.getEs_de().getId_tema(), mensaje.getId_mensaje());
+				Responder responder = new Responder();
+				responder.setNavegador(navegador);
+				responder.inicio(idusuario, idmensaje);
+				navegador.addView("responder", responder);
+				navegador.navigateTo("responder");
+			}
+		});
+	}
+	
+	public void setNavegador(Navigator nav) {
+		
+	}
+	
+	public void crearMensaje(Crear_mensaje aCreacion) {
+		throw new UnsupportedOperationException();
+	}
+}

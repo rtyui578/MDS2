@@ -1,0 +1,17 @@
+package com.example.Foro;
+
+public class Iniciar_Sesión {
+	
+
+	public void iniciarSesion(String aNombreUsuario, String aContraseña) {
+		throw new UnsupportedOperationException();
+	}
+
+	public void recordarContraseña() {
+		throw new UnsupportedOperationException();
+	}
+
+	public void iniciarSesion_____boolean() {
+		throw new UnsupportedOperationException();
+	}
+}

@@ -1,0 +1,21 @@
+package com.example.Foro;
+
+public class Modificar_perfil {
+	
+
+	public void modificarPerfil(String aNombreCompleto, String aDescripcion, String aImagen) {
+		throw new UnsupportedOperationException();
+	}
+
+	public void modificarUInformacion_____void() {
+		throw new UnsupportedOperationException();
+	}
+
+	public void modificarContrase�a() {
+		throw new UnsupportedOperationException();
+	}
+
+	public boolean modificar_Contrase�a() {
+		throw new UnsupportedOperationException();
+	}
+}

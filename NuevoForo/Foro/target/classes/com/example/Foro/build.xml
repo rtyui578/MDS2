@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="build">
+	<path id="build.classpath">
+		<pathelement location="classes"/>
+	</path>
+	<target name="init">
+		<mkdir dir="classes"/>
+	</target>
+	<target name="clean">
+		<delete dir="classes"/>
+	</target>
+	<target depends="init" name="build">
+		<javac srcdir="." destdir="classes" source="1.5" target="1.5" fork="yes">
+			<classpath refid="build.classpath"/>
+			<include name="Secciones.java"/>
+			<include name="Sección.java"/>
+			<include name="Crear_tema.java"/>
+			<include name="Temas_no_ocultos.java"/>
+			<include name="Crear_mensaje.java"/>
+			<include name="Tema.java"/>
+			<include name="Mensajes.java"/>
+			<include name="Reportar_usuario_creador.java"/>
+			<include name="Responder.java"/>
+			<include name="Mensajes_propios.java"/>
+			<include name="Mensaje_propio.java"/>
+			<include name="Mensaje.java"/>
+			<include name="Modifiar_n�mero_mensajes.java"/>
+			<include name="Usuarios_reportados.java"/>
+			<include name="Ajustes_administrador.java"/>
+			<include name="Modificar_contrase�a.java"/>
+			<include name="Modificar_perfil.java"/>
+			<include name="Ajustes.java"/>
+			<include name="Ver_perfil.java"/>
+			<include name="Amigo.java"/>
+			<include name="Amigos.java"/>
+			<include name="Ajustes_moderador.java"/>
+			<include name="Visualizar.java"/>
+			<include name="Notificaci�n.java"/>
+			<include name="Notificaciones.java"/>
+			<include name="Validar_sesi�n.java"/>
+			<include name="Iniciar_Sesi�n.java"/>
+			<include name="Recordar_contrase�a.java"/>
+			<include name="Reportar.java"/>
+			<include name="Marcar_para_revisi�n.java"/>
+			<include name="Usuarios_Para_Revision.java"/>
+			<include name="Registrarse.java"/>
+			<include name="Cerrar_sesi�n.java"/>
+			<include name="Ver_�ltimos_mensajes.java"/>
+			<include name="Temas_publicos.java"/>
+			<include name="Mensaje_No_Interacci�n.java"/>
+		</javac>
+	</target>
+</project>

@@ -1,0 +1,9 @@
+package com.example.Foro;
+
+public class Recordar_contrasena {
+
+
+	public void recuperarContrasena(String aCorreo) {
+		throw new UnsupportedOperationException();
+	}
+}

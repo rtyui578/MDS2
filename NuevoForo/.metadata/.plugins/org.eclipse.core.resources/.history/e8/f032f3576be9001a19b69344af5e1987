@@ -1,0 +1,31 @@
+package interfaz;
+
+public class Iniciar_Sesión {
+	private Label _iniciarSesionL;
+	private Label _descripcion;
+	private Label _nombreUsuarioL;
+	private TextField _nombreUsuarioTF;
+	private Label _contraseñaL;
+	private TextField _contraseñaTF;
+	private Button _registrarseB;
+	private Label _registrarseL;
+	private Button _entrarB;
+	private Label _entrarL;
+	private Label _recordarContraseñaL;
+	private Button _recordarContraseñaB;
+	public Usuario_No_Registrado _unnamed_Usuario_No_Registrado_;
+	public Recordar_contraseña _unnamed_Recordar_contraseña_;
+	public Validar_sesión _unnamed_Validar_sesión_;
+
+	public void iniciarSesion(String aNombreUsuario, String aContraseña) {
+		throw new UnsupportedOperationException();
+	}
+
+	public void recordarContraseña() {
+		throw new UnsupportedOperationException();
+	}
+
+	public void iniciarSesion_____boolean() {
+		throw new UnsupportedOperationException();
+	}
+}

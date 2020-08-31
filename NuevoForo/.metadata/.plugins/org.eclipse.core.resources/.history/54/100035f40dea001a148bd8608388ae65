@@ -1,0 +1,34 @@
+package com.example.Foro;
+
+import com.vaadin.navigator.View;
+
+public class Modificar_perfil extends Modificar_perfil_ventana implements View {
+	
+	public Modificar_perfil() {
+		
+	}
+
+	public void inicio(int idusuario) {
+		
+	}
+	
+	public setNavegador(Navigator nav) {
+		
+	}
+	
+	public void modificarPerfil(String aNombreCompleto, String aDescripcion, String aImagen) {
+		throw new UnsupportedOperationException();
+	}
+
+	public void modificarUInformacion_____void() {
+		throw new UnsupportedOperationException();
+	}
+
+	public void modificarContraseña() {
+		throw new UnsupportedOperationException();
+	}
+
+	public boolean modificar_Contraseña() {
+		throw new UnsupportedOperationException();
+	}
+}

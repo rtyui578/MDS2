@@ -1,0 +1,6 @@
+package interfaz;
+
+public class Ver_últimos_mensajes {
+	private List _mensajes;
+	public Usuario _usuario;
+}

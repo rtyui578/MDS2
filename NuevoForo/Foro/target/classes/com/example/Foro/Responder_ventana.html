@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;mytheme&quot;}">
+  <meta name="vaadin-version" content="8.1.5">
+ </head>
+ <body>
+  <vaadin-vertical-layout size-full>
+   <vaadin-horizontal-layout width-full>
+    <vaadin-button style-name="borderless boton1" size-full plain-text _id="foro_html" :expand>
+      Foro 
+    </vaadin-button>
+    <vaadin-horizontal-layout>
+     <vaadin-button style-name="borderless boton1" responsive _id="ajustes_html">
+       Ajustes 
+     </vaadin-button>
+     <vaadin-button style-name="borderless boton1" plain-text _id="notificaciones_html">
+       Notificaciones 
+     </vaadin-button>
+     <vaadin-button style-name="borderless boton1" plain-text _id="cerrarsesion_html">
+       Cerrar Sesió 
+     </vaadin-button>
+    </vaadin-horizontal-layout>
+   </vaadin-horizontal-layout>
+   <vaadin-horizontal-layout width-full>
+    <vaadin-vertical-layout spacing="false" size-auto margin="false" :expand>
+     <vaadin-button style-name="titulo" plain-text _id="titulotema_html">
+       Button 
+     </vaadin-button>
+    </vaadin-vertical-layout>
+   </vaadin-horizontal-layout>
+   <vaadin-panel size-full :expand>
+    <vaadin-vertical-layout spacing="false" size-full margin="false" _id="mensajes_html"></vaadin-vertical-layout>
+   </vaadin-panel>
+   <vaadin-vertical-layout>
+    <vaadin-text-field width-full value="Escribe tu comentario" _id="contenidocomentario_html"></vaadin-text-field>
+    <vaadin-button style-name="primary" plain-text _id="publicar_html" :center>
+      Responder 
+    </vaadin-button>
+   </vaadin-vertical-layout>
+  </vaadin-vertical-layout>
+ </body>
+</html>

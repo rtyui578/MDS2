@@ -1,0 +1,13 @@
+package com.example.Foro;
+
+public class Registrarse {
+	
+
+	public void registrarse() {
+		throw new UnsupportedOperationException();
+	}
+
+	public boolean Registrarse() {
+		throw new UnsupportedOperationException();
+	}
+}

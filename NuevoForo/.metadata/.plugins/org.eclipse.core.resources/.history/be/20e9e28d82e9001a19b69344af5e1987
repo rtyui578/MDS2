@@ -1,0 +1,27 @@
+package com.example.Foro;
+
+import com.vaadin.navigator.Navigator;
+import com.vaadin.navigator.View;
+import com.vaadin.ui.Button;
+import com.vaadin.ui.TextField;
+import com.vaadin.ui.VerticalLayout;
+
+public class Temas extends Temas_ventana implements View {
+	
+	VerticalLayout listausuarios,listatemas;
+	Button iniciarsesion,registrarse,foro,ajustes,notificaciones,cerrarsesion,publicartema;
+	Navigator navegador;
+	TextField titulo;
+	
+	public Temas() {
+		
+	}
+	public void inicio(int idusuario) {
+		
+	}
+	
+	public void setNavegador(Navigator nav) {
+		navegador=nav;
+	}
+
+}

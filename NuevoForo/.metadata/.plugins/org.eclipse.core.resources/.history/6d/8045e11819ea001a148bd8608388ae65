@@ -1,0 +1,80 @@
+package com.example.Foro;
+
+import org.orm.PersistentException;
+
+import com.vaadin.navigator.Navigator;
+import com.vaadin.navigator.View;
+import com.vaadin.ui.Button;
+import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.ui.Label;
+import com.vaadin.ui.VerticalLayout;
+
+import basededatos.BD_Principal;
+import basededatos.UsuarioDAO;
+
+public class Usuario extends Usuario_ventana implements View {
+	
+	public Reportar _unnamed_Reportar_;
+	public Ver_perfil _unnamed_Ver_perfil_;
+	
+	Button mensajes,amigos,perfil,foro,ajustes,notificaciones,cerrarsesion,iniciarsesion,registrarse;
+	VerticalLayout vistaamigos,vistamensajes,vistaperfil,listaamigos,listamensajes;
+	HorizontalLayout partenoregistrado,parteregistrado;
+	Label nombreusuario;
+	Navigator navegador;
+	BD_Principal bd;
+	
+	
+	public Usuario() {
+		
+	}
+	
+	public void inicio(int idusuariove,int idusuariovisto) {
+		foro=this.foro_html;
+		ajustes=this.ajustes_html;
+		notificaciones=this.notificacion_html;
+		cerrarsesion=this.cerrarsesion_html;
+		iniciarsesion=this.iniciarsesion_html;
+		registrarse=this.registrarse_html;
+		
+		vistaamigos=this.vista_amigos_html;
+		vistamensajes=this.vista_mensajes_html;
+		vistaperfil=this.vista_perfil_html;
+		listaamigos=this.listaamigos_html;
+		listamensajes=this.listamensajes_html;
+		partenoregistrado=this.partenoregistrado_html;
+		parteregistrado=this.parteregistrado_html;
+		
+		nombreusuario=this.nombreusuario_html;
+		amigos=this.amigos_html;
+		perfil=this.perfil_html;
+		mensajes=this.mensajes_html;
+		
+		basededatos.Usuario userve=null;
+		basededatos.Usuario uservisto=null;
+		if(idusuariove!=-1) {
+			try {
+				userve=UsuarioDAO.getUsuarioByORMID(idusuariove);
+			} catch (PersistentException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		try {
+			uservisto=UsuarioDAO.getUsuarioByORMID(idusuariovisto);
+		} catch (PersistentException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		if(idusuariove==-1) {
+			parteregistrado.setVisible(false);
+			partenoregistrado.setVisible(true);
+		}
+	}
+	
+	
+	public void setNavegador(Navigator nav) {
+		navegador=nav;
+	}
+}
