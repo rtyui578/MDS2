@@ -1,6 +1,0 @@
-package com.example.Foro;
-
-public class ModeradoresAdm {
-	//public Ajustes_administrador _unnamed_Ajustes_administrador_;
-	public ModeradorAdm _unnamed_ModeradorAdm_;
-}

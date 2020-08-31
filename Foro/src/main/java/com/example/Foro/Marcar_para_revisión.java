@@ -1,5 +1,0 @@
-package com.example.Foro;
-
-public class Marcar_para_revisión {
-	public Usuarios_Para_Revision _unnamed_Usuarios_Para_Revision_;
-}
